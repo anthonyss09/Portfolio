@@ -67,7 +67,7 @@ export default function BackgroundOne() {
         <div className="cloud-small-three">
           <CloudSmallThree />
         </div>
-        <p className="scroll-text">Scroll</p>
+        {/* <p className="scroll-text">Scroll</p> */}
       </div>
     </section>
   );
