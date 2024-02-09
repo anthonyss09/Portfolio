@@ -30,6 +30,7 @@ export default function NavBar() {
             viewBox="0 0 24 24"
             fill="#ced9df"
             className="w-8 h-8"
+            height="30px"
           >
             <path
               fillRule="evenodd"

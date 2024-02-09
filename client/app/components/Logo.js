@@ -1,7 +1,7 @@
 export default function Logo() {
   return (
     <span className="logo">
-      <p>Cloud 9</p>
+      <p className="p-logo">Cloud 9</p>
       <svg
         width="30"
         height="23"

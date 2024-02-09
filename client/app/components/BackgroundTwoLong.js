@@ -63,7 +63,7 @@ export default function BackgroundOne() {
         className={`image-blue-sphere-b2 ${dropSphere ? "fade-out-image" : ""}`}
       >
         {" "}
-        <Image src={blueSphere} width={860} />
+        <Image src={blueSphere} width={420} />
       </div>
       <div
         className={`image-blue-sphere-b2 image-blue-sphere-b2-dropped ${
@@ -71,7 +71,7 @@ export default function BackgroundOne() {
         }`}
       >
         {" "}
-        <Image src={blueSphere} width={860} />
+        <Image src={blueSphere} width={420} />
       </div>
 
       <div className="two-med-clouds-b2-2">
@@ -85,7 +85,7 @@ export default function BackgroundOne() {
           <Blocks3dBack />
         </div>
         <p className="p-b2 p-b2-2">Between formless & form.</p>
-        <Link href="#" className="link-projects">
+        <Link href="#" className="link link-projects">
           View Projects
         </Link>
       </div>

@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap");
 
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -42,11 +42,11 @@ body {
   font-family: "M PLUS Rounded 1c", sans-serif;
 }
 
-@layer utilities {
+/* @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
-}
+} */
 
 .background {
   height: 760px;
@@ -112,6 +112,10 @@ body {
 .blocks-svg {
   grid-row: 1;
   grid-column: 1;
+}
+
+.blue-sphere {
+  transition: 1s ease-in all;
 }
 
 .cloud-big-b1-left {
@@ -228,7 +232,10 @@ body {
 }
 
 .icon-bars {
-  margin-top: auto;
+  height: 30px;
+  position: absolute;
+  right: 4rem;
+  top: 3.8rem;
 }
 
 .image-phone {
@@ -275,6 +282,7 @@ body {
   position: absolute;
   top: 200px;
   left: 55vw;
+  transition: 1s ease-in all;
 }
 
 .image-blue-sphere-b4-2 {
@@ -285,6 +293,11 @@ body {
   right: 30vw;
   opacity: 0;
   transition: 1s ease-in all;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
 }
 
 .link-articles {
@@ -311,8 +324,10 @@ body {
 }
 
 .logo {
+  height: 30px;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  align-self: flex-end;
   gap: 0.8rem;
   font-size: 20px;
   font-weight: 500;
@@ -331,19 +346,19 @@ body {
   width: 100vw;
   height: 107px;
   height: 130px;
+  height: 6rem;
   position: fixed;
   top: 0;
   background: white;
   background: none;
   padding: 0 2rem;
-  padding-bottom: 1rem;
+  display: flex;
   z-index: 12;
 }
 
 .nav-bar-row-flex {
   display: flex;
-  justify-content: space-between;
-  height: 90px;
+  justify-content: space-around;
 }
 
 .p-b2 {
@@ -399,7 +414,7 @@ body {
 
 .page-name {
   position: fixed;
-  top: 6rem;
+  top: 5.6rem;
   left: 4rem;
   font-weight: 500;
   font-size: 16px;
