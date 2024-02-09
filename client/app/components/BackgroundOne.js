@@ -9,6 +9,7 @@ import CloudMed from "../assets/svgs/CloudMed";
 import BigCloud from "../assets/svgs/CloudBig";
 import blueSphere from "../../public/assets/images/blueSphere.png";
 import CloudSmallFour from "../assets/svgs/CloudSmallFour";
+import TwoSmallClouds from "../assets/svgs/TwoSmallClouds";
 
 export default function BackgroundOne() {
   const [windowY, setWindowY] = useState(0);
@@ -35,9 +36,10 @@ export default function BackgroundOne() {
       }`}
     >
       <div className="image-blue-sphere-b1">
-        <Image src={blueSphere} height={320} />
+        <Image src={blueSphere} height={260} />
         <div className="two-small-clouds-b1">
-          <CloudSmallFour />
+          {/* <CloudSmallFour /> */}
+          <TwoSmallClouds />
         </div>
       </div>
 
@@ -55,9 +57,9 @@ export default function BackgroundOne() {
 
       <div className="clouds-phone-center">
         {" "}
-        <div className="image-phone">
+        {/* <div className="image-phone">
           <Image src={phoneSilver} className="phone" height={130.22} />
-        </div>{" "}
+        </div>{" "} */}
         <div className="cloud-small-one">
           <CloudSmallOne />
         </div>

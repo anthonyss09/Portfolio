@@ -167,7 +167,9 @@ body {
 .cloud-right {
   position: absolute;
   top: 15rem;
-  left: -6rem;
+  top: 14rem;
+  /* left: -6rem; */
+  right: 10vw;
   z-index: -2;
 }
 
@@ -247,11 +249,13 @@ body {
 }
 
 .image-blue-sphere-b1 {
-  height: 320px;
-  width: 400px;
+  /* height: 320px;
+  width: 400px; */
   position: absolute;
   top: 14rem;
+  top: 7.8rem;
   right: 30vw;
+  right: 32vw;
   z-index: -1;
 }
 
@@ -302,15 +306,15 @@ body {
 
 .link-articles {
   position: absolute;
-  bottom: 38vh;
-  right: 3rem;
+  bottom: 45vh;
+  right: 20vw;
   font-size: 14px;
   font-weight: 500;
 }
 
 .link-projects {
   position: absolute;
-  bottom: 11rem;
+  bottom: 10rem;
   left: 15rem;
   font-size: 14px;
   font-weight: 500;
@@ -390,14 +394,14 @@ body {
 }
 
 .p-b3-1 {
-  bottom: 48vh;
-  left: 4rem;
+  bottom: 55vh;
+  left: 35vw;
   font-weight: 500;
 }
 
 .p-b3-2 {
-  bottom: 43vh;
-  left: 2rem;
+  bottom: 50vh;
+  left: 25vw;
   font-weight: 500;
 }
 
@@ -455,7 +459,9 @@ body {
 .two-small-clouds-b1 {
   position: absolute;
   left: 8rem;
+  left: 2rem;
   top: 5rem;
+  top: 6rem;
   /* transform: rotate(180deg); */
 }
 
