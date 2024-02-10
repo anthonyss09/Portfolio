@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useState } from "react";
-import phoneSilver from "../../public/assets/images/phoneSilver.png";
 import Image from "next/image";
 import CloudSmallOne from "../assets/svgs/CloudSmallOne";
 import CloudSmallTwo from "../assets/svgs/CloudSmallTwo";
@@ -8,7 +7,6 @@ import CloudSmallThree from "../assets/svgs/CloudSmallThree";
 import CloudMed from "../assets/svgs/CloudMed";
 import BigCloud from "../assets/svgs/CloudBig";
 import blueSphere from "../../public/assets/images/blueSphere.png";
-import CloudSmallFour from "../assets/svgs/CloudSmallFour";
 import TwoSmallClouds from "../assets/svgs/TwoSmallClouds";
 
 export default function BackgroundOne() {
@@ -36,9 +34,8 @@ export default function BackgroundOne() {
       }`}
     >
       <div className="image-blue-sphere-b1">
-        <Image src={blueSphere} height={260} />
+        <Image src={blueSphere} height={260} alt="blue sphere" />
         <div className="two-small-clouds-b1">
-          {/* <CloudSmallFour /> */}
           <TwoSmallClouds />
         </div>
       </div>
@@ -57,9 +54,6 @@ export default function BackgroundOne() {
 
       <div className="clouds-phone-center">
         {" "}
-        {/* <div className="image-phone">
-          <Image src={phoneSilver} className="phone" height={130.22} />
-        </div>{" "} */}
         <div className="cloud-small-one">
           <CloudSmallOne />
         </div>

@@ -43,6 +43,7 @@ export default function BackgroundTwo() {
           height={420}
           width={420}
           className="image-blue-sphere-b2"
+          alt="blue sphere"
         />
         <p className="p-b2 p-b2-2">Between formless & form.</p>
         <Link href="#" className="link-projects">

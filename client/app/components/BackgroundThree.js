@@ -57,7 +57,7 @@ export default function BackgroundOne() {
         <Link href="#" className="link link-articles">
           View Blog
         </Link>
-        <Image src={CloudComputers} height={365} />
+        <Image src={CloudComputers} height={365} alt="cloud & computers" />
         <div className="two-small-clouds-b3">
           <TwoSmallClouds />
         </div>

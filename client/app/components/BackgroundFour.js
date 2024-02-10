@@ -18,10 +18,11 @@ export default function BackgroundFour() {
       if (window.scrollY > 2600) {
         setFadeIn(true);
         setTimeout(() => {
-          setShowText(true);
           setShowSphere(true);
         }, 1000);
-        setTimeout(() => {}, 2000);
+        setTimeout(() => {
+          setShowText(true);
+        }, 2000);
       }
       if (window.scrollY < 2600) {
         setFadeIn(false);
@@ -48,6 +49,7 @@ export default function BackgroundFour() {
           src={blueSphere}
           height={180}
           className={`blue-sphere ${showSphere ? "fade-out-image" : ""}`}
+          alt="blue sphere"
         />
         <div className="two-small-clouds-b4">
           {" "}
@@ -62,7 +64,7 @@ export default function BackgroundFour() {
         <div className="cloud-small-three-b4">
           <CloudSmallThree />
         </div>
-        <Image src={blueSphere} height={260} />
+        <Image src={blueSphere} height={260} alt="blue sphere" />
       </div>
     </section>
   );

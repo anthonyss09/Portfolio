@@ -48,11 +48,7 @@ export default function BackgroundOne() {
 
       <div className="two-small-clouds-b2">
         {" "}
-        <p className="p-b2">
-          {/* Cloud 9 is a software development & design <br />
-          concept & workspace. */}
-          Cloud 9 A concept & a workspace.
-        </p>
+        <p className="p-b2">Cloud 9 A concept & a workspace.</p>
         <TwoSmallClouds />
         <div className="cloud-small-three-b2">
           <CloudSmallThree />
@@ -63,7 +59,7 @@ export default function BackgroundOne() {
         className={`image-blue-sphere-b2 ${dropSphere ? "fade-out-image" : ""}`}
       >
         {" "}
-        <Image src={blueSphere} width={420} />
+        <Image src={blueSphere} width={420} alt="blue sphere" />
       </div>
       <div
         className={`image-blue-sphere-b2 image-blue-sphere-b2-dropped ${
@@ -71,7 +67,7 @@ export default function BackgroundOne() {
         }`}
       >
         {" "}
-        <Image src={blueSphere} width={420} />
+        <Image src={blueSphere} width={420} alt="blue sphere" />
       </div>
 
       <div className="two-med-clouds-b2-2">
