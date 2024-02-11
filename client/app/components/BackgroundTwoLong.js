@@ -17,18 +17,18 @@ export default function BackgroundOne() {
   useEffect(() => {
     const scroll = (event) => {
       setWindowY(window.scrollY);
-      if (window.scrollY > 200) {
+      if (windowY > 200) {
         setFadeIn("fade-in-image");
       }
-      if (window.scrollY < 200) {
+      if (windowY < 200) {
         setFadeIn("");
       }
-      if (window.scrollY > 1100) {
+      if (windowY > 1100) {
         setDropSphere(true);
         setFadeOutSphereOne("fade-out-sphere-1");
         setFadeInSphereTwo("fade-in-sphere-2");
       }
-      if (window.scrollY < 1100) {
+      if (windowY < 1100) {
         setDropSphere(false);
         setFadeOutSphereOne("");
         setFadeInSphereTwo("");

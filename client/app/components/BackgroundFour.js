@@ -16,7 +16,7 @@ export default function BackgroundFour() {
   useEffect(() => {
     const scroll = (event) => {
       setWindowY(window.scrollY);
-      if (window.scrollY > 2600) {
+      if (windowY > 2600) {
         setFadeIn("fade-in-image");
         setTimeout(() => {
           setFadeInSphereTwo("fade-in-sphere-2");
@@ -26,7 +26,7 @@ export default function BackgroundFour() {
           setFadeInText("fade-in-text");
         }, 2000);
       }
-      if (window.scrollY < 2600) {
+      if (windowY < 2600) {
         setFadeIn("");
         setFadeInSphereTwo("");
         setFadeOutSphereOne("");

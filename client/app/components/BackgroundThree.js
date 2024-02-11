@@ -16,10 +16,10 @@ export default function BackgroundOne() {
   useEffect(() => {
     const scroll = (event) => {
       setWindowY(window.scrollY);
-      if (window.scrollY > 1800) {
+      if (window > 1800) {
         setFadeIn("fade-in-image");
       }
-      if (window.scrollY < 1800) {
+      if (windowY < 1800) {
         setFadeIn("");
       }
     };
