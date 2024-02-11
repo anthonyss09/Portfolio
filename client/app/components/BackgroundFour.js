@@ -8,26 +8,29 @@ import CloudSmallThree from "../assets/svgs/CloudSmallThree";
 
 export default function BackgroundFour() {
   const [windowY, setWindowY] = useState(0);
-  const [fadeIn, setFadeIn] = useState(false);
-  const [showSphere, setShowSphere] = useState(false);
-  const [showText, setShowText] = useState(false);
+  const [fadeIn, setFadeIn] = useState("");
+  const [fadeInText, setFadeInText] = useState("");
+  const [fadeOutSphereOne, setFadeOutSphereOne] = useState("");
+  const [fadeInSphereTwo, setFadeInSphereTwo] = useState("");
 
   useEffect(() => {
     const scroll = (event) => {
       setWindowY(window.scrollY);
       if (window.scrollY > 2600) {
-        setFadeIn(true);
+        setFadeIn("fade-in-image");
         setTimeout(() => {
-          setShowSphere(true);
+          setFadeInSphereTwo("fade-in-sphere-2");
+          setFadeOutSphereOne("fade-out-sphere-1");
         }, 1000);
         setTimeout(() => {
-          setShowText(true);
+          setFadeInText("fade-in-text");
         }, 2000);
       }
       if (window.scrollY < 2600) {
-        setFadeIn(false);
-        setShowSphere(false);
-        setShowText(false);
+        setFadeIn("");
+        setFadeInSphereTwo("");
+        setFadeOutSphereOne("");
+        setFadeInText("");
       }
     };
     window.addEventListener("scroll", scroll, false);
@@ -35,20 +38,16 @@ export default function BackgroundFour() {
   }, [windowY]);
 
   return (
-    <section
-      className={`background background-four ${fadeIn ? "fade-in-image" : ""}`}
-    >
+    <section className={`background background-four ${fadeIn}`}>
       <div className="two-med-clouds-b4">
         <TwoMedClouds />
       </div>
-      <p className={`p-b4-1 ${showText ? "fade-in-image" : ""}`}>
-        Cloud 9 An expression of self.
-      </p>
+      <p className={`p-b4-1 ${fadeInText}`}>Cloud 9 An expression of self.</p>
       <div className={`image-blue-sphere-b4-1`}>
         <Image
           src={blueSphere}
           height={180}
-          className={`blue-sphere ${showSphere ? "fade-out-image" : ""}`}
+          className={`blue-sphere ${fadeOutSphereOne}`}
           alt="blue sphere"
         />
         <div className="two-small-clouds-b4">
@@ -56,11 +55,7 @@ export default function BackgroundFour() {
           <TwoSmallClouds />
         </div>
       </div>
-      <div
-        className={`image-blue-sphere-b4-2 ${
-          showSphere ? "fade-in-image" : ""
-        }`}
-      >
+      <div className={`image-blue-sphere-b4-2 ${fadeInSphereTwo}`}>
         <div className="cloud-small-three-b4">
           <CloudSmallThree />
         </div>

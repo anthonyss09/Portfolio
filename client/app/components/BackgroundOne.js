@@ -11,28 +11,23 @@ import TwoSmallClouds from "../assets/svgs/TwoSmallClouds";
 
 export default function BackgroundOne() {
   const [windowY, setWindowY] = useState(0);
-  const [hideBackgroundOne, setHideBackgroundOne] = useState(false);
+  const [fadeOutImage, setFadeOutImage] = useState("");
 
   useEffect(() => {
     const scroll = (event) => {
       setWindowY(window.scrollY);
       if (windowY < 100) {
-        setHideBackgroundOne(false);
+        setFadeOutImage("");
       } else if (windowY > 100) {
-        setHideBackgroundOne(true);
+        setFadeOutImage("fade-out-image");
       }
     };
-    console.log(hideBackgroundOne);
 
     window.addEventListener("scroll", scroll, false);
     return () => window.removeEventListener("scroll", scroll, false);
-  }, [windowY, hideBackgroundOne]);
+  }, [windowY]);
   return (
-    <section
-      className={`background background-one  ${
-        hideBackgroundOne ? "fade-out-image" : ""
-      }`}
-    >
+    <section className={`background background-one  ${fadeOutImage}`}>
       <div className="image-blue-sphere-b1">
         <Image src={blueSphere} height={260} alt="blue sphere" />
         <div className="two-small-clouds-b1">

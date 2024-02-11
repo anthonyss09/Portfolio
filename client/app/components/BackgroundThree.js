@@ -11,16 +11,16 @@ import CloudMed from "../assets/svgs/CloudMed";
 
 export default function BackgroundOne() {
   const [windowY, setWindowY] = useState(0);
-  const [fadeIn, setFadeIn] = useState(false);
+  const [fadeIn, setFadeIn] = useState("");
 
   useEffect(() => {
     const scroll = (event) => {
       setWindowY(window.scrollY);
       if (window.scrollY > 1800) {
-        setFadeIn(true);
+        setFadeIn("fade-in-image");
       }
       if (window.scrollY < 1800) {
-        setFadeIn(false);
+        setFadeIn("");
       }
     };
     window.addEventListener("scroll", scroll, false);
@@ -28,9 +28,7 @@ export default function BackgroundOne() {
   }, [windowY]);
 
   return (
-    <section
-      className={`background background-three ${fadeIn ? "fade-in-image" : ""}`}
-    >
+    <section className={`background background-three ${fadeIn}`}>
       <div className="cloud-small-one-b3">
         <CloudSmallOne />
       </div>

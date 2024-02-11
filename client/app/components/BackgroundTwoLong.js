@@ -10,38 +10,36 @@ import Blocks3dBack from "../assets/svgs/Blocks3dBack";
 
 export default function BackgroundOne() {
   const [windowY, setWindowY] = useState(0);
-  const [fadeIn, setFadeIn] = useState(false);
-  const [dropSphere, setDropSphere] = useState(false);
+  const [fadeIn, setFadeIn] = useState("");
+  const [fadeOutSphereOne, setFadeOutSphereOne] = useState("");
+  const [fadeInSphereTwo, setFadeInSphereTwo] = useState("");
 
   useEffect(() => {
     const scroll = (event) => {
       setWindowY(window.scrollY);
       if (window.scrollY > 200) {
-        setFadeIn(true);
+        setFadeIn("fade-in-image");
       }
       if (window.scrollY < 200) {
-        setFadeIn(false);
+        setFadeIn("");
       }
       if (window.scrollY > 1100) {
         setDropSphere(true);
+        setFadeOutSphereOne("fade-out-sphere-1");
+        setFadeInSphereTwo("fade-in-sphere-2");
       }
       if (window.scrollY < 1100) {
         setDropSphere(false);
+        setFadeOutSphereOne("");
+        setFadeInSphereTwo("");
       }
-      // if (window.scrollY > 1800) {
-      //   setFadeIn(false);
-      // }
     };
     window.addEventListener("scroll", scroll, false);
     return () => window.removeEventListener("scroll", scroll, false);
   }, [windowY]);
 
   return (
-    <section
-      className={`background background-two ${
-        fadeIn ? "fade-in-image scroll-into-view" : ""
-      }`}
-    >
+    <section className={`background background-two ${fadeIn}`}>
       <div className="two-med-clouds-b2">
         <TwoMedClouds />
       </div>
@@ -55,16 +53,12 @@ export default function BackgroundOne() {
         </div>
       </div>
 
-      <div
-        className={`image-blue-sphere-b2 ${dropSphere ? "fade-out-image" : ""}`}
-      >
+      <div className={`image-blue-sphere-b2 ${fadeOutSphereOne}`}>
         {" "}
         <Image src={blueSphere} width={420} alt="blue sphere" />
       </div>
       <div
-        className={`image-blue-sphere-b2 image-blue-sphere-b2-dropped ${
-          dropSphere ? "fade-in-image" : ""
-        }`}
+        className={`image-blue-sphere-b2 image-blue-sphere-b2-dropped ${fadeInSphereTwo}`}
       >
         {" "}
         <Image src={blueSphere} width={420} alt="blue sphere" />
