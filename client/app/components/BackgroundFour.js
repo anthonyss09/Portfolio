@@ -21,10 +21,10 @@ export default function BackgroundFour() {
         setTimeout(() => {
           setFadeInSphereTwo("fade-in-sphere-2");
           setFadeOutSphereOne("fade-out-sphere-1");
-        }, 1000);
+        }, 500);
         setTimeout(() => {
           setFadeInText("fade-in-text");
-        }, 2000);
+        }, 1500);
       }
       if (windowY < 2600) {
         setFadeIn("");
