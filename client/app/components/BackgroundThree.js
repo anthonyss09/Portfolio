@@ -1,5 +1,3 @@
-"use client";
-import { useEffect, useState } from "react";
 import Image from "next/image";
 import CloudBigB3 from "../assets/svgs/CloudBigB3";
 import CloudComputers from "../../public/assets/images/cloudComputers.png";
@@ -10,25 +8,8 @@ import CloudSmallThree from "../assets/svgs/CloudSmallThree";
 import CloudMed from "../assets/svgs/CloudMed";
 
 export default function BackgroundOne() {
-  const [windowY, setWindowY] = useState(0);
-  const [fadeIn, setFadeIn] = useState("");
-
-  useEffect(() => {
-    const scroll = (event) => {
-      setWindowY(window.scrollY);
-      if (window > 1800) {
-        setFadeIn("fade-in-image");
-      }
-      if (windowY < 1800) {
-        setFadeIn("");
-      }
-    };
-    window.addEventListener("scroll", scroll, false);
-    return () => window.removeEventListener("scroll", scroll, false);
-  }, [windowY]);
-
   return (
-    <section className={`background background-three ${fadeIn}`}>
+    <section id="background-three" className={`background background-three`}>
       <div className="cloud-small-one-b3">
         <CloudSmallOne />
       </div>

@@ -1,107 +1,120 @@
-//write scroll animation
-
-const scrollDown = (startingY, height, duration, position, setPosition) => {
-  const start = document.timeline.currentTime;
+const fadeInElement = (targetId, duration) => {
   requestAnimationFrame(animate);
+  const start = document.timeline.currentTime;
 
   function animate() {
     const now = document.timeline.currentTime;
+    const element = document.getElementById(targetId);
     const delta = (now - start) / duration;
-    const yCoord = delta * height + startingY;
     if (delta < 1) {
-      window.scrollTo(0, yCoord);
+      element.style.opacity = delta;
       requestAnimationFrame(() => {
         animate();
       });
     } else {
+      return;
     }
   }
 };
 
-const scrollUp = (startingY, height, duration) => {
-  const start = document.timeline.currentTime;
+const fadeOutElement = (targetId, duration) => {
   requestAnimationFrame(animate);
+  const start = document.timeline.currentTime;
 
   function animate() {
     const now = document.timeline.currentTime;
-    const delta = (now - start) / duration;
-    const yCoord = startingY - delta * height;
-    if (delta < 1) {
-      window.scrollTo(0, yCoord);
+    const element = document.getElementById(targetId);
+    const delta = (duration - (now - start)) / duration;
+    if (delta > 0) {
+      element.style.opacity = delta;
       requestAnimationFrame(() => {
         animate();
       });
     } else {
+      return;
     }
   }
 };
 
-const animateScroll = (position, setPosition) => {
-  console.log("listener added");
-  console.log(position);
-
+const fadeAnimationLanding = (position, setPosition) => {
   switch (position) {
     case "position-1":
       if (window.scrollY > 100) {
-        // scrollDown(100, 660, 1000);
-        window.scrollTo({ top: 760, behavior: "smooth" });
+        fadeOutElement("background-one", 1000);
+        fadeInElement("background-two", 1000);
+        fadeInElement("p-b2-1", 1000);
+        fadeInElement("image-blue-sphere-b2-1", 1000);
         setPosition("");
         setTimeout(() => {
           setPosition("position-2");
         }, 1000);
       }
       break;
+
     case "position-2":
       if (window.scrollY > 860) {
-        // scrollDown(860, 860, 1000);
-        window.scrollTo({ top: 1740, behavior: "smooth" });
+        fadeOutElement("p-b2-1", 1000);
+        fadeOutElement("image-blue-sphere-b2-1", 1000);
+        fadeInElement("blocks-back-b2", 1000);
         setPosition("");
         setTimeout(() => {
           setPosition("position-3");
         }, 1000);
       } else if (window.scrollY < 660) {
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        fadeInElement("background-one", 1000);
         setPosition("");
         setTimeout(() => {
           setPosition("position-1");
         }, 1000);
       }
       break;
+
     case "position-3":
       if (window.scrollY > 1840) {
-        // scrollDown(1840, 600, 1000);
-        window.scrollTo({ top: 2440, behavior: "smooth" });
+        fadeOutElement("blocks-back-b2", 1000);
+        fadeInElement("background-three", 1000);
         setPosition("");
         setTimeout(() => {
           setPosition("position-4");
         }, 1000);
       } else if (window.scrollY < 1640) {
-        window.scrollTo({ top: 760, behavior: "smooth" });
+        fadeInElement("background-two", 1000);
+        fadeInElement("image-blue-sphere-b2-1", 1000);
+        fadeInElement("p-b2-1", 1000);
         setPosition("");
         setTimeout(() => {
           setPosition("position-2");
         }, 1000);
       }
       break;
+
     case "position-4":
       if (window.scrollY > 2540) {
-        // scrollDown(2540, 760, 1000);
-        window.scrollTo({ top: 3300, behavior: "smooth" });
+        fadeOutElement("background-three", 1000);
+        fadeInElement("background-four", 1000);
+        setTimeout(() => {
+          fadeOutElement("image-blue-sphere-b4-1", 1000);
+          fadeInElement("image-blue-sphere-b4-2", 1000);
+        }, 500);
+        setTimeout(() => {
+          fadeInElement("p-b4-1", 1000);
+        }, 1500);
         setPosition("");
         setTimeout(() => {
           setPosition("position-5");
         }, 1000);
       } else if (window.scrollY < 2340) {
-        window.scrollTo({ top: 1740, behavior: "smooth" });
+        fadeInElement("blocks-back-b2", 1000);
         setPosition("");
         setTimeout(() => {
           setPosition("position-3");
         }, 1000);
       }
       break;
+
     case "position-5":
       if (window.scrollY < 3200) {
-        window.scrollTo({ top: 2440, behavior: "smooth" });
+        fadeInElement("background-three", 1000);
         setPosition("");
         setTimeout(() => {
           setPosition("position-4");
@@ -112,4 +125,4 @@ const animateScroll = (position, setPosition) => {
   }
 };
 
-export { animateScroll };
+export { fadeInElement, fadeOutElement, fadeAnimationLanding };

@@ -84,12 +84,12 @@ body {
   display: flex;
   justify-content: center;
   padding-bottom: 7rem;
-  /* opacity: 0; */
+  opacity: 0;
 }
 
 .background-four {
   position: relative;
-  /* opacity: 0; */
+  opacity: 0;
 }
 
 .blocks-back {
@@ -109,6 +109,7 @@ body {
   grid-template-rows: 1;
   z-index: -3;
   top: 980px;
+  opacity: 0;
 }
 
 .blocks-svg {
@@ -269,19 +270,21 @@ body {
   top: 520px;
   z-index: -1;
   transition: 1s ease-in-out all;
+  opacity: 0;
 }
 
 .image-blue-sphere-b2-dropped {
+  top: 200px;
   margin-left: -6rem;
-  top: 1160px;
   opacity: 0;
+  z-index: 5;
 }
 
 .image-blue-sphere-b2-2 {
   position: absolute;
-  top: 460px;
-  left: 2vw;
-  width: 340px;
+  top: 200px;
+  margin-left: -6rem;
+  z-index: 5;
   transition: 0.3s ease-out all;
 }
 
@@ -355,13 +358,12 @@ body {
   height: 6rem;
   position: fixed;
   top: 0;
-  background: white;
   background: none;
   padding: 0 2rem;
   padding-bottom: 0.4rem;
   display: flex;
   z-index: 12;
-  background: rgb(252, 252, 252, 0.6);
+  background: var(--light-blue-grey);
   box-shadow: 0 4px 30px #ced9df60;
   transition: all 0.2s ease-out;
 }
@@ -386,15 +388,20 @@ body {
   position: absolute;
   top: 4rem;
   left: -1rem;
+  z-index: 2;
 }
 
 .p-b2-1 {
+  opacity: 0;
+}
+
+.p-b2-2 {
   font-size: 20px;
   top: 10rem;
   left: 6rem;
 }
 
-.p-b2-2 {
+.p-b2-3 {
   font-size: 20px;
   top: 31rem;
   left: 6rem;

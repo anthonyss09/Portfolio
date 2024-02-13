@@ -1,5 +1,3 @@
-"use client";
-import { useEffect, useState } from "react";
 import Image from "next/image";
 import CloudSmallOne from "../assets/svgs/CloudSmallOne";
 import CloudSmallTwo from "../assets/svgs/CloudSmallTwo";
@@ -10,24 +8,8 @@ import blueSphere from "../../public/assets/images/blueSphere.png";
 import TwoSmallClouds from "../assets/svgs/TwoSmallClouds";
 
 export default function BackgroundOne() {
-  const [windowY, setWindowY] = useState(0);
-  const [fadeOutImage, setFadeOutImage] = useState("");
-
-  useEffect(() => {
-    const scroll = (event) => {
-      setWindowY(window.scrollY);
-      if (windowY < 100) {
-        setFadeOutImage("");
-      } else if (windowY > 100) {
-        setFadeOutImage("fade-out-image");
-      }
-    };
-
-    window.addEventListener("scroll", scroll, false);
-    return () => window.removeEventListener("scroll", scroll, false);
-  }, [windowY]);
   return (
-    <section className={`background background-one  ${fadeOutImage}`}>
+    <section id="background-one" className={`background background-one`}>
       <div className="image-blue-sphere-b1">
         <Image src={blueSphere} height={260} alt="blue sphere" />
         <div className="two-small-clouds-b1">

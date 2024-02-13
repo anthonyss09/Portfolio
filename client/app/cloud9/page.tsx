@@ -6,7 +6,8 @@ import BackgroundTwoLong from "../components/BackgroundTwoLong";
 import BackgroundThree from "../components/BackgroundThree";
 import BackgroundFour from "../components/BackgroundFour";
 import { useState, useEffect } from "react";
-import { animateScroll } from "../modules/animateScroll";
+import { scrollAnimationLanding } from "../modules/scrollAnimations";
+import { fadeAnimationLanding } from "../modules/fadeAnimations";
 
 export default function Home() {
   const [position, setPosition] = useState("position-1");
@@ -16,13 +17,13 @@ export default function Home() {
   useEffect(() => {
     function scroll() {
       if (window.scrollY < windowY) {
-        console.log("going up");
         setNavbarClass("navbar-reduced");
       } else {
         setNavbarClass("");
       }
       setWindowY(window.scrollY);
-      animateScroll(position, setPosition);
+      scrollAnimationLanding(position, setPosition);
+      fadeAnimationLanding(position, setPosition);
     }
     window.addEventListener("scroll", scroll);
     return () => {
