@@ -24,12 +24,10 @@ export default function BackgroundOne() {
         setFadeIn("");
       }
       if (windowY > 1100) {
-        setDropSphere(true);
         setFadeOutSphereOne("fade-out-sphere-1");
         setFadeInSphereTwo("fade-in-sphere-2");
       }
       if (windowY < 1100) {
-        setDropSphere(false);
         setFadeOutSphereOne("");
         setFadeInSphereTwo("");
       }

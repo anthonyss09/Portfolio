@@ -13,6 +13,7 @@
   font-family: "M PLUS Rounded 1c", sans-serif;
   box-sizing: border-box;
   letter-spacing: 0.03rem;
+  margin: 0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -83,12 +84,12 @@ body {
   display: flex;
   justify-content: center;
   padding-bottom: 7rem;
-  opacity: 0;
+  /* opacity: 0; */
 }
 
 .background-four {
   position: relative;
-  opacity: 0;
+  /* opacity: 0; */
 }
 
 .blocks-back {
@@ -357,8 +358,11 @@ body {
   background: white;
   background: none;
   padding: 0 2rem;
+  padding-bottom: 0.4rem;
   display: flex;
   z-index: 12;
+  background: rgb(252, 252, 252, 0.7);
+  box-shadow: 0 4px 30px #ced9df60;
 }
 
 .nav-bar-row-flex {
@@ -420,6 +424,7 @@ body {
 .page-name {
   position: fixed;
   top: 5.6rem;
+  top: 6.4rem;
   left: 4rem;
   font-weight: 500;
   font-size: 16px;
