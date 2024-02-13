@@ -10,16 +10,25 @@ import { animateScroll } from "../modules/animateScroll";
 
 export default function Home() {
   const [position, setPosition] = useState("position-1");
+  const [windowY, setWindowY] = useState(0);
+  const [navbarClass, setNavbarClass] = useState("");
 
   useEffect(() => {
     function scroll() {
+      if (window.scrollY < windowY) {
+        console.log("going up");
+        setNavbarClass("navbar-reduced");
+      } else {
+        setNavbarClass("");
+      }
+      setWindowY(window.scrollY);
       animateScroll(position, setPosition);
     }
     window.addEventListener("scroll", scroll);
     return () => {
       window.removeEventListener("scroll", scroll);
     };
-  }, [position, setPosition]);
+  }, [windowY, position, setPosition]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -27,7 +36,7 @@ export default function Home() {
 
   return (
     <main className="main">
-      <NavBar />
+      <NavBar navbarClass={navbarClass} />
       <BackgroundOne />
       <BackgroundTwoLong />
       <BackgroundThree />

@@ -1,7 +1,8 @@
 "use client";
 import Logo from "../components/Logo";
 import { useState, useEffect } from "react";
-export default function NavBar() {
+
+export default function NavBar({ navbarClass }) {
   const [pageName, setPageName] = useState("Software Development & Design.");
 
   useEffect(() => {
@@ -19,8 +20,8 @@ export default function NavBar() {
     return () => window.removeEventListener("scroll", scroll, false);
   }, [pageName]);
   return (
-    <nav className="nav-bar">
-      <div className="nav-bar-row-flex">
+    <nav className={`navbar ${navbarClass}`}>
+      <div className="navbar-row-flex">
         <Logo />
 
         <div className="icon-bars">

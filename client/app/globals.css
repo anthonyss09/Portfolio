@@ -237,9 +237,11 @@ body {
 
 .icon-bars {
   height: 30px;
-  position: absolute;
-  right: 4rem;
-  top: 3.8rem;
+  width: 30px;
+
+  /* position: absolute; */
+  /* right: 4rem;
+  top: 3.8rem; */
 }
 
 .image-phone {
@@ -348,10 +350,8 @@ body {
   overflow-x: hidden;
 }
 
-.nav-bar {
+.navbar {
   width: 100vw;
-  height: 107px;
-  height: 130px;
   height: 6rem;
   position: fixed;
   top: 0;
@@ -363,11 +363,19 @@ body {
   z-index: 12;
   background: rgb(252, 252, 252, 0.6);
   box-shadow: 0 4px 30px #ced9df60;
+  transition: all 0.2s ease-out;
 }
 
-.nav-bar-row-flex {
+.navbar-reduced {
+  height: 5rem;
+}
+
+.navbar-row-flex {
+  width: 100vw;
+  height: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
 .p-b2 {
