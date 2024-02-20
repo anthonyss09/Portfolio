@@ -21,39 +21,46 @@ export default function Home() {
   const pauseScrollRef = useRef(false);
   const windowPositionRef = useRef(1);
   const touchStartYRef = useRef(0);
-  const touchEndYRef = useRef(0);
+
+  const handleScrollUpAnimations = () => {
+    //height animations
+    setNavbarClass("navbar-reduced");
+    setFooterClass("footer-height");
+    //index animations
+    setTimeout(() => {}, 1500);
+    windowPositionRef.current--;
+    //scroll animations
+    setMainInnerPosition("position-" + windowPositionRef.current);
+    //special fade animation cases
+    scrollUpFadeAnimations(windowPositionRef.current);
+  };
+
+  const handleScrollDownAnimations = () => {
+    if (windowPositionRef.current === 5) {
+      return;
+    }
+    //height animations
+    setNavbarClass("");
+    setFooterClass("");
+    windowPositionRef.current++;
+    //scroll animations
+    setMainInnerPosition("position-" + windowPositionRef.current);
+    //special fade animation cases
+    scrollDownFadeAnimations(windowPositionRef.current);
+  };
 
   const wheel = (e) => {
     if (!pauseScrollRef.current) {
       pauseScrollRef.current = true;
       setToFront("");
-
       //if scrolling down
       if (e.deltaY > 0 && windowPositionRef.current < 5) {
-        //height animations
-        setNavbarClass("");
-        setFooterClass("");
-        windowPositionRef.current++;
-        //scroll animations
-        setMainInnerPosition("position-" + windowPositionRef.current);
-        //special fade animation cases
-        scrollDownFadeAnimations(windowPositionRef.current);
+        handleScrollDownAnimations();
       }
-
       //if scrolling up
       if (e.deltaY < 0 && windowPositionRef.current > 1) {
-        //height animations
-        setNavbarClass("navbar-reduced");
-        setFooterClass("footer-height");
-        //index animations
-        setTimeout(() => {}, 1500);
-        windowPositionRef.current--;
-        //scroll animations
-        setMainInnerPosition("position-" + windowPositionRef.current);
-        //special fade animation cases
-        scrollUpFadeAnimations(windowPositionRef.current);
+        handleScrollUpAnimations();
       }
-
       setTimeout(() => {
         pauseScrollRef.current = false;
         setToFront("to-front");
@@ -68,36 +75,14 @@ export default function Home() {
   const touchEnd = (e) => {
     const deltaY =
       Number(e.changedTouches[0].clientY) - Number(touchStartYRef.current);
-
     //if scrolling down
     if (deltaY < 0) {
-      if (windowPositionRef.current === 5) {
-        return;
-      }
-      //height animations
-      setNavbarClass("");
-      setFooterClass("");
-      windowPositionRef.current++;
-      //scroll animations
-      setMainInnerPosition("position-" + windowPositionRef.current);
-      //special fade animation cases
-      scrollDownFadeAnimations(windowPositionRef.current);
+      handleScrollDownAnimations();
     }
-
     //if scrolling up
     if (deltaY > 0) {
-      //height animations
-      setNavbarClass("navbar-reduced");
-      setFooterClass("footer-height");
-      //index animations
-      setTimeout(() => {}, 1500);
-      windowPositionRef.current--;
-      //scroll animations
-      setMainInnerPosition("position-" + windowPositionRef.current);
-      //special fade animation cases
-      scrollUpFadeAnimations(windowPositionRef.current);
+      handleScrollUpAnimations();
     }
-
     if (deltaY === 0) {
       return;
     }
@@ -105,34 +90,13 @@ export default function Home() {
 
   const keyDown = (e) => {
     console.log(e.keyCode);
-
     //if scrolling down
     if (e.keyCode === 40) {
-      if (windowPositionRef.current === 5) {
-        return;
-      }
-      //height animations
-      setNavbarClass("");
-      setFooterClass("");
-      windowPositionRef.current++;
-      //scroll animations
-      setMainInnerPosition("position-" + windowPositionRef.current);
-      //special fade animation cases
-      scrollDownFadeAnimations(windowPositionRef.current);
+      handleScrollDownAnimations();
     }
-
     //if scrolling up
     if (e.keyCode === 38) {
-      //height animations
-      setNavbarClass("navbar-reduced");
-      setFooterClass("footer-height");
-      //index animations
-      setTimeout(() => {}, 1500);
-      windowPositionRef.current--;
-      //scroll animations
-      setMainInnerPosition("position-" + windowPositionRef.current);
-      //special fade animation cases
-      scrollUpFadeAnimations(windowPositionRef.current);
+      handleScrollUpAnimations();
     }
   };
 
