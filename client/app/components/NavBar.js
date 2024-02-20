@@ -3,25 +3,11 @@ import Logo from "../components/Logo";
 import { useState, useEffect } from "react";
 import SidebarMain from "../components/SidebarMain";
 
-export default function NavBar({ navbarClass }) {
-  const [pageName, setPageName] = useState("");
+export default function NavBar({ navbarClass, toFront }) {
+  const [pageName, setPageName] = useState("Software & Design.");
 
-  useEffect(() => {
-    const scroll = (event) => {
-      if (window.scrollY < 200) {
-        // setPageName("Software Development & Design.");
-      } else if (window.scrollY > 200 && window.scrollY < 2000) {
-        setPageName("");
-      } else if ((window.scrollY > 2000) & (window.scrollY < 4000)) {
-        // setPageName("Blog");
-      }
-    };
-
-    window.addEventListener("scroll", scroll, false);
-    return () => window.removeEventListener("scroll", scroll, false);
-  }, [pageName]);
   return (
-    <nav className={`navbar ${navbarClass}`}>
+    <nav className={`navbar ${navbarClass} `}>
       <div className="navbar-row-flex">
         <Logo />
 

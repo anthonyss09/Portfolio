@@ -274,17 +274,18 @@ body {
   opacity: 0;
 }
 
-.image-blue-sphere-b2-dropped {
+/* .image-blue-sphere-b2-dropped {
   top: 200px;
   margin-left: -6rem;
   opacity: 0;
   z-index: 5;
-}
+} */
 
 .image-blue-sphere-b2-2 {
   position: absolute;
   top: 200px;
   margin-left: -6rem;
+  margin-left: 0;
   z-index: 5;
   transition: 0.3s ease-out all;
 }
@@ -308,16 +309,26 @@ body {
 }
 
 .footer {
-  height: 6rem;
+  /* height: 6rem; */
+  height: 0rem;
   width: 100vw;
+  overflow-y: hidden;
   display: flex;
   padding: 0 2rem;
   justify-content: space-between;
   align-items: center;
-  /* margin: 0 2rem; */
-  /* position: absolute; */
-  bottom: 6rem;
+  position: fixed;
+  bottom: 0;
   /* box-shadow: 0 -4px 30px #ced9df60; */
+  transition: all 0.3s ease-out;
+  /* z-index: -1; */
+  z-index: 20;
+  opacity: 0.4;
+}
+
+.footer-height {
+  height: 6rem;
+  background: rgb(252, 252, 252);
 }
 
 .link {
@@ -416,6 +427,8 @@ body {
 
 .navbar-reduced {
   height: 5rem;
+  /* box-shadow: none; */
+  background: white;
 }
 
 .navbar-row-flex {
@@ -493,6 +506,12 @@ body {
 
 .reduce-height {
   margin-top: -760px;
+}
+
+.to-front {
+  /* z-index: 20; */
+  opacity: 0.95;
+  opacity: 0.9;
 }
 
 .two-med-clouds-b2 {
