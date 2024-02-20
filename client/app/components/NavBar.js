@@ -1,14 +1,15 @@
 "use client";
 import Logo from "../components/Logo";
 import { useState, useEffect } from "react";
+import SidebarMain from "../components/SidebarMain";
 
 export default function NavBar({ navbarClass }) {
-  const [pageName, setPageName] = useState("Software Development & Design.");
+  const [pageName, setPageName] = useState("");
 
   useEffect(() => {
     const scroll = (event) => {
       if (window.scrollY < 200) {
-        setPageName("Software Development & Design.");
+        // setPageName("Software Development & Design.");
       } else if (window.scrollY > 200 && window.scrollY < 2000) {
         setPageName("");
       } else if ((window.scrollY > 2000) & (window.scrollY < 4000)) {

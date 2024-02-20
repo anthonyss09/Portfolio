@@ -9,7 +9,7 @@ import TwoSmallClouds from "../assets/svgs/TwoSmallClouds";
 
 export default function BackgroundOne() {
   return (
-    <section id="background-one" className={`background background-one`}>
+    <section id="background-1" className={`background background-one`}>
       <div className="image-blue-sphere-b1">
         <Image src={blueSphere} height={260} alt="blue sphere" />
         <div className="two-small-clouds-b1">

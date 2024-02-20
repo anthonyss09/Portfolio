@@ -34,81 +34,68 @@ const scrollUp = (startingY, height, duration) => {
   }
 };
 
-const scrollAnimationLanding = (position, setPosition) => {
-  switch (position) {
-    case "position-1":
-      if (window.scrollY > 100) {
-        // scrollDown(100, 660, 1000);
-        window.scrollTo({ top: 760, behavior: "smooth" });
-        setPosition("");
-        setTimeout(() => {
-          setPosition("position-2");
-        }, 1000);
-      }
-      break;
-
-    case "position-2":
-      if (window.scrollY > 860) {
-        // scrollDown(860, 860, 1000);
-        window.scrollTo({ top: 1740, behavior: "smooth" });
-        setPosition("");
-        setTimeout(() => {
-          setPosition("position-3");
-        }, 1000);
-      } else if (window.scrollY < 660) {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-        setPosition("");
-        setTimeout(() => {
-          setPosition("position-1");
-        }, 1000);
-      }
-      break;
-
-    case "position-3":
-      if (window.scrollY > 1840) {
-        // scrollDown(1840, 600, 1000);
-        window.scrollTo({ top: 2440, behavior: "smooth" });
-        setPosition("");
-        setTimeout(() => {
-          setPosition("position-4");
-        }, 1000);
-      } else if (window.scrollY < 1640) {
-        window.scrollTo({ top: 760, behavior: "smooth" });
-        setPosition("");
-        setTimeout(() => {
-          setPosition("position-2");
-        }, 1000);
-      }
-      break;
-
-    case "position-4":
-      if (window.scrollY > 2540) {
-        // scrollDown(2540, 760, 1000);
-        window.scrollTo({ top: 3300, behavior: "smooth" });
-        setPosition("");
-        setTimeout(() => {
-          setPosition("position-5");
-        }, 1000);
-      } else if (window.scrollY < 2340) {
-        window.scrollTo({ top: 1740, behavior: "smooth" });
-        setPosition("");
-        setTimeout(() => {
-          setPosition("position-3");
-        }, 1000);
-      }
-      break;
-
-    case "position-5":
-      if (window.scrollY < 3200) {
-        window.scrollTo({ top: 2440, behavior: "smooth" });
-        setPosition("");
-        setTimeout(() => {
-          setPosition("position-4");
-        }, 1000);
-      }
-    default:
-      break;
+const scrollAnimationLanding = (
+  scrollDirection,
+  windowPosition,
+  setWindowPosition,
+  setInnerPosition
+) => {
+  let newPosition;
+  if (scrollDirection === "down") {
+    newPosition = windowPosition + 1;
+    switch (windowPosition) {
+      case 1:
+        console.log(windowPosition);
+        setInnerPosition("position-2");
+        break;
+      case 2:
+        console.log("position 2");
+        setInnerPosition("position-3");
+        break;
+      case 3:
+        console.log("position 3");
+        setInnerPosition("position-4");
+        break;
+      case 4:
+        console.log("position 4");
+        setInnerPosition("position-5");
+        break;
+      case 5:
+        console.log(windowPosition);
+        break;
+      default:
+        break;
+    }
+  } else if (scrollDirection === "up") {
+    switch (windowPosition) {
+      case 1:
+        console.log(windowPosition);
+        // window.scrollTo({ top: 760, behavior: "smooth" });
+        break;
+      case 2:
+        console.log("position 2");
+        setInnerPosition("position-1");
+        break;
+      case 3:
+        console.log("position 3");
+        setInnerPosition("position-2");
+        break;
+      case 4:
+        console.log("position 4");
+        setInnerPosition("position-3");
+        break;
+      case 5:
+        console.log("position 5");
+        setInnerPosition("position-4");
+      default:
+        break;
+    }
+    newPosition = windowPosition - 1;
   }
+
+  setTimeout(() => {
+    setWindowPosition(newPosition);
+  }, 1000);
 };
 
 export { scrollAnimationLanding };

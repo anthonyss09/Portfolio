@@ -8,7 +8,7 @@ import Blocks3dBack from "../assets/svgs/Blocks3dBack";
 
 export default function BackgroundOne() {
   return (
-    <section id="background-two" className={`background background-two`}>
+    <section id="background-2" className={`background background-two`}>
       <div className="two-med-clouds-b2">
         <TwoMedClouds />
       </div>

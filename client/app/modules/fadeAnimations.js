@@ -36,93 +36,67 @@ const fadeOutElement = (targetId, duration) => {
   }
 };
 
-const fadeAnimationLanding = (position, setPosition) => {
-  switch (position) {
-    case "position-1":
-      if (window.scrollY > 100) {
-        fadeOutElement("background-one", 1000);
-        fadeInElement("background-two", 1000);
-        fadeInElement("p-b2-1", 1000);
-        fadeInElement("image-blue-sphere-b2-1", 1000);
-        setPosition("");
-        setTimeout(() => {
-          setPosition("position-2");
-        }, 1000);
-      }
+const scrollDownFadeAnimations = (windowPosition) => {
+  switch (windowPosition) {
+    case 2:
+      fadeOutElement("background-1", 1000);
+      fadeInElement("background-2", 1000);
+      fadeInElement("image-blue-sphere-b2-1", 1000);
       break;
-
-    case "position-2":
-      if (window.scrollY > 860) {
-        fadeOutElement("p-b2-1", 1000);
-        fadeOutElement("image-blue-sphere-b2-1", 1000);
-        fadeInElement("blocks-back-b2", 1000);
-        setPosition("");
-        setTimeout(() => {
-          setPosition("position-3");
-        }, 1000);
-      } else if (window.scrollY < 660) {
-        fadeInElement("background-one", 1000);
-        setPosition("");
-        setTimeout(() => {
-          setPosition("position-1");
-        }, 1000);
-      }
+    case 3:
+      fadeOutElement("image-blue-sphere-b2-1", 500);
+      fadeInElement("blocks-back-b2", 1000);
+      fadeInElement("image-blue-sphere-b2-2", 1000);
       break;
-
-    case "position-3":
-      if (window.scrollY > 1840) {
-        fadeOutElement("blocks-back-b2", 1000);
-        fadeInElement("background-three", 1000);
-        setPosition("");
-        setTimeout(() => {
-          setPosition("position-4");
-        }, 1000);
-      } else if (window.scrollY < 1640) {
-        fadeInElement("background-two", 1000);
-        fadeInElement("image-blue-sphere-b2-1", 1000);
-        fadeInElement("p-b2-1", 1000);
-        setPosition("");
-        setTimeout(() => {
-          setPosition("position-2");
-        }, 1000);
-      }
+    case 4:
+      fadeInElement("background-4", 1000);
+      fadeOutElement("blocks-back-b2", 1000);
+      fadeOutElement("image-blue-sphere-b2-2", 1000);
       break;
-
-    case "position-4":
-      if (window.scrollY > 2540) {
-        fadeOutElement("background-three", 1000);
-        fadeInElement("background-four", 1000);
-        setTimeout(() => {
-          fadeOutElement("image-blue-sphere-b4-1", 1000);
-          fadeInElement("image-blue-sphere-b4-2", 1000);
-        }, 500);
-        setTimeout(() => {
-          fadeInElement("p-b4-1", 1000);
-        }, 1500);
-        setPosition("");
-        setTimeout(() => {
-          setPosition("position-5");
-        }, 1000);
-      } else if (window.scrollY < 2340) {
-        fadeInElement("blocks-back-b2", 1000);
-        setPosition("");
-        setTimeout(() => {
-          setPosition("position-3");
-        }, 1000);
-      }
+    case 5:
+      fadeInElement("background-5", 1000);
+      fadeOutElement("background-4", 1000);
+      fadeInElement("image-blue-sphere-b4-2", 1000);
+      fadeInElement("p-b4-1", 1000);
+      fadeOutElement("image-blue-sphere-b4-1", 1000);
       break;
-
-    case "position-5":
-      if (window.scrollY < 3200) {
-        fadeInElement("background-three", 1000);
-        setPosition("");
-        setTimeout(() => {
-          setPosition("position-4");
-        }, 1000);
-      }
     default:
       break;
   }
 };
 
-export { fadeInElement, fadeOutElement, fadeAnimationLanding };
+const scrollUpFadeAnimations = (windowPosition) => {
+  switch (windowPosition) {
+    case 1:
+      fadeInElement("background-1", 1000);
+      fadeOutElement("background-2", 1000);
+      fadeOutElement("image-blue-sphere-b2-1", 1000);
+      break;
+    case 2:
+      fadeInElement("image-blue-sphere-b2-1", 500);
+      fadeOutElement("blocks-back-b2", 1000);
+      fadeOutElement("image-blue-sphere-b2-2", 1000);
+      break;
+    case 3:
+      fadeOutElement("background-4", 1000);
+      fadeInElement("blocks-back-b2", 1000);
+      fadeInElement("image-blue-sphere-b2-2", 1000);
+      break;
+    case 4:
+      fadeInElement("background-4", 1000);
+      fadeOutElement("background-5", 1000);
+      fadeInElement("image-blue-sphere-b4-1", 1000);
+      fadeOutElement("image-blue-sphere-b4-2", 1000);
+      fadeOutElement("p-b4-1", 1000);
+      break;
+    default:
+      break;
+  }
+};
+
+export {
+  fadeInElement,
+  fadeOutElement,
+  scrollDownFadeAnimations,
+  scrollUpFadeAnimations,
+};

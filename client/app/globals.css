@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap");
 
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
-
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -245,6 +241,11 @@ body {
   top: 3.8rem; */
 }
 
+.image-cloud-network-sidebar {
+  width: 90vw;
+  height: 45vh;
+}
+
 .image-phone {
   align-self: center;
   margin-top: -4rem;
@@ -306,6 +307,19 @@ body {
   transition: 1s ease-in all;
 }
 
+.footer {
+  height: 6rem;
+  width: 100vw;
+  display: flex;
+  padding: 0 2rem;
+  justify-content: space-between;
+  align-items: center;
+  /* margin: 0 2rem; */
+  /* position: absolute; */
+  bottom: 6rem;
+  /* box-shadow: 0 -4px 30px #ced9df60; */
+}
+
 .link {
   text-decoration: none;
   color: inherit;
@@ -347,10 +361,42 @@ body {
 }
 
 .main {
+  min-height: 3980px;
   width: 100vw;
   max-width: 100%;
   background: none;
   overflow-x: hidden;
+  transition: 1s ease-out all;
+  position: relative;
+}
+
+.main-inner {
+  transition: 1s ease-out all;
+}
+
+.position-1 {
+  transform: translateY(0);
+}
+
+.position-2 {
+  transform: translateY(-760px);
+}
+
+.position-3 {
+  transform: translateY(-1740px);
+}
+
+.position-4 {
+  transform: translateY(-2440px);
+}
+
+.position-5 {
+  transform: translateY(-3240px);
+}
+
+.main-fixed {
+  position: fixed;
+  overflow-y: hidden;
 }
 
 .navbar {
@@ -363,7 +409,7 @@ body {
   padding-bottom: 0.4rem;
   display: flex;
   z-index: 12;
-  background: var(--light-blue-grey);
+  /* background: var(--light-blue-grey); */
   box-shadow: 0 4px 30px #ced9df60;
   transition: all 0.2s ease-out;
 }
@@ -430,8 +476,8 @@ body {
   font-weight: 500;
   top: 420px;
   top: 380px;
-  left: 30vw;
   left: 22vw;
+  /* left: 9vw; */
   opacity: 0;
   transition: 1.2s ease-out all;
 }
@@ -515,6 +561,35 @@ body {
 
 .scroll-into-view {
   margin-top: -30vh;
+}
+
+.sidebar-main {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  overflow-y: hidden;
+  top: 6rem;
+  left: 0;
+  bottom: 0;
+  background: white;
+  z-index: 11;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.sidebar-main-link {
+  height: 35px;
+  border-bottom: 1px solid #ced9df50;
+  margin: 1rem 2rem 0 2rem;
+  display: block;
+  letter-spacing: 0.1rem;
+  font-size: 16px;
+  font-weight: 500;
+  color: #00000060;
+}
+
+.sidebar-main-links {
+  margin-top: 2rem;
 }
 
 .fade-in-image {
