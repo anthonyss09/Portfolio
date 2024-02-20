@@ -15,7 +15,7 @@ import {
 
 export default function Home() {
   const [navbarClass, setNavbarClass] = useState("");
-  const [footerClass, setFooterClass] = useState("footer-height");
+  const [footerClass, setFooterClass] = useState("");
   const [toFront, setToFront] = useState("to-front");
   const [MainInnerPosition, setMainInnerPosition] = useState("");
   const pauseScrollRef = useRef(false);
@@ -71,6 +71,9 @@ export default function Home() {
 
     //if scrolling down
     if (deltaY < 0) {
+      if (windowPositionRef.current === 5) {
+        return;
+      }
       //height animations
       setNavbarClass("");
       setFooterClass("");
@@ -94,6 +97,43 @@ export default function Home() {
       //special fade animation cases
       scrollUpFadeAnimations(windowPositionRef.current);
     }
+
+    if (deltaY === 0) {
+      return;
+    }
+  };
+
+  const keyDown = (e) => {
+    console.log(e.keyCode);
+
+    //if scrolling down
+    if (e.keyCode === 40) {
+      if (windowPositionRef.current === 5) {
+        return;
+      }
+      //height animations
+      setNavbarClass("");
+      setFooterClass("");
+      windowPositionRef.current++;
+      //scroll animations
+      setMainInnerPosition("position-" + windowPositionRef.current);
+      //special fade animation cases
+      scrollDownFadeAnimations(windowPositionRef.current);
+    }
+
+    //if scrolling up
+    if (e.keyCode === 38) {
+      //height animations
+      setNavbarClass("navbar-reduced");
+      setFooterClass("footer-height");
+      //index animations
+      setTimeout(() => {}, 1500);
+      windowPositionRef.current--;
+      //scroll animations
+      setMainInnerPosition("position-" + windowPositionRef.current);
+      //special fade animation cases
+      scrollUpFadeAnimations(windowPositionRef.current);
+    }
   };
 
   useEffect(() => {
@@ -101,10 +141,12 @@ export default function Home() {
     el?.addEventListener("wheel", wheel);
     el?.addEventListener("touchstart", touchStart);
     el?.addEventListener("touchend", touchEnd);
+    document.addEventListener("keydown", keyDown);
     return () => {
       el?.removeEventListener("wheel", wheel);
       el?.removeEventListener("touchstart", touchStart);
       el?.removeEventListener("touchend", touchEnd);
+      document.removeEventListener("keydown", keyDown);
     };
   }, []);
 

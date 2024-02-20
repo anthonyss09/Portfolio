@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import SidebarMain from "../components/SidebarMain";
 
 export default function NavBar({ navbarClass, toFront }) {
-  const [pageName, setPageName] = useState("Software & Design.");
+  const [pageName, setPageName] = useState("");
 
   return (
     <nav className={`navbar ${navbarClass} `}>
