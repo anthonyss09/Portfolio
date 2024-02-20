@@ -18,7 +18,11 @@ export default function SidebarMain() {
         </Link>
       </div>
 
-      <Image src={cloudNetwork1} className="image-cloud-network-sidebar" />
+      <Image
+        src={cloudNetwork1}
+        className="image-cloud-network-sidebar"
+        alt="cloud network & computers"
+      />
       <Footer />
     </aside>
   );

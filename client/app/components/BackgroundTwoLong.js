@@ -13,11 +13,12 @@ export default function BackgroundOne() {
         <TwoMedClouds />
       </div>
 
+      <p id="p-b2-1" className="p-b2 p-b2-1">
+        Cloud 9 A concept & a workspace.
+      </p>
+
       <div className="two-small-clouds-b2">
         {" "}
-        <p id="p-b2-1" className="p-b2 p-b2-1">
-          Cloud 9 A concept & a workspace.
-        </p>
         <TwoSmallClouds />
         <div className="cloud-small-three-b2">
           <CloudSmallThree />
@@ -33,20 +34,21 @@ export default function BackgroundOne() {
         <TwoMedClouds />
       </div>
 
+      <p className="p-b2 p-b2-2">Bridge the gap</p>
+      <p className="p-b2 p-b2-3">Between formless & form.</p>
+      <Link href="#" className="link link-projects">
+        View Projects
+      </Link>
+
       <div id="blocks-back-b2" className="blocks-back-b2">
         <div id="image-blue-sphere-b2-2" className={`image-blue-sphere-b2-2`}>
           {" "}
           <Image src={blueSphere} width={420} alt="blue sphere" />
         </div>
-        <p className="p-b2 p-b2-2">Bridge the gap</p>
         <div id="blocks-svg" className="blocks-svg">
           {" "}
           <Blocks3dBack />
         </div>
-        <p className="p-b2 p-b2-3">Between formless & form.</p>
-        <Link href="#" className="link link-projects">
-          View Projects
-        </Link>
       </div>
     </section>
   );

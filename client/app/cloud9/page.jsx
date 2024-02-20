@@ -6,7 +6,7 @@ import BackgroundThree from "../components/BackgroundThree";
 import BackgroundFour from "../components/BackgroundFour";
 import Footer from "../components/Footer";
 import SidebarMain from "../components/SidebarMain";
-import { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
   fadeInElement,
   scrollDownFadeAnimations,
@@ -14,8 +14,8 @@ import {
 } from "../modules/fadeAnimations";
 
 export default function Home() {
-  const [navbarClass, setNavbarClass] = useState("");
-  const [footerClass, setFooterClass] = useState("");
+  const [navbarClass, setNavbarClass] = useState("navbar-reduced");
+  const [footerClass, setFooterClass] = useState("footer-height");
   const [toFront, setToFront] = useState("to-front");
   const [MainInnerPosition, setMainInnerPosition] = useState("");
   const pauseScrollRef = useRef(false);
@@ -112,7 +112,7 @@ export default function Home() {
       el?.removeEventListener("touchend", touchEnd);
       document.removeEventListener("keydown", keyDown);
     };
-  }, []);
+  }, [wheel, touchStart, touchEnd, keyDown]);
 
   useEffect(() => {
     window.scrollTo(0, 0);

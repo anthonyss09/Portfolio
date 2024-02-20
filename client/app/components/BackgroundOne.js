@@ -6,15 +6,20 @@ import CloudMed from "../assets/svgs/CloudMed";
 import BigCloud from "../assets/svgs/CloudBig";
 import blueSphere from "../../public/assets/images/blueSphere.png";
 import TwoSmallClouds from "../assets/svgs/TwoSmallClouds";
+import phoneSilver from "../../public/assets/images/phoneSilver.png";
 
 export default function BackgroundOne() {
   return (
     <section id="background-1" className={`background background-one`}>
+      <div className="p-b1-1">Software Development & Design.</div>
       <div className="image-blue-sphere-b1">
         <Image src={blueSphere} height={260} alt="blue sphere" />
         <div className="two-small-clouds-b1">
           <TwoSmallClouds />
         </div>
+        {/* <div className="image-phone-silver">
+          <Image src={phoneSilver} height={120} />
+        </div> */}
       </div>
 
       <div className="cloud-big-b1-right">
