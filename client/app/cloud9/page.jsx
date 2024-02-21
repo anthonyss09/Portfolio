@@ -18,9 +18,14 @@ export default function Home() {
   const [footerClass, setFooterClass] = useState("footer-height");
   const [toFront, setToFront] = useState("to-front");
   const [MainInnerPosition, setMainInnerPosition] = useState("");
+  const [noShadow, setNoShadow] = useState("");
+  const [sidebarMainHeight, setSidebarMainHeight] = useState("");
   const pauseScrollRef = useRef(false);
   const windowPositionRef = useRef(1);
   const touchStartYRef = useRef(0);
+  const [menuDropped, setMenuDropped] = useState(false);
+
+  let el;
 
   const handleScrollUpAnimations = () => {
     //height animations
@@ -101,7 +106,7 @@ export default function Home() {
   };
 
   useEffect(() => {
-    const el = document.getElementById("main-inner");
+    el = document.getElementById("main-inner");
     el?.addEventListener("wheel", wheel);
     el?.addEventListener("touchstart", touchStart);
     el?.addEventListener("touchend", touchEnd);
@@ -120,24 +125,37 @@ export default function Home() {
   }, []);
 
   const handleMenuClick = () => {
-    setNavbarClass("");
-    //animate height sidebarMain
-    //set page Name in nav
+    if (!menuDropped) {
+      setNavbarClass("navbar-background");
+      setNoShadow("no-shadow");
+      setSidebarMainHeight("sidebar-main-height");
+      setFooterClass("footer-height-5");
+    } else {
+      setNavbarClass("");
+      setNoShadow("");
+      setSidebarMainHeight("");
+      setFooterClass("");
+    }
+    setMenuDropped(!menuDropped);
   };
 
   return (
     <main className={`main main-fixed`}>
-      <NavBar navbarClass={navbarClass} toFront={toFront} />
+      <NavBar
+        navbarClass={navbarClass}
+        toFront={toFront}
+        handleMenuClick={handleMenuClick}
+      />
+      <SidebarMain sidebarMainHeight={sidebarMainHeight} noShadow={noShadow} />
 
       <div id="main-inner" className={`main-inner ${MainInnerPosition} `}>
         {" "}
-        {/* <SidebarMain /> */}
         <BackgroundOne />
         <BackgroundTwoLong />
         <BackgroundThree />
         <BackgroundFour />
       </div>
-      <Footer footerClass={footerClass} toFront={toFront} />
+      <Footer footerClass={footerClass} toFront={toFront} noShadow={noShadow} />
     </main>
   );
 }

@@ -174,10 +174,19 @@ body {
   transform: rotateY(180deg);
 }
 
+.cloud-small-one-sidebar {
+}
+
 .cloud-small-two {
   position: absolute;
   top: 22rem;
   right: 32vw;
+}
+
+.cloud-small-two-sidebar {
+  position: absolute;
+  bottom: 0;
+  left: 8vw;
 }
 
 .cloud-small-three {
@@ -216,8 +225,9 @@ body {
 }
 
 .icon-bars {
-  height: 30px;
-  width: 30px;
+  /* height: 30px;
+  width: 30px; */
+  margin-bottom: -0.2rem;
 }
 
 .image-cloud-network-sidebar {
@@ -281,6 +291,15 @@ body {
   transition: 1s ease-in all;
 }
 
+.image-sidebar {
+}
+
+.image-sidebar-container {
+  height: 360px;
+  display: grid;
+  place-items: center;
+}
+
 .footer {
   height: 0rem;
   width: 100vw;
@@ -297,8 +316,15 @@ body {
 }
 
 .footer-height {
+  height: 4rem;
+  background: white;
+  box-shadow: 0 -4px 30px #ced9df60;
+}
+
+.footer-height-5 {
   height: 5rem;
-  background: rgb(252, 252, 252);
+  background: white;
+  box-shadow: 0 -4px 30px #ced9df60;
 }
 
 .link {
@@ -396,6 +422,10 @@ body {
   transition: all 0.2s ease-out;
 }
 
+.navbar-background {
+  background: white;
+}
+
 .navbar-reduced {
   height: 5rem;
   background: white;
@@ -407,6 +437,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+}
+
+.no-shadow {
+  box-shadow: none;
 }
 
 .p-b1-1 {
@@ -541,6 +575,11 @@ body {
   z-index: 10;
 }
 
+.two-small-clouds-sidebar {
+  position: absolute;
+  z-index: -1;
+}
+
 .two-med-clouds-b2-2 {
   position: absolute;
   top: 800px;
@@ -562,7 +601,7 @@ body {
 }
 
 .sidebar-main {
-  height: 100vh;
+  height: 0;
   width: 100vw;
   position: fixed;
   overflow-y: hidden;
@@ -572,18 +611,27 @@ body {
   background: white;
   z-index: 11;
   box-sizing: border-box;
-  position: relative;
+  transition: all ease-out 0.3s;
+}
+
+.sidebar-main-height {
+  height: 80vh;
 }
 
 .sidebar-main-link {
   height: 35px;
-  border-bottom: 1px solid #ced9df50;
+  border-bottom: 0.8px solid #ced9df90;
   margin: 1rem 2rem 0 2rem;
   display: block;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.05rem;
   font-size: 16px;
-  font-weight: 500;
-  color: #00000060;
+  font-size: 15px;
+  font-weight: 400;
+  color: #00000098;
+  color: black;
+}
+
+.sidebar-main-link-top {
 }
 
 .sidebar-main-links {
