@@ -106,17 +106,26 @@ export default function Home() {
   };
 
   return (
-    <main id="main" className={`main main-fixed`}>
-      <NavBar handleMenuClick={handleMenuClick} />
-      <SidebarMain />
-      <div id="main-inner" className={`main-inner `}>
+    <>
+      {" "}
+      <header>
         {" "}
-        <BackgroundOne />
-        <BackgroundTwoLong />
-        <BackgroundThree />
-        <BackgroundFour />
-      </div>
-      <Footer />
-    </main>
+        <NavBar handleMenuClick={handleMenuClick} />
+      </header>
+      <main id="main" className={`main main-fixed`}>
+        <SidebarMain />
+        <div id="main-inner" className={`main-inner `}>
+          {" "}
+          <BackgroundOne />
+          <BackgroundTwoLong />
+          <BackgroundThree />
+          <BackgroundFour />
+        </div>
+      </main>
+      <footer>
+        {" "}
+        <Footer />
+      </footer>
+    </>
   );
 }
