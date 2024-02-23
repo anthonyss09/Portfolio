@@ -1,12 +1,12 @@
 import {
-  handleScrollDownAnimations,
-  handleScrollUpAnimations,
-} from "../../animationFrames/scrollAnimations";
+  translateOnScrollDown,
+  translateOnScrollUp,
+} from "../../animationFrames/translateAnimations";
 import { heightFromToPx } from "../../animationFrames/heightAnimations";
 import {
-  scrollDownFadeAnimations,
-  scrollUpFadeAnimations,
-} from "@/app/animationFrames/fadeAnimations";
+  opacityOnScrollDown,
+  opacityOnScrollUp,
+} from "@/app/animationFrames/opacityAnimations";
 
 const handleTouchEnd = (
   deltaY,
@@ -20,8 +20,8 @@ const handleTouchEnd = (
     pauseScrollRef.current = true;
     //if scrolling down
     if (deltaY < 0) {
-      handleScrollDownAnimations(windowPositionRef, mainPositionRef);
-      scrollDownFadeAnimations(windowPositionRef.current);
+      translateOnScrollDown(windowPositionRef, mainPositionRef);
+      opacityOnScrollDown(windowPositionRef.current);
       heightFromToPx("navbar", 300, navbarHeight.current, 96);
       heightFromToPx("footer", 300, footerHeight.current, 0);
       navbarHeight.current = 96;
@@ -29,8 +29,8 @@ const handleTouchEnd = (
     }
     //if scrolling up
     if (deltaY > 0) {
-      handleScrollUpAnimations(windowPositionRef, mainPositionRef);
-      scrollUpFadeAnimations(windowPositionRef.current);
+      translateOnScrollUp(windowPositionRef, mainPositionRef);
+      opacityOnScrollUp(windowPositionRef.current);
       heightFromToPx("navbar", 300, navbarHeight.current, 80);
       heightFromToPx("footer", 300, footerHeight.current, 64);
       navbarHeight.current = 80;

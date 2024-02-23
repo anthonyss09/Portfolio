@@ -54,7 +54,7 @@ const fadeOutElement = (targetId, duration) => {
   }
 };
 
-const scrollDownFadeAnimations = (windowPosition) => {
+const opacityOnScrollDown = (windowPosition) => {
   switch (windowPosition) {
     case 2:
       fadeOutElement("background-1", 1000);
@@ -83,7 +83,7 @@ const scrollDownFadeAnimations = (windowPosition) => {
   }
 };
 
-const scrollUpFadeAnimations = (windowPosition) => {
+const opacityOnScrollUp = (windowPosition) => {
   switch (windowPosition) {
     case 1:
       fadeInElement("background-1", 1000);
@@ -115,6 +115,6 @@ const scrollUpFadeAnimations = (windowPosition) => {
 export {
   fadeInElement,
   fadeOutElement,
-  scrollDownFadeAnimations,
-  scrollUpFadeAnimations,
+  opacityOnScrollDown,
+  opacityOnScrollUp,
 };

@@ -17,7 +17,7 @@ const translateYFromToPx = (el, duration, from, to) => {
   }
 };
 
-const handleScrollDownAnimations = (windowPositionRef, mainPositionRef) => {
+const translateOnScrollDown = (windowPositionRef, mainPositionRef) => {
   if (windowPositionRef.current === 5) {
     return;
   }
@@ -50,7 +50,7 @@ const handleScrollDownAnimations = (windowPositionRef, mainPositionRef) => {
   windowPositionRef.current++;
 };
 
-const handleScrollUpAnimations = (windowPositionRef, mainPositionRef) => {
+const translateOnScrollUp = (windowPositionRef, mainPositionRef) => {
   if (windowPositionRef.current === 1) {
     return;
   }
@@ -83,4 +83,4 @@ const handleScrollUpAnimations = (windowPositionRef, mainPositionRef) => {
   windowPositionRef.current--;
 };
 
-export { handleScrollDownAnimations, handleScrollUpAnimations };
+export { translateOnScrollDown, translateOnScrollUp };

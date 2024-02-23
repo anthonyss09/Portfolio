@@ -1,13 +1,13 @@
 "use client";
 import BackgroundOne from "../components/BackgroundOne";
-import NavBar from "../components/NavBar";
 import BackgroundTwoLong from "../components/BackgroundTwoLong";
 import BackgroundThree from "../components/BackgroundThree";
 import BackgroundFour from "../components/BackgroundFour";
+import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import SidebarMain from "../components/SidebarMain";
 import React, { useEffect, useRef } from "react";
-import { fadeInElement } from "../animationFrames/fadeAnimations";
+import { fadeInElement } from "../animationFrames/opacityAnimations";
 import { heightFromToPx } from "../animationFrames/heightAnimations";
 import { handleWheel } from "./cbs/handleWheel";
 import { handleKeyDown } from "./cbs/handleKeyDown";
