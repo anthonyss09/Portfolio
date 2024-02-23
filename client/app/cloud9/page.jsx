@@ -6,71 +6,30 @@ import BackgroundThree from "../components/BackgroundThree";
 import BackgroundFour from "../components/BackgroundFour";
 import Footer from "../components/Footer";
 import SidebarMain from "../components/SidebarMain";
-import React, { useState, useEffect, useRef } from "react";
-import {
-  fadeInElement,
-  scrollDownFadeAnimations,
-  scrollUpFadeAnimations,
-} from "../modules/fadeAnimations";
+import React, { useEffect, useRef } from "react";
+import { fadeInElement } from "../animationFrames/fadeAnimations";
+import { heightFromToPx } from "../animationFrames/heightAnimations";
+import { handleWheel } from "./cbs/handleWheel";
+import { handleKeyDown } from "./cbs/handleKeyDown";
+import { handleTouchEnd } from "./cbs/handleTouchEnd";
 
 export default function Home() {
-  const [navbarClass, setNavbarClass] = useState("navbar-reduced");
-  const [footerClass, setFooterClass] = useState("footer-height");
-  const [toFront, setToFront] = useState("to-front");
-  const [MainInnerPosition, setMainInnerPosition] = useState("");
-  const [noShadow, setNoShadow] = useState("");
-  const [sidebarMainHeight, setSidebarMainHeight] = useState("");
   const pauseScrollRef = useRef(false);
+  const mainPositionRef = useRef(0);
   const windowPositionRef = useRef(1);
   const touchStartYRef = useRef(0);
-  const [menuDropped, setMenuDropped] = useState(false);
-
-  let el;
-
-  const handleScrollUpAnimations = () => {
-    //height animations
-    setNavbarClass("navbar-reduced");
-    setFooterClass("footer-height");
-    //index animations
-    setTimeout(() => {}, 1500);
-    windowPositionRef.current--;
-    //scroll animations
-    setMainInnerPosition("position-" + windowPositionRef.current);
-    //special fade animation cases
-    scrollUpFadeAnimations(windowPositionRef.current);
-  };
-
-  const handleScrollDownAnimations = () => {
-    if (windowPositionRef.current === 5) {
-      return;
-    }
-    //height animations
-    setNavbarClass("");
-    setFooterClass("");
-    windowPositionRef.current++;
-    //scroll animations
-    setMainInnerPosition("position-" + windowPositionRef.current);
-    //special fade animation cases
-    scrollDownFadeAnimations(windowPositionRef.current);
-  };
+  const footerHeight = useRef(64);
+  const navbarHeight = useRef(80);
 
   const wheel = (e) => {
-    if (!pauseScrollRef.current) {
-      pauseScrollRef.current = true;
-      setToFront("");
-      //if scrolling down
-      if (e.deltaY > 0 && windowPositionRef.current < 5) {
-        handleScrollDownAnimations();
-      }
-      //if scrolling up
-      if (e.deltaY < 0 && windowPositionRef.current > 1) {
-        handleScrollUpAnimations();
-      }
-      setTimeout(() => {
-        pauseScrollRef.current = false;
-        setToFront("to-front");
-      }, 1500);
-    }
+    handleWheel(
+      e,
+      pauseScrollRef,
+      windowPositionRef,
+      mainPositionRef,
+      navbarHeight,
+      footerHeight
+    );
   };
 
   const touchStart = (e) => {
@@ -80,33 +39,28 @@ export default function Home() {
   const touchEnd = (e) => {
     const deltaY =
       Number(e.changedTouches[0].clientY) - Number(touchStartYRef.current);
-    //if scrolling down
-    if (deltaY < 0) {
-      handleScrollDownAnimations();
-    }
-    //if scrolling up
-    if (deltaY > 0) {
-      handleScrollUpAnimations();
-    }
-    if (deltaY === 0) {
-      return;
-    }
+    handleTouchEnd(
+      deltaY,
+      pauseScrollRef,
+      windowPositionRef,
+      mainPositionRef,
+      navbarHeight,
+      footerHeight
+    );
   };
 
   const keyDown = (e) => {
-    console.log(e.keyCode);
-    //if scrolling down
-    if (e.keyCode === 40) {
-      handleScrollDownAnimations();
-    }
-    //if scrolling up
-    if (e.keyCode === 38) {
-      handleScrollUpAnimations();
-    }
+    handleKeyDown(
+      e,
+      windowPositionRef,
+      mainPositionRef,
+      navbarHeight,
+      footerHeight
+    );
   };
 
   useEffect(() => {
-    el = document.getElementById("main-inner");
+    const el = document.getElementById("main-inner");
     el?.addEventListener("wheel", wheel);
     el?.addEventListener("touchstart", touchStart);
     el?.addEventListener("touchend", touchEnd);
@@ -125,37 +79,44 @@ export default function Home() {
   }, []);
 
   const handleMenuClick = () => {
-    if (!menuDropped) {
-      setNavbarClass("navbar-background");
-      setNoShadow("no-shadow");
-      setSidebarMainHeight("sidebar-main-height");
-      setFooterClass("footer-height-5");
+    const navbar = document.getElementById("navbar");
+    const footer = document.getElementById("footer");
+    const sidebar = document.getElementById("sidebar-main");
+    const sidebarHeight = sidebar.offsetHeight;
+    footerHeight.current = footer.offsetHeight;
+    if (sidebarHeight === 0) {
+      navbar.style.background = "white";
+      navbar.style.boxShadow = "0 -4px 30px #6cc7f830";
+      footer.style.background = "white";
+      heightFromToPx("footer", 300, footerHeight.current, 80);
+      heightFromToPx("navbar", 300, navbarHeight.current, 96);
+      heightFromToPx("sidebar-main", 300, 0, 800);
+      navbarHeight.current = 96;
+      footerHeight.current = 80;
     } else {
-      setNavbarClass("");
-      setNoShadow("");
-      setSidebarMainHeight("");
-      setFooterClass("");
+      setTimeout(() => {
+        navbar.style.background = "none";
+        navbar.style.boxShadow = "0 4px 30px #ced9df60";
+      }, 500);
+      footer.style.background = "none";
+      heightFromToPx("footer", 300, footerHeight.current, 0);
+      heightFromToPx("sidebar-main", 300, 800, 0);
+      footerHeight.current = 0;
     }
-    setMenuDropped(!menuDropped);
   };
 
   return (
-    <main className={`main main-fixed`}>
-      <NavBar
-        navbarClass={navbarClass}
-        toFront={toFront}
-        handleMenuClick={handleMenuClick}
-      />
-      <SidebarMain sidebarMainHeight={sidebarMainHeight} noShadow={noShadow} />
-
-      <div id="main-inner" className={`main-inner ${MainInnerPosition} `}>
+    <main id="main" className={`main main-fixed`}>
+      <NavBar handleMenuClick={handleMenuClick} />
+      <SidebarMain />
+      <div id="main-inner" className={`main-inner `}>
         {" "}
         <BackgroundOne />
         <BackgroundTwoLong />
         <BackgroundThree />
         <BackgroundFour />
       </div>
-      <Footer footerClass={footerClass} toFront={toFront} noShadow={noShadow} />
+      <Footer />
     </main>
   );
 }
