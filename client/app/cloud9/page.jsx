@@ -86,7 +86,7 @@ export default function Home() {
     footerHeight.current = footer.offsetHeight;
     if (sidebarHeight === 0) {
       navbar.style.background = "white";
-      navbar.style.boxShadow = "0 -4px 30px #6cc7f860";
+      // navbar.style.boxShadow = "0 -4px 30px #6cc7f860";
       footer.style.background = "white";
       heightFromToPx("footer", 300, footerHeight.current, 80);
       heightFromToPx("navbar", 300, navbarHeight.current, 96);

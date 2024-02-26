@@ -102,13 +102,18 @@ body {
 }
 
 .blog-header {
-  width: 120px;
-  font-size: 18px;
-  font-weight: 500;
+  width: min-content;
+  font-size: 16px;
+  font-weight: 600;
   margin-left: 1rem;
   /* margin-bottom: 1rem; */
   color: #29292d;
-  /* border-bottom: 3px solid #6cc7f860; */
+  border-bottom: 3px solid #6cc7f840;
+  border-bottom: 3px solid #ced9df60;
+}
+
+.blog-header-second {
+  margin-top: 1rem;
 }
 
 .blog-main {
@@ -539,7 +544,8 @@ body {
 }
 
 .post-preview-date {
-  color: #00000085;
+  font-weight: 800;
+  color: #00000055;
 }
 
 .post-preview-image {

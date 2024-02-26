@@ -26,9 +26,9 @@ export default function BackgroundOne() {
         <BigCloud />
       </div>
 
-      <div className="cloud-right">
+      {/* <div className="cloud-right">
         <CloudMed />
-      </div>
+      </div> */}
 
       <div className="cloud-right-far">
         <CloudMed />

@@ -7,7 +7,7 @@ export default function NavBar({ handleMenuClick, navbarClass }) {
     <nav id="navbar" className={`navbar ${navbarClass}`}>
       <div className="navbar-row-flex">
         <Logo />
-        <div className="icon-bars" onClick={handleMenuClick}>
+        <div className="icon-bars link" onClick={handleMenuClick}>
           <Hamburger color="#ced9df" />{" "}
         </div>
       </div>

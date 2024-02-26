@@ -5,6 +5,7 @@ import PostPreview from "@/app/components/PostPreview";
 import dataFlow from "../../../public/assets/images/dataFlow.jpg";
 import SidebarMain from "@/app/components/SidebarMain";
 import { heightFromToPx } from "@/app/animationFrames/heightAnimations";
+import blueSphere from "../../../public/assets/images/cloudNetwork1.png";
 
 export default function Blog() {
   const handleMenuClick = () => {
@@ -15,7 +16,7 @@ export default function Blog() {
     // footerHeight.current = footer.offsetHeight;
     if (sidebarHeight === 0) {
       navbar.style.background = "white";
-      navbar.style.boxShadow = "0 -4px 30px #6cc7f860";
+      // navbar.style.boxShadow = "0 -4px 30px #6cc7f860";
       heightFromToPx("sidebar-main", 300, 0, 800);
     } else {
       setTimeout(() => {
@@ -42,9 +43,8 @@ export default function Blog() {
       </header>
       <SidebarMain handleLinkClick={handleLinkClick} />
       <main className="blog-main">
-        <div className="blog-intro">
-          <h4 className="blog-header">Browse posts</h4>
-        </div>
+        <h4 className="blog-header">Featured</h4>
+
         <div className="post-first">
           {" "}
           <PostPreview
@@ -54,6 +54,11 @@ export default function Blog() {
             postDate="02/25/2024"
           />
         </div>
+        <h4 className="blog-header blog-header-second">Recent</h4>
+        <PostPreview
+          postHeading="Check back we'll be adding new posts soon!"
+          postImage={blueSphere}
+        />
       </main>
       <footer>
         <Footer footerClass="footer-blog" />
