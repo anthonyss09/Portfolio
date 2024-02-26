@@ -32,6 +32,10 @@ const handleKeyDown = (
     heightFromToPx("footer", 300, footerHeight.current, 64);
     navbarHeight.current = 80;
     footerHeight.current = 64;
+    footer.style.background = "none";
+    setTimeout(() => {
+      footer.style.background = "white";
+    }, 1000);
   }
 };
 
