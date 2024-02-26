@@ -33,7 +33,7 @@ export default function BackgroundOne() {
       <div className="cloud-computers">
         <p className="p-b3 p-b3-1">Build with thoughtful</p>
         <p className="p-b3 p-b3-2">Integration strategies.</p>
-        <Link href="#" className="link link-articles">
+        <Link href="/cloud9/blog" className="link link-articles">
           View Blog
         </Link>
         <Image src={CloudComputers} height={365} alt="cloud & computers" />

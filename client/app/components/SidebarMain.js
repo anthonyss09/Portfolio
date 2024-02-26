@@ -2,20 +2,36 @@ import Link from "next/link";
 import TwoSmallClouds from "../assets/svgs/TwoSmallClouds";
 import CloudSmallTwo from "../assets/svgs/CloudSmallTwo";
 
-export default function SidebarMain() {
+export default function SidebarMain({ handleLinkClick }) {
   return (
     <aside id="sidebar-main" className={`sidebar-main `}>
       <div className="sidebar-main-links">
-        <Link href="#" className="link sidebar-main-link sidebar-main-link-top">
+        <Link
+          href="/cloud9"
+          className="link sidebar-main-link sidebar-main-link-top"
+          onClick={handleLinkClick}
+        >
           Home
         </Link>
-        <Link href="#" className="link sidebar-main-link">
+        <Link
+          href="/cloud9/blog"
+          className="link sidebar-main-link"
+          onClick={handleLinkClick}
+        >
           Blog
-        </Link>
-        <Link href="#" className="link sidebar-main-link">
+        </Link>{" "}
+        <Link
+          href="#"
+          className="link sidebar-main-link"
+          onClick={handleLinkClick}
+        >
           Work
         </Link>
-        <Link href="#" className="link sidebar-main-link">
+        <Link
+          href="#"
+          className="link sidebar-main-link"
+          onClick={handleLinkClick}
+        >
           Contact
         </Link>
       </div>

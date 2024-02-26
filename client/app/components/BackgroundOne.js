@@ -13,7 +13,7 @@ export default function BackgroundOne() {
     <section id="background-1" className={`background background-one`}>
       <div className="p-b1-1">Software Development & Design.</div>
       <div className="image-blue-sphere-b1">
-        <Image src={blueSphere} height={260} alt="blue sphere" />
+        <Image src={blueSphere} height={260} alt="blue sphere" priority />
         <div className="two-small-clouds-b1">
           <TwoSmallClouds />
         </div>

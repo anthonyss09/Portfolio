@@ -29,8 +29,6 @@ const heightFromToPx = (elId, duration, height1, height2) => {
     const delta = (now - start) / duration;
     const height = height1 + (height2 - height1) * delta;
     if (delta < 1) {
-      console.log(delta);
-      console.log(height);
       el.style.height = height + "px";
       requestAnimationFrame(() => {
         animate();

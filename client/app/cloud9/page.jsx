@@ -86,7 +86,7 @@ export default function Home() {
     footerHeight.current = footer.offsetHeight;
     if (sidebarHeight === 0) {
       navbar.style.background = "white";
-      navbar.style.boxShadow = "0 -4px 30px #6cc7f830";
+      navbar.style.boxShadow = "0 -4px 30px #6cc7f860";
       footer.style.background = "white";
       heightFromToPx("footer", 300, footerHeight.current, 80);
       heightFromToPx("navbar", 300, navbarHeight.current, 96);
@@ -105,6 +105,14 @@ export default function Home() {
     }
   };
 
+  const handleLinkClick = () => {
+    console.log("link clicked");
+    const sidebar = document.getElementById("sidebar-main");
+    const sidebarHeight = sidebar.offsetHeight;
+    if (sidebarHeight > 0) {
+      heightFromToPx("sidebar-main", 300, 800, 0);
+    }
+  };
   return (
     <>
       {" "}
@@ -113,7 +121,7 @@ export default function Home() {
         <NavBar handleMenuClick={handleMenuClick} />
       </header>
       <main id="main" className={`main main-fixed`}>
-        <SidebarMain />
+        <SidebarMain handleLinkClick={handleLinkClick} />
         <div id="main-inner" className={`main-inner `}>
           {" "}
           <BackgroundOne />

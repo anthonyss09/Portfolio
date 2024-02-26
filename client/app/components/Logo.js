@@ -1,6 +1,8 @@
+import Link from "next/link";
+
 export default function Logo() {
   return (
-    <span className="logo">
+    <Link href="/cloud9" className="logo link">
       <p className="p-logo">Cloud 9</p>
       <svg
         width="30"
@@ -55,6 +57,6 @@ export default function Logo() {
           </filter>
         </defs>
       </svg>
-    </span>
+    </Link>
   );
 }

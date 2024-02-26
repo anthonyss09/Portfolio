@@ -16,6 +16,7 @@ const handleTouchEnd = (
   navbarHeight,
   footerHeight
 ) => {
+  const footer = document.getElementById("footer");
   if (!pauseScrollRef.current) {
     pauseScrollRef.current = true;
     //if scrolling down
@@ -35,6 +36,10 @@ const handleTouchEnd = (
       heightFromToPx("footer", 300, footerHeight.current, 64);
       navbarHeight.current = 80;
       footerHeight.current = 64;
+      footer.style.background = "none";
+      setTimeout(() => {
+        footer.style.background = "white";
+      }, 1000);
     }
     if (deltaY === 0) {
       return;
