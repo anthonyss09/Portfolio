@@ -18,7 +18,7 @@ export default function Home() {
   const mainPositionRef = useRef(0);
   const windowPositionRef = useRef(1);
   const touchStartYRef = useRef(0);
-  const footerHeight = useRef(64);
+  const footerHeight = useRef(0);
   const navbarHeight = useRef(80);
 
   const wheel = (e) => {

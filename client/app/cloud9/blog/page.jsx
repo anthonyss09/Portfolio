@@ -43,22 +43,23 @@ export default function Blog() {
       </header>
       <SidebarMain handleLinkClick={handleLinkClick} />
       <main className="blog-main">
-        <h4 className="blog-header">Featured</h4>
-
-        <div className="post-first">
-          {" "}
+        <section className="blog-featured-section blog-section">
+          <h4 className="blog-header">Featured Post</h4>{" "}
           <PostPreview
             postHeading="            Deploy dockerized React/Nginx app featuring Redux & RTK with Node.js
             in serverless Google Cloud Run containers."
             postImage={dataFlow}
             postDate="02/25/2024"
           />
-        </div>
-        <h4 className="blog-header blog-header-second">Recent</h4>
-        <PostPreview
-          postHeading="Check back we'll be adding new posts soon!"
-          postImage={blueSphere}
-        />
+        </section>
+        <section className="blog-recent-section blog-section">
+          {" "}
+          <h4 className="blog-header blog-header-second">Recent</h4>
+          <PostPreview
+            postHeading="Check back we'll be adding new posts soon!"
+            postImage={blueSphere}
+          />
+        </section>
       </main>
       <footer>
         <Footer footerClass="footer-blog" />
