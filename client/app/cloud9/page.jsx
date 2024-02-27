@@ -5,10 +5,8 @@ import BackgroundThree from "../components/BackgroundThree";
 import BackgroundFour from "../components/BackgroundFour";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
-import SidebarMain from "../components/SidebarMain";
 import React, { useEffect, useRef } from "react";
 import { fadeInElement } from "../animationFrames/opacityAnimations";
-import { heightFromToPx } from "../animationFrames/heightAnimations";
 import { handleWheel } from "./cbs/handleWheel";
 import { handleKeyDown } from "./cbs/handleKeyDown";
 import { handleTouchEnd } from "./cbs/handleTouchEnd";
@@ -78,50 +76,14 @@ export default function Home() {
     fadeInElement("p-b2-1", 1000);
   }, []);
 
-  const handleMenuClick = () => {
-    const navbar = document.getElementById("navbar");
-    const footer = document.getElementById("footer");
-    const sidebar = document.getElementById("sidebar-main");
-    const sidebarHeight = sidebar.offsetHeight;
-    footerHeight.current = footer.offsetHeight;
-    if (sidebarHeight === 0) {
-      navbar.style.background = "white";
-      // navbar.style.boxShadow = "0 -4px 30px #6cc7f860";
-      footer.style.background = "white";
-      heightFromToPx("footer", 300, footerHeight.current, 80);
-      heightFromToPx("navbar", 300, navbarHeight.current, 96);
-      heightFromToPx("sidebar-main", 300, 0, 800);
-      navbarHeight.current = 96;
-      footerHeight.current = 80;
-    } else {
-      setTimeout(() => {
-        navbar.style.background = "none";
-        navbar.style.boxShadow = "0 4px 30px #ced9df60";
-      }, 500);
-      footer.style.background = "none";
-      heightFromToPx("footer", 300, footerHeight.current, 0);
-      heightFromToPx("sidebar-main", 300, 800, 0);
-      footerHeight.current = 0;
-    }
-  };
-
-  const handleLinkClick = () => {
-    console.log("link clicked");
-    const sidebar = document.getElementById("sidebar-main");
-    const sidebarHeight = sidebar.offsetHeight;
-    if (sidebarHeight > 0) {
-      heightFromToPx("sidebar-main", 300, 800, 0);
-    }
-  };
   return (
     <>
       {" "}
       <header>
         {" "}
-        <NavBar elId="main" handleMenuClick={handleMenuClick} />
+        <NavBar elId="main" />
       </header>
       <main id="main" className={`main main-fixed`}>
-        <SidebarMain handleLinkClick={handleLinkClick} />
         <div id="main-inner" className={`main-inner `}>
           {" "}
           <BackgroundOne />

@@ -1,0 +1,31 @@
+import { heightFromToPx } from "@/app/animationFrames/heightAnimations";
+
+const handleMenuClickLanding = (footerHeight, navbarHeight) => {
+  const navbar = document.getElementById("navbar");
+  const footer = document.getElementById("footer");
+  const sidebar = document.getElementById("sidebar-main");
+  const sidebarHeight = sidebar.offsetHeight;
+  footerHeight.current = footer.offsetHeight;
+  navbarHeight.current = navbar.offsetHeight;
+  if (sidebarHeight === 0) {
+    navbar.style.background = "white";
+    navbar.style.boxShadow = "none";
+    footer.style.background = "white";
+    heightFromToPx("footer", 300, footerHeight.current, 80);
+    heightFromToPx("navbar", 300, navbarHeight.current, 96);
+    heightFromToPx("sidebar-main", 300, 0, 800);
+    navbarHeight.current = 96;
+    footerHeight.current = 80;
+  } else {
+    setTimeout(() => {
+      navbar.style.background = "none";
+      navbar.style.boxShadow = "0 4px 30px #ced9df60";
+    }, 500);
+    footer.style.background = "none";
+    heightFromToPx("footer", 300, footerHeight.current, 0);
+    heightFromToPx("sidebar-main", 300, 800, 0);
+    footerHeight.current = 0;
+  }
+};
+
+export { handleMenuClickLanding };

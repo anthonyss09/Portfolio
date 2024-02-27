@@ -8,7 +8,7 @@ export default function Work() {
   return (
     <>
       <header>
-        <Navbar navbarClass="navbar-work" />
+        <Navbar navbarClass="navbar-work" elId="work-main" />
       </header>
       <main id="work-main" className="work-main">
         <section className="work-section work-section-featured">

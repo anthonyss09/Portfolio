@@ -9,7 +9,7 @@ export default function Blog() {
   return (
     <>
       <header>
-        <NavBar navbarClass="navbar-blog" />
+        <NavBar navbarClass="navbar-blog" elId="blog-main" />
       </header>
       <main id="blog-main" className="blog-main">
         <section className="blog-section-featured blog-section">
@@ -24,7 +24,7 @@ export default function Blog() {
         <div className="blog-spacer"></div>
         <section className="blog-section-recent blog-section">
           {" "}
-          <h4 className="blog-header blog-header-second">Recent</h4>
+          <h4 className="blog-header blog-header-recent">Recent</h4>
           <PostPreview
             postHeading="Check back we'll be adding new posts soon!"
             postImage={cloudNetwork1}

@@ -435,7 +435,7 @@ body {
   max-width: 100%;
   background: none;
   overflow-x: hidden;
-  transition: 1s ease-out all;
+  transition: 0.3s ease-out all;
   position: relative;
 }
 
@@ -654,11 +654,11 @@ body {
   width: 100vw;
   position: fixed;
   overflow-y: hidden;
-  top: 6rem;
+  top: 5rem;
   left: 0;
   bottom: 0;
   background: white;
-  z-index: 11;
+  z-index: -1;
   box-sizing: border-box;
   transition: all ease-out 0.3s;
 }
@@ -698,6 +698,7 @@ body {
   flex-direction: column;
   padding: 2rem 1rem;
   padding-bottom: 64px;
+  position: relative;
 }
 
 .work-preview {
