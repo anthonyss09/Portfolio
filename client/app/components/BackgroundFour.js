@@ -1,5 +1,5 @@
 import Image from "next/image";
-import blueSphere from "../../public/assets/images/blueSphere.png";
+import blueSphere from "/public/assets/images/blueSphere.png";
 import TwoMedClouds from "../assets/svgs/TwoMedClouds";
 import TwoSmallClouds from "../assets/svgs/TwoSmallClouds";
 import CloudSmallThree from "../assets/svgs/CloudSmallThree";

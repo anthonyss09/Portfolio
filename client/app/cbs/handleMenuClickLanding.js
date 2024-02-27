@@ -1,4 +1,4 @@
-import { heightFromToPx } from "@/app/animationFrames/heightAnimations";
+import { heightFromToPx } from "../animationFrames/heightAnimations";
 
 const handleMenuClickLanding = (footerHeight, navbarHeight) => {
   const navbar = document.getElementById("navbar");

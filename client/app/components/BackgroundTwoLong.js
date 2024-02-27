@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import blueSphere from "../../public/assets/images/blueSphere.png";
+import blueSphere from "/public/assets/images/blueSphere.png";
 import TwoSmallClouds from "../assets/svgs/TwoSmallClouds.js";
 import CloudSmallThree from "../assets/svgs/CloudSmallThree";
 import TwoMedClouds from "../assets/svgs/TwoMedClouds";
@@ -27,7 +27,7 @@ export default function BackgroundOne() {
 
       <div id="image-blue-sphere-b2-1" className={`image-blue-sphere-b2 `}>
         {" "}
-        <Image src={blueSphere} width={420} alt="blue sphere" />
+        <Image src={blueSphere} height={325} width={420} alt="blue sphere" />
       </div>
 
       <div className="two-med-clouds-b2-2">
@@ -43,7 +43,7 @@ export default function BackgroundOne() {
       <div id="blocks-back-b2" className="blocks-back-b2">
         <div id="image-blue-sphere-b2-2" className={`image-blue-sphere-b2-2`}>
           {" "}
-          <Image src={blueSphere} width={420} alt="blue sphere" />
+          <Image src={blueSphere} height={325} width={420} alt="blue sphere" />
         </div>
         <div id="blocks-svg" className="blocks-svg">
           {" "}

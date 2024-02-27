@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Logo() {
   return (
-    <Link href="/cloud9" className="logo link">
+    <Link href="/" className="logo link">
       <p className="p-logo">Cloud 9</p>
       <svg
         width="30"

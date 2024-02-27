@@ -2,7 +2,7 @@
 import Logo from "../components/Logo";
 import { Spiral as Hamburger } from "hamburger-react";
 import SidebarMain from "./SidebarMain";
-import { handleMenuClickLanding } from "../cloud9/cbs/handleMenuClickLanding";
+import { handleMenuClickLanding } from "../cbs/handleMenuClickLanding";
 import { useRef } from "react";
 import { heightFromToPx } from "../animationFrames/heightAnimations";
 

@@ -1,6 +1,6 @@
 "use client";
-import Navbar from "../../components/NavBar";
-import Footer from "../../components/Footer";
+import Navbar from "../components/NavBar";
+import Footer from "../components/Footer";
 import BarkMate from "./components/BarkMate";
 import CheckBack from "./components/CheckBack";
 

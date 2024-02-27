@@ -1,6 +1,6 @@
 import Image from "next/image";
 import CloudBigB3 from "../assets/svgs/CloudBigB3";
-import CloudComputers from "../../public/assets/images/cloudComputers.png";
+import CloudComputers from "/public/assets/images/cloudComputers.png";
 import TwoSmallClouds from "../assets/svgs/TwoSmallClouds.js";
 import Link from "next/link";
 import CloudSmallOne from "../assets/svgs/CloudSmallOne";
@@ -36,7 +36,12 @@ export default function BackgroundOne() {
         <Link href="/cloud9/blog" className="link link-articles">
           View Blog
         </Link>
-        <Image src={CloudComputers} height={365} alt="cloud & computers" />
+        <Image
+          src={CloudComputers}
+          height={365}
+          width={505}
+          alt="cloud & computers"
+        />
         <div className="two-small-clouds-b3">
           <TwoSmallClouds />
         </div>

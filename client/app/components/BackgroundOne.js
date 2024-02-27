@@ -4,7 +4,7 @@ import CloudSmallTwo from "../assets/svgs/CloudSmallTwo";
 import CloudSmallThree from "../assets/svgs/CloudSmallThree";
 import CloudMed from "../assets/svgs/CloudMed";
 import BigCloud from "../assets/svgs/CloudBig";
-import blueSphere from "../../public/assets/images/blueSphere.png";
+import blueSphere from "/public/assets/images/blueSphere.png";
 import TwoSmallClouds from "../assets/svgs/TwoSmallClouds";
 
 export default function BackgroundOne() {
@@ -12,7 +12,13 @@ export default function BackgroundOne() {
     <section id="background-1" className={`background background-one`}>
       <div className="p-b1-1">Software Development & Design.</div>
       <div className="image-blue-sphere-b1">
-        <Image src={blueSphere} height={260} alt="blue sphere" priority />
+        <Image
+          src={blueSphere}
+          height={260}
+          width={340}
+          alt="blue sphere"
+          priority={true}
+        />
         <div className="two-small-clouds-b1">
           <TwoSmallClouds />
         </div>

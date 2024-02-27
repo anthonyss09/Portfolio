@@ -1,12 +1,12 @@
 import {
   translateOnScrollDown,
   translateOnScrollUp,
-} from "../../animationFrames/translateAnimations";
-import { heightFromToPx } from "../../animationFrames/heightAnimations";
+} from "../animationFrames/translateAnimations";
+import { heightFromToPx } from "../animationFrames/heightAnimations";
 import {
   opacityOnScrollDown,
   opacityOnScrollUp,
-} from "@/app/animationFrames/opacityAnimations";
+} from "../animationFrames/opacityAnimations";
 
 const handleTouchEnd = (
   deltaY,

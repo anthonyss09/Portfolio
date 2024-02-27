@@ -7,21 +7,22 @@ export default function SidebarMain({ handleLinkClick }) {
     <aside id="sidebar-main" className={`sidebar-main `}>
       <div className="sidebar-main-links">
         <Link
-          href="/cloud9"
+          href="/"
           className="link sidebar-main-link sidebar-main-link-top"
           onClick={handleLinkClick}
+          shallow
         >
           Home
         </Link>
         <Link
-          href="/cloud9/blog"
+          href="/blog"
           className="link sidebar-main-link"
           onClick={handleLinkClick}
         >
           Blog
         </Link>{" "}
         <Link
-          href="/cloud9/work"
+          href="/work"
           className="link sidebar-main-link"
           onClick={handleLinkClick}
         >

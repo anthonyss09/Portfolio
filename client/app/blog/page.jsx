@@ -2,8 +2,8 @@
 import NavBar from "@/app/components/NavBar";
 import Footer from "@/app/components/Footer";
 import PostPreview from "@/app/components/PostPreview";
-import dataFlow from "../../../public/assets/images/dataFlow.jpg";
-import cloudNetwork1 from "../../../public/assets/images/cloudNetwork1.png";
+import dataFlow from "../../public/assets/images/dataFlow.jpg";
+import cloudNetwork1 from "../../public/assets/images/cloudNetwork1.png";
 
 export default function Blog() {
   return (
