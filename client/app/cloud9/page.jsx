@@ -118,7 +118,7 @@ export default function Home() {
       {" "}
       <header>
         {" "}
-        <NavBar handleMenuClick={handleMenuClick} />
+        <NavBar elId="main" handleMenuClick={handleMenuClick} />
       </header>
       <main id="main" className={`main main-fixed`}>
         <SidebarMain handleLinkClick={handleLinkClick} />

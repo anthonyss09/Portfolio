@@ -1,8 +1,9 @@
-"use client";
+"use-client";
 import Logo from "../components/Logo";
 import { Spiral as Hamburger } from "hamburger-react";
+import SidebarMain from "./SidebarMain";
 
-export default function NavBar({ handleMenuClick, navbarClass }) {
+export default function NavBar({ navbarClass, handleMenuClick }) {
   return (
     <nav id="navbar" className={`navbar ${navbarClass}`}>
       <div className="navbar-row-flex">
@@ -11,6 +12,7 @@ export default function NavBar({ handleMenuClick, navbarClass }) {
           <Hamburger color="#ced9df" />{" "}
         </div>
       </div>
+      <SidebarMain handleLinkClick={handleMenuClick} />
     </nav>
   );
 }

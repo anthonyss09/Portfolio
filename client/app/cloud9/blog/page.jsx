@@ -3,61 +3,31 @@ import NavBar from "@/app/components/NavBar";
 import Footer from "@/app/components/Footer";
 import PostPreview from "@/app/components/PostPreview";
 import dataFlow from "../../../public/assets/images/dataFlow.jpg";
-import SidebarMain from "@/app/components/SidebarMain";
-import { heightFromToPx } from "@/app/animationFrames/heightAnimations";
-import blueSphere from "../../../public/assets/images/cloudNetwork1.png";
+import cloudNetwork1 from "../../../public/assets/images/cloudNetwork1.png";
 
 export default function Blog() {
-  const handleMenuClick = () => {
-    const navbar = document.getElementById("navbar");
-    const footer = document.getElementById("footer");
-    const sidebar = document.getElementById("sidebar-main");
-    const sidebarHeight = sidebar.offsetHeight;
-    // footerHeight.current = footer.offsetHeight;
-    if (sidebarHeight === 0) {
-      navbar.style.background = "white";
-      // navbar.style.boxShadow = "0 -4px 30px #6cc7f860";
-      heightFromToPx("sidebar-main", 300, 0, 800);
-    } else {
-      setTimeout(() => {
-        navbar.style.background = "none";
-        navbar.style.boxShadow = "0 4px 30px #ced9df60";
-      }, 500);
-
-      heightFromToPx("sidebar-main", 300, 800, 0);
-    }
-  };
-
-  const handleLinkClick = () => {
-    console.log("link clicked");
-    const sidebar = document.getElementById("sidebar-main");
-    const sidebarHeight = sidebar.offsetHeight;
-    if (sidebarHeight > 0) {
-      heightFromToPx("sidebar-main", 300, 800, 0);
-    }
-  };
   return (
     <>
       <header>
-        <NavBar navbarClass="navbar-blog" handleMenuClick={handleMenuClick} />
+        <NavBar navbarClass="navbar-blog" />
       </header>
-      <SidebarMain handleLinkClick={handleLinkClick} />
-      <main className="blog-main">
-        <section className="blog-featured-section blog-section">
+      <main id="blog-main" className="blog-main">
+        <section className="blog-section-featured blog-section">
           <h4 className="blog-header">Featured Post</h4>{" "}
           <PostPreview
-            postHeading="            Deploy dockerized React/Nginx app featuring Redux & RTK with Node.js
+            postHeading="Deploy dockerized React/Nginx app featuring Redux & RTK with Node.js
             in serverless Google Cloud Run containers."
             postImage={dataFlow}
             postDate="02/25/2024"
           />
         </section>
-        <section className="blog-recent-section blog-section">
+        <div className="blog-spacer"></div>
+        <section className="blog-section-recent blog-section">
           {" "}
           <h4 className="blog-header blog-header-second">Recent</h4>
           <PostPreview
             postHeading="Check back we'll be adding new posts soon!"
-            postImage={blueSphere}
+            postImage={cloudNetwork1}
           />
         </section>
       </main>

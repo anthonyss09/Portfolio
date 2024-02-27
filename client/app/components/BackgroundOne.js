@@ -6,7 +6,6 @@ import CloudMed from "../assets/svgs/CloudMed";
 import BigCloud from "../assets/svgs/CloudBig";
 import blueSphere from "../../public/assets/images/blueSphere.png";
 import TwoSmallClouds from "../assets/svgs/TwoSmallClouds";
-import phoneSilver from "../../public/assets/images/phoneSilver.png";
 
 export default function BackgroundOne() {
   return (

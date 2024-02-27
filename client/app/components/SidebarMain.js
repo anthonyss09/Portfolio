@@ -21,7 +21,7 @@ export default function SidebarMain({ handleLinkClick }) {
           Blog
         </Link>{" "}
         <Link
-          href="#"
+          href="/cloud9/work"
           className="link sidebar-main-link"
           onClick={handleLinkClick}
         >
