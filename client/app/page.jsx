@@ -87,7 +87,7 @@ export default function Home() {
           <BackgroundOne />
           <BackgroundTwoLong />
           <BackgroundThree />
-          {/* <BackgroundFour /> */}
+          <BackgroundFour />
         </div>
       </main>
       <footer>
