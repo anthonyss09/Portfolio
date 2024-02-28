@@ -15,10 +15,10 @@ export default function BackgroundFour() {
       </p>
       <div id="image-blue-sphere-b4-1" className={`image-blue-sphere-b4-1`}>
         <Image
-          src={blueSphere}
           height={180}
           className={`blue-sphere `}
           alt="blue sphere"
+          src={blueSphere}
         />
         <div className="two-small-clouds-b4">
           {" "}
@@ -29,7 +29,7 @@ export default function BackgroundFour() {
         <div className="cloud-small-three-b4">
           <CloudSmallThree />
         </div>
-        <Image src={blueSphere} height={260} alt="blue sphere" />
+        <Image height={260} alt="blue sphere" src={blueSphere} />
       </div>
     </section>
   );

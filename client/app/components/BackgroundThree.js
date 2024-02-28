@@ -37,10 +37,10 @@ export default function BackgroundOne() {
           View Blog
         </Link>
         <Image
-          src={CloudComputers}
           height={365}
           width={505}
           alt="cloud & computers"
+          src={CloudComputers}
         />
         <div className="two-small-clouds-b3">
           <TwoSmallClouds />

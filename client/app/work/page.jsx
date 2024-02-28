@@ -22,9 +22,9 @@ export default function Work() {
           <CheckBack />
         </section>
       </main>
-      <footer>
+      {/* <footer>
         <Footer footerClass="footer-work" />
-      </footer>
+      </footer> */}
     </>
   );
 }

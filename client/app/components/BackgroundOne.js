@@ -13,27 +13,20 @@ export default function BackgroundOne() {
       <div className="p-b1-1">Software Development & Design.</div>
       <div className="image-blue-sphere-b1">
         <Image
-          src={blueSphere}
           height={260}
           width={340}
           alt="blue sphere"
-          priority={true}
+          loading="eager"
+          src={blueSphere}
         />
         <div className="two-small-clouds-b1">
           <TwoSmallClouds />
         </div>
-        {/* <div className="image-phone-silver">
-          <Image src={phoneSilver} height={120} />
-        </div> */}
       </div>
 
       <div className="cloud-big-b1-right">
         <BigCloud />
       </div>
-
-      {/* <div className="cloud-right">
-        <CloudMed />
-      </div> */}
 
       <div className="cloud-right-far">
         <CloudMed />
@@ -50,7 +43,6 @@ export default function BackgroundOne() {
         <div className="cloud-small-three">
           <CloudSmallThree />
         </div>
-        {/* <p className="scroll-text">Scroll</p> */}
       </div>
     </section>
   );
