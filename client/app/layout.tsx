@@ -17,9 +17,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        <script src="http://localhost:8097"></script>
-      </Head>
       <body>{children}</body>
     </html>
   );

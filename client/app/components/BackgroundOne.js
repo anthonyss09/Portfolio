@@ -20,30 +20,30 @@ export default function BackgroundOne() {
           src={blueSphere}
         />
         <div className="two-small-clouds-b1">
-          <Image src={twoSmallCloudsR} />
+          <Image src={twoSmallCloudsR} alt="two-small-clouds" />
         </div>
       </div>
 
       <div className="cloud-big-b1-right">
         {" "}
-        <Image src={cloudBigR} />
+        <Image src={cloudBigR} alt="cloud big" />
       </div>
 
       <div className="cloud-right-far">
         {" "}
-        <Image src={cloudMedR} />
+        <Image src={cloudMedR} alt="cloud far right" />
       </div>
 
       <div className="clouds-phone-center">
         {" "}
         <div className="cloud-small-one">
-          <Image src={cloudSMallOneR} />
+          <Image src={cloudSMallOneR} alt="scloud small one" />
         </div>
         <div className="cloud-small-two">
-          <Image src={cloudSmallTwoR} />
+          <Image src={cloudSmallTwoR} alt="cloud small two" />
         </div>
         <div className="cloud-small-three">
-          <Image src={cloudSmallThreeR} />
+          <Image src={cloudSmallThreeR} alt="cloud small three" />
         </div>
       </div>
     </section>

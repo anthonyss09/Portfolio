@@ -10,7 +10,7 @@ export default function BackgroundOne() {
   return (
     <section id="background-2" className={`background background-two`}>
       <div className="two-med-clouds-b2">
-        <Image src={twoMedCloudsR} />
+        <Image src={twoMedCloudsR} alt="two medium clouds" />
       </div>
 
       <p id="p-b2-1" className="p-b2 p-b2-1">
@@ -19,9 +19,9 @@ export default function BackgroundOne() {
 
       <div className="two-small-clouds-b2">
         {" "}
-        <Image src={twoSmallCloudsR} />
+        <Image src={twoSmallCloudsR} alt="two small clouds" />
         <div className="cloud-small-three-b2">
-          <Image src={cloudSmallThreeR} />
+          <Image src={cloudSmallThreeR} alt="cloud small three" />
         </div>
       </div>
 
@@ -31,7 +31,7 @@ export default function BackgroundOne() {
       </div>
 
       <div className="two-med-clouds-b2-2">
-        <Image src={twoMedCloudsR} />
+        <Image src={twoMedCloudsR} alt="two medium clouds" />
       </div>
 
       <p className="p-b2 p-b2-2">Bridge the gap</p>
@@ -47,7 +47,7 @@ export default function BackgroundOne() {
         </div>
         <div id="blocks-svg" className="blocks-svg">
           {" "}
-          <Image src={blocks3dBackR} />
+          <Image src={blocks3dBackR} alt="blocks 3d back" />
         </div>
       </div>
     </section>
