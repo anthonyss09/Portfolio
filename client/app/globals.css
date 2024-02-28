@@ -151,7 +151,8 @@ body {
   position: absolute;
   right: -12rem;
   top: 18rem;
-  transform: rotate(180deg);
+  top: 22rem;
+  /* transform: rotate(180deg); */
 }
 
 .cloud-big-b3 {
@@ -374,8 +375,17 @@ body {
 
 .footer-work {
   height: 64px;
+  height: 0;
   background: white;
   opacity: 0.99;
+}
+
+.footer-work-fixed {
+  height: 64px;
+  position: absolute;
+  bottom: 0;
+  background: white;
+  opacity: 1;
 }
 
 .link {
@@ -704,6 +714,10 @@ body {
   flex-direction: column;
   padding: 1rem;
   padding-bottom: 64px;
+  position: relative;
+}
+
+.work-positioner {
   position: relative;
 }
 

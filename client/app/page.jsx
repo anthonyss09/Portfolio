@@ -92,7 +92,7 @@ export default function Home() {
       </main>
       <footer>
         {" "}
-        <Footer />
+        <Footer footerId="footer" />
       </footer>
     </>
   );

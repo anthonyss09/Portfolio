@@ -1,16 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
 import blueSphere from "/public/assets/images/blueSphere.png";
-import TwoSmallClouds from "../assets/svgs/TwoSmallClouds.js";
-import CloudSmallThree from "../assets/svgs/CloudSmallThree";
-import TwoMedClouds from "../assets/svgs/TwoMedClouds";
-import Blocks3dBack from "../assets/svgs/Blocks3dBack";
+import twoSmallCloudsR from "../assets/svgs/twoSmallCloudsR.svg";
+import cloudSmallThreeR from "../assets/svgs/cloudSmallThreeR.svg";
+import twoMedCloudsR from "../assets/svgs/twoMedCloudsR.svg";
+import blocks3dBackR from "../assets/svgs/blocks3dBackR.svg";
 
 export default function BackgroundOne() {
   return (
     <section id="background-2" className={`background background-two`}>
       <div className="two-med-clouds-b2">
-        <TwoMedClouds />
+        {/* <TwoMedClouds /> */}
+        <Image src={twoMedCloudsR} />
       </div>
 
       <p id="p-b2-1" className="p-b2 p-b2-1">
@@ -19,9 +20,11 @@ export default function BackgroundOne() {
 
       <div className="two-small-clouds-b2">
         {" "}
-        <TwoSmallClouds />
+        <Image src={twoSmallCloudsR} />
+        {/* <TwoSmallClouds /> */}
         <div className="cloud-small-three-b2">
-          <CloudSmallThree />
+          {/* <CloudSmallThree /> */}
+          <Image src={cloudSmallThreeR} />
         </div>
       </div>
 
@@ -31,7 +34,8 @@ export default function BackgroundOne() {
       </div>
 
       <div className="two-med-clouds-b2-2">
-        <TwoMedClouds />
+        {/* <TwoMedClouds /> */}
+        <Image src={twoMedCloudsR} />
       </div>
 
       <p className="p-b2 p-b2-2">Bridge the gap</p>
@@ -47,7 +51,8 @@ export default function BackgroundOne() {
         </div>
         <div id="blocks-svg" className="blocks-svg">
           {" "}
-          <Blocks3dBack />
+          {/* <Blocks3dBack /> */}
+          <Image src={blocks3dBackR} />
         </div>
       </div>
     </section>

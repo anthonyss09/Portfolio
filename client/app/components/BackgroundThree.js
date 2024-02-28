@@ -1,33 +1,38 @@
 import Image from "next/image";
-import CloudBigB3 from "../assets/svgs/CloudBigB3";
+import cloudBigB3R from "../assets/svgs/cloudBigB3R.svg";
 import CloudComputers from "/public/assets/images/cloudComputers.png";
-import TwoSmallClouds from "../assets/svgs/TwoSmallClouds.js";
+import twoSmallCloudsR from "../assets/svgs/twoSmallCloudsR.svg";
 import Link from "next/link";
-import CloudSmallOne from "../assets/svgs/CloudSmallOne";
-import CloudSmallThree from "../assets/svgs/CloudSmallThree";
-import CloudMed from "../assets/svgs/CloudMed";
+import cloudSmallThreeR from "../assets/svgs/cloudSmallThreeR.svg";
+import cloudSmallOneR from "../assets/svgs/cloudSmallOneR.svg";
+import cloudMedR from "../assets/svgs/cloudMedR.svg";
 
 export default function BackgroundOne() {
   return (
     <section id="background-4" className={`background background-three`}>
       <div className="cloud-small-one-b3">
-        <CloudSmallOne />
+        {/* <CloudSmallOne /> */}
+        <Image src={cloudSmallOneR} />
       </div>
 
       <div className="cloud-small-three-b3">
-        <CloudSmallThree />
+        {/* <CloudSmallThree /> */}
+        <Image src={cloudSmallThreeR} />
       </div>
 
       <div className="cloud-big-b3">
-        <CloudBigB3 />
+        {/* <CloudBigB3 /> */}
+        <Image src={cloudBigB3R} />
       </div>
 
       <div className="cloud-big-b3-right">
-        <CloudBigB3 />
+        {/* <CloudBigB3 /> */}
+        <Image src={cloudBigB3R} />
       </div>
 
       <div className="cloud-med-b3">
-        <CloudMed />
+        {/* <CloudMed /> */}
+        <Image src={cloudMedR} />
       </div>
 
       <div className="cloud-computers">
@@ -43,7 +48,8 @@ export default function BackgroundOne() {
           src={CloudComputers}
         />
         <div className="two-small-clouds-b3">
-          <TwoSmallClouds />
+          {/* <TwoSmallClouds /> */}
+          <Image src={twoSmallCloudsR} />
         </div>
       </div>
     </section>

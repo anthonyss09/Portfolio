@@ -1,11 +1,10 @@
 import Image from "next/image";
-import CloudSmallOne from "../assets/svgs/CloudSmallOne";
-import CloudSmallTwo from "../assets/svgs/CloudSmallTwo";
-import CloudSmallThree from "../assets/svgs/CloudSmallThree";
-import CloudMed from "../assets/svgs/CloudMed";
-import BigCloud from "../assets/svgs/CloudBig";
+import cloudSmallTwoR from "../assets/svgs/cloudSmallTwoR.svg";
+import cloudSmallThreeR from "../assets/svgs/cloudSmallThreeR.svg";
+import cloudBigR from "../assets/svgs/cloudBigR.svg";
 import blueSphere from "/public/assets/images/blueSphere.png";
-import TwoSmallClouds from "../assets/svgs/TwoSmallClouds";
+import twoSmallCloudsR from "../assets/svgs/twoSmallCloudsR.svg";
+import cloudSMallOneR from "../assets/svgs/cloudSmallOneR.svg";
 
 export default function BackgroundOne() {
   return (
@@ -20,28 +19,31 @@ export default function BackgroundOne() {
           src={blueSphere}
         />
         <div className="two-small-clouds-b1">
-          <TwoSmallClouds />
+          {/* <TwoSmallClouds /> */}
+          <Image src={twoSmallCloudsR} />
         </div>
       </div>
 
       <div className="cloud-big-b1-right">
-        <BigCloud />
+        {/* <BigCloud /> */}
+        <Image src={cloudBigR} />
       </div>
 
-      <div className="cloud-right-far">
-        <CloudMed />
-      </div>
+      <div className="cloud-right-far">{/* <CloudMed /> */}</div>
 
       <div className="clouds-phone-center">
         {" "}
         <div className="cloud-small-one">
-          <CloudSmallOne />
+          {/* <CloudSmallOne /> */}
+          <Image src={cloudSMallOneR} />
         </div>
         <div className="cloud-small-two">
-          <CloudSmallTwo />
+          {/* <CloudSmallTwo /> */}
+          <Image src={cloudSmallTwoR} />
         </div>
         <div className="cloud-small-three">
-          <CloudSmallThree />
+          {/* <CloudSmallThree /> */}
+          <Image src={cloudSmallThreeR} />
         </div>
       </div>
     </section>
