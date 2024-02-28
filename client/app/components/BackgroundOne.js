@@ -5,6 +5,7 @@ import cloudBigR from "../assets/svgs/cloudBigR.svg";
 import blueSphere from "/public/assets/images/blueSphere.png";
 import twoSmallCloudsR from "../assets/svgs/twoSmallCloudsR.svg";
 import cloudSMallOneR from "../assets/svgs/cloudSmallOneR.svg";
+import cloudMedR from "../assets/svgs/cloudMedR.svg";
 
 export default function BackgroundOne() {
   return (
@@ -19,30 +20,29 @@ export default function BackgroundOne() {
           src={blueSphere}
         />
         <div className="two-small-clouds-b1">
-          {/* <TwoSmallClouds /> */}
           <Image src={twoSmallCloudsR} />
         </div>
       </div>
 
       <div className="cloud-big-b1-right">
-        {/* <BigCloud /> */}
+        {" "}
         <Image src={cloudBigR} />
       </div>
 
-      <div className="cloud-right-far">{/* <CloudMed /> */}</div>
+      <div className="cloud-right-far">
+        {" "}
+        <Image src={cloudMedR} />
+      </div>
 
       <div className="clouds-phone-center">
         {" "}
         <div className="cloud-small-one">
-          {/* <CloudSmallOne /> */}
           <Image src={cloudSMallOneR} />
         </div>
         <div className="cloud-small-two">
-          {/* <CloudSmallTwo /> */}
           <Image src={cloudSmallTwoR} />
         </div>
         <div className="cloud-small-three">
-          {/* <CloudSmallThree /> */}
           <Image src={cloudSmallThreeR} />
         </div>
       </div>

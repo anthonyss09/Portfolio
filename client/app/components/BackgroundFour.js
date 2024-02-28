@@ -7,7 +7,6 @@ export default function BackgroundFour() {
   return (
     <section id="background-5" className={`background background-four `}>
       <div className="two-med-clouds-b4">
-        {/* <TwoMedClouds /> */}
         <Image src={twoMedCloudsR} />
       </div>
       <p id="p-b4-1" className={`p-b4-1 `}>
@@ -23,12 +22,10 @@ export default function BackgroundFour() {
         <div className="two-small-clouds-b4">
           {" "}
           <Image src={twoMedCloudsR} />
-          {/* <TwoSmallClouds /> */}
         </div>
       </div>
       <div id="image-blue-sphere-b4-2" className={`image-blue-sphere-b4-2 `}>
         <div className="cloud-small-three-b4">
-          {/* <CloudSmallThree /> */}
           <Image src={cloudSmallThreeR} />
         </div>
         <Image height={260} alt="blue sphere" src={blueSphere} />

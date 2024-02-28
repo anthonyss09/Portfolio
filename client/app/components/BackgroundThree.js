@@ -11,27 +11,22 @@ export default function BackgroundOne() {
   return (
     <section id="background-4" className={`background background-three`}>
       <div className="cloud-small-one-b3">
-        {/* <CloudSmallOne /> */}
         <Image src={cloudSmallOneR} />
       </div>
 
       <div className="cloud-small-three-b3">
-        {/* <CloudSmallThree /> */}
         <Image src={cloudSmallThreeR} />
       </div>
 
       <div className="cloud-big-b3">
-        {/* <CloudBigB3 /> */}
         <Image src={cloudBigB3R} />
       </div>
 
       <div className="cloud-big-b3-right">
-        {/* <CloudBigB3 /> */}
         <Image src={cloudBigB3R} />
       </div>
 
       <div className="cloud-med-b3">
-        {/* <CloudMed /> */}
         <Image src={cloudMedR} />
       </div>
 
@@ -48,7 +43,6 @@ export default function BackgroundOne() {
           src={CloudComputers}
         />
         <div className="two-small-clouds-b3">
-          {/* <TwoSmallClouds /> */}
           <Image src={twoSmallCloudsR} />
         </div>
       </div>
