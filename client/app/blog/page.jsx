@@ -4,6 +4,7 @@ import Footer from "@/app/components/Footer";
 import PostPreview from "@/app/components/PostPreview";
 import dataFlow from "../../public/assets/images/dataFlow.jpg";
 import cloudNetwork1 from "../../public/assets/images/cloudNetwork1.png";
+import Link from "next/link";
 
 export default function Blog() {
   return (
@@ -14,12 +15,15 @@ export default function Blog() {
       <main id="blog-main" className="blog-main">
         <section className="blog-section-featured blog-section">
           <h4 className="blog-header">Featured Post</h4>{" "}
-          <PostPreview
-            postHeading="Deploy dockerized React/Nginx app featuring Redux & RTK with Node.js
+          <Link href="/blog/post-one" className="link">
+            {" "}
+            <PostPreview
+              postHeading="Deploy dockerized React/Nginx app featuring Redux & RTK with Node.js
             in serverless Google Cloud Run containers."
-            postImage={dataFlow}
-            postDate="02/25/2024"
-          />
+              postImage={dataFlow}
+              postDate="02/25/2024"
+            />
+          </Link>
         </section>
         <div className="blog-spacer"></div>
         <section className="blog-section-recent blog-section">
