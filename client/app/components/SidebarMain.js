@@ -15,14 +15,14 @@ export default function SidebarMain({ handleLinkClick }) {
           Home
         </Link>
         <Link
-          href="/blog"
+          href="/cloud9/blog"
           className="link sidebar-main-link"
           onClick={handleLinkClick}
         >
           Blog
         </Link>{" "}
         <Link
-          href="/work"
+          href="/cloud9/work"
           className="link sidebar-main-link"
           onClick={handleLinkClick}
         >

@@ -2,12 +2,13 @@ import Image from "next/image";
 import blueSphere from "/public/assets/images/blueSphere.png";
 import twoMedCloudsR from "../assets/svgs/twoMedCloudsR.svg";
 import cloudSmallThreeR from "../assets/svgs/cloudSmallThreeR.svg";
+import twoSmallCloudsR from "../assets/svgs/twoSmallCloudsR.svg";
 
 export default function BackgroundFour() {
   return (
     <section id="background-5" className={`background background-four `}>
       <div className="two-med-clouds-b4">
-        <Image src={twoMedCloudsR} alt="two medum clouds" />
+        <Image src={twoSmallCloudsR} alt="two medum clouds" />
       </div>
       <p id="p-b4-1" className={`p-b4-1 `}>
         Cloud 9 An expression of self.
@@ -21,7 +22,7 @@ export default function BackgroundFour() {
         />
         <div className="two-small-clouds-b4">
           {" "}
-          <Image src={twoMedCloudsR} alt="two medium clouds" />
+          <Image src={twoSmallCloudsR} alt="two medium clouds" />
         </div>
       </div>
       <div id="image-blue-sphere-b4-2" className={`image-blue-sphere-b4-2 `}>

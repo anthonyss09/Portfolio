@@ -1,14 +1,14 @@
 "use client";
-import { storeSnippet } from "../snippets/blogOne/storeOne";
-import CodeSnippet from "../../components/CodeSnippet";
-import { apiSliceOne } from "../snippets/blogOne/apiSliceOne";
-import { indexSnippet } from "../snippets/blogOne/indexOne";
-import { serverSnippet } from "../snippets/blogOne/serverOne";
-import { serverJsonSnippet } from "../snippets/blogOne/serverJsonOne";
-import { nodeDockerSnippet } from "../snippets/blogOne/nodeDockerOne";
-import { reactDockerSnippet } from "../snippets/blogOne/reactDockerOne";
-import { composeSnippet } from "../snippets/blogOne/composeOne";
-import { nginxSnippet } from "../snippets/blogOne/nginxOne";
+import { storeSnippet } from "../snippets/blog-one/storeOne";
+import CodeSnippet from "../../../components/CodeSnippet";
+import { apiSliceOne } from "../snippets/blog-one/apiSliceOne";
+import { indexSnippet } from "../snippets/blog-one/indexOne";
+import { serverSnippet } from "../snippets/blog-one/serverOne";
+import { serverJsonSnippet } from "../snippets/blog-one/serverJsonOne";
+import { nodeDockerSnippet } from "../snippets/blog-one/nodeDockerOne";
+import { reactDockerSnippet } from "../snippets/blog-one/reactDockerOne";
+import { composeSnippet } from "../snippets/blog-one/composeOne";
+import { nginxSnippet } from "../snippets/blog-one/nginxOne";
 import gcpAccount from "/public/assets/images/gcp-account-one.png";
 import Link from "next/link";
 import Image from "next/image";
@@ -26,7 +26,7 @@ export default function postOne() {
   return (
     <>
       {" "}
-      <NavBar navbarClass="navbar-blog" />
+      {/* <NavBar navbarClass="navbar-blog" /> */}
       <div className="post-center">
         {" "}
         <header>

@@ -1,12 +1,12 @@
 import {
   translateOnScrollDown,
   translateOnScrollUp,
-} from "../animationFrames/translateAnimations";
-import { heightFromToPx } from "../animationFrames/heightAnimations";
+} from "../../animationFrames/translateAnimations";
+import { heightFromToPx } from "../../animationFrames/heightAnimations";
 import {
   opacityOnScrollDown,
   opacityOnScrollUp,
-} from "../animationFrames/opacityAnimations";
+} from "../../animationFrames/opacityAnimations";
 
 const handleTouchEnd = (
   deltaY,
@@ -14,15 +14,18 @@ const handleTouchEnd = (
   windowPositionRef,
   mainPositionRef,
   navbarHeight,
-  footerHeight
+  footerHeight,
+  landing
 ) => {
-  const footer = document.getElementById("footer");
   if (!pauseScrollRef.current) {
     pauseScrollRef.current = true;
     //if scrolling down
     if (deltaY < 0) {
-      translateOnScrollDown(windowPositionRef, mainPositionRef);
-      opacityOnScrollDown(windowPositionRef.current);
+      if (landing && windowPositionRef.current < 5) {
+        translateOnScrollDown(windowPositionRef, mainPositionRef);
+        opacityOnScrollDown(windowPositionRef.current);
+        windowPositionRef.current++;
+      }
       heightFromToPx("navbar", 300, navbarHeight.current, 96);
       heightFromToPx("footer", 300, footerHeight.current, 0);
       navbarHeight.current = 96;
@@ -30,16 +33,19 @@ const handleTouchEnd = (
     }
     //if scrolling up
     if (deltaY > 0) {
-      translateOnScrollUp(windowPositionRef, mainPositionRef);
-      opacityOnScrollUp(windowPositionRef.current);
+      if (landing && windowPositionRef.current > 1) {
+        translateOnScrollUp(windowPositionRef, mainPositionRef);
+        opacityOnScrollUp(windowPositionRef.current);
+        windowPositionRef.current--;
+      }
       heightFromToPx("navbar", 300, navbarHeight.current, 80);
       heightFromToPx("footer", 300, footerHeight.current, 64);
       navbarHeight.current = 80;
       footerHeight.current = 64;
-      footer.style.background = "none";
-      setTimeout(() => {
-        footer.style.background = "white";
-      }, 1000);
+      // footer.style.background = "none";
+      // setTimeout(() => {
+      //   footer.style.background = "white";
+      // }, 1000);
     }
     if (deltaY === 0) {
       return;

@@ -150,9 +150,10 @@ body {
 .cloud-big-b1-right {
   position: absolute;
   right: -12rem;
+  right: -14rem;
   top: 18rem;
-  top: 22rem;
-  /* transform: rotate(180deg); */
+  /* top: 22rem; */
+  /* transform: rotate(90deg); */
 }
 
 .cloud-big-b3 {
@@ -484,6 +485,7 @@ body {
   box-shadow: 0 4px 30px #ced9df60;
   /* box-shadow: 0 4px 30px #6cc7f860; */
   transition: all 0.2s ease-out;
+  opacity: 0.9;
 }
 
 .navbar-blog {
@@ -533,7 +535,6 @@ body {
 .p-b2-1 {
   width: 100vw;
   text-align: center;
-  opacity: 0;
   left: 0;
   top: 18rem;
 }
@@ -655,10 +656,18 @@ body {
 .two-med-clouds-b2 {
   height: 400px;
   position: absolute;
-  top: -3.4rem;
+  /* top: -3.4rem; */
   right: 30vw;
-  transform: rotateY(180deg);
+  right: 40vw;
+  transform: rotateY(180deg) scale(1.4);
   transition: 0.1s ease-in-out all;
+}
+
+.two-med-clouds-b2-2 {
+  position: absolute;
+  top: 880px;
+  right: 10vw;
+  transform: rotateY(180deg) scale(1.4);
 }
 
 .two-med-clouds-b4 {
@@ -704,13 +713,6 @@ body {
   z-index: -1;
 }
 
-.two-med-clouds-b2-2 {
-  position: absolute;
-  top: 800px;
-  right: 10vw;
-  transform: rotateY(180deg);
-}
-
 .sidebar-main {
   height: 0;
   width: 100vw;
@@ -723,6 +725,7 @@ body {
   z-index: -1;
   box-sizing: border-box;
   transition: all ease-out 0.3s;
+  opacity: 1;
 }
 
 .sidebar-main-link {

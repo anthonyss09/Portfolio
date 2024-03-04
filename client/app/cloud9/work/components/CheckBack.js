@@ -1,5 +1,5 @@
 import Image from "next/image";
-import cloudNetwork1 from "../../../public/assets/images/cloudNetwork1.png";
+import cloudNetwork1 from "/public/assets/images/cloudNetwork1.png";
 
 export default function CheckBack() {
   return (

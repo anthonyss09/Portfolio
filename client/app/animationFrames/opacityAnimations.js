@@ -56,22 +56,22 @@ const fadeOutElement = (targetId, duration) => {
 
 const opacityOnScrollDown = (windowPosition) => {
   switch (windowPosition) {
-    case 2:
+    case 1:
       fadeOutElement("background-1", 1000);
       fadeInElement("background-2", 1000);
       fadeInElement("image-blue-sphere-b2-1", 1000);
       break;
-    case 3:
+    case 2:
       fadeOutElement("image-blue-sphere-b2-1", 500);
       fadeInElement("blocks-back-b2", 1000);
       fadeInElement("image-blue-sphere-b2-2", 1000);
       break;
-    case 4:
+    case 3:
       fadeInElement("background-4", 1000);
       fadeOutElement("blocks-back-b2", 1000);
       fadeOutElement("image-blue-sphere-b2-2", 1000);
       break;
-    case 5:
+    case 4:
       fadeInElement("background-5", 1000);
       fadeOutElement("background-4", 1000);
       fadeInElement("image-blue-sphere-b4-2", 1000);
@@ -85,22 +85,22 @@ const opacityOnScrollDown = (windowPosition) => {
 
 const opacityOnScrollUp = (windowPosition) => {
   switch (windowPosition) {
-    case 1:
+    case 2:
       fadeInElement("background-1", 1000);
       fadeOutElement("background-2", 1000);
       fadeOutElement("image-blue-sphere-b2-1", 1000);
       break;
-    case 2:
+    case 3:
       fadeInElement("image-blue-sphere-b2-1", 500);
       fadeOutElement("blocks-back-b2", 1000);
       fadeOutElement("image-blue-sphere-b2-2", 1000);
       break;
-    case 3:
+    case 4:
       fadeOutElement("background-4", 1000);
       fadeInElement("blocks-back-b2", 1000);
       fadeInElement("image-blue-sphere-b2-2", 1000);
       break;
-    case 4:
+    case 5:
       fadeInElement("background-4", 1000);
       fadeOutElement("background-5", 1000);
       fadeInElement("image-blue-sphere-b4-1", 1000);
@@ -113,6 +113,7 @@ const opacityOnScrollUp = (windowPosition) => {
 };
 
 export {
+  fadeFromTo,
   fadeInElement,
   fadeOutElement,
   opacityOnScrollDown,

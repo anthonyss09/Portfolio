@@ -47,7 +47,7 @@ const translateOnScrollDown = (windowPositionRef, mainPositionRef) => {
     default:
       break;
   }
-  windowPositionRef.current++;
+  // windowPositionRef.current++;
 };
 
 const translateOnScrollUp = (windowPositionRef, mainPositionRef) => {
@@ -80,7 +80,7 @@ const translateOnScrollUp = (windowPositionRef, mainPositionRef) => {
     default:
       break;
   }
-  windowPositionRef.current--;
+  // windowPositionRef.current--;
 };
 
 export { translateOnScrollDown, translateOnScrollUp };

@@ -4,7 +4,7 @@ import bmPicBlue from "/public/assets/images/bmPicBlue.jpeg";
 import bmPicPink from "/public/assets/images/bmPicPink.PNG";
 import bmPicPearl from "/public/assets/images/bmPicPearl.jpeg";
 import Link from "next/link";
-import GitHub2 from "../../assets/svgs/GitHub2";
+import GitHub2 from "../../../assets/svgs/GitHub2";
 
 export default function BarkMate() {
   return (
