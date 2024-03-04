@@ -43,7 +43,7 @@ const handleNavFooterHeight = (e, navbarHeight, footerHeight, deltaY) => {
         // }, 1000);
       }
       break;
-    case "touch":
+    case "touchend":
       //if scrolling down
       if (deltaY < 0) {
         heightFromToPx("navbar", 300, navbarHeight.current, 96);
