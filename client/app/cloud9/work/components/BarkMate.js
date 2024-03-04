@@ -11,9 +11,24 @@ export default function BarkMate() {
     <aside className="work-preview ">
       <section className="work-preview-section work-preview-section-images">
         {" "}
-        <Image src={beachBums} height={180} className="work-preview-image" />
-        <Image src={bmPicBlue} height={180} className="work-preview-image" />
-        <Image src={bmPicPink} height={180} className="work-preview-image" />
+        <Image
+          src={beachBums}
+          height={180}
+          className="work-preview-image"
+          alt="bark mate preview"
+        />
+        <Image
+          src={bmPicBlue}
+          height={180}
+          className="work-preview-image"
+          alt="bark mate preview"
+        />
+        <Image
+          src={bmPicPink}
+          height={180}
+          className="work-preview-image"
+          alt="bark mate preview"
+        />
       </section>
       <section className="work-preview-section work-preview-section-title">
         <h5 className="work-preview-header">Bark Mate</h5>

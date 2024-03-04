@@ -20,13 +20,11 @@ import feContainer from "/public/assets/images/fe-container-config-1.png";
 import feContainer2 from "/public/assets/images/fe-container-port-1.png";
 import beContainer from "/public/assets/images/add-be-container.png";
 import backPic from "/public/assets/images/dataFlow.jpg";
-import NavBar from "@/app/components/NavBar";
 
 export default function postOne() {
   return (
     <>
       {" "}
-      {/* <NavBar navbarClass="navbar-blog" /> */}
       <div className="post-center">
         {" "}
         <header>

@@ -16,10 +16,10 @@ const handleNavFooterHeight = (e, navbarHeight, footerHeight, deltaY) => {
         heightFromToPx("footer", 300, footerHeight.current, 64);
         navbarHeight.current = 80;
         footerHeight.current = 64;
-        footer.style.background = "none";
-        setTimeout(() => {
-          footer.style.background = "white";
-        }, 1000);
+        // footer.style.background = "none";
+        // setTimeout(() => {
+        //   footer.style.background = "white";
+        // }, 1000);
       }
 
       break;
@@ -38,9 +38,9 @@ const handleNavFooterHeight = (e, navbarHeight, footerHeight, deltaY) => {
         navbarHeight.current = 80;
         footerHeight.current = 64;
         footer.style.background = "none";
-        setTimeout(() => {
-          footer.style.background = "white";
-        }, 1000);
+        // setTimeout(() => {
+        //   footer.style.background = "white";
+        // }, 1000);
       }
       break;
     case "touch":
@@ -57,10 +57,10 @@ const handleNavFooterHeight = (e, navbarHeight, footerHeight, deltaY) => {
         heightFromToPx("footer", 300, footerHeight.current, 64);
         navbarHeight.current = 80;
         footerHeight.current = 64;
-        footer.style.background = "none";
-        setTimeout(() => {
-          footer.style.background = "white";
-        }, 1000);
+        // footer.style.background = "none";
+        // setTimeout(() => {
+        //   footer.style.background = "white";
+        // }, 1000);
       }
       if (deltaY === 0) {
         return;

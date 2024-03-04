@@ -13,20 +13,10 @@ export default function Home() {
   const mainPositionRef = useRef(0);
   const windowPositionRef = useRef(1);
   const touchStartYRef = useRef(0);
-  const footerHeight = useRef(0);
-  const navbarHeight = useRef(80);
 
   useEffect(() => {
     const wheel = (e) => {
-      handleWheel(
-        e,
-        pauseScrollRef,
-        windowPositionRef,
-        mainPositionRef,
-        navbarHeight,
-        footerHeight,
-        true
-      );
+      handleWheel(e, pauseScrollRef, windowPositionRef, mainPositionRef);
     };
 
     const touchStart = (e) => {
@@ -40,22 +30,12 @@ export default function Home() {
         deltaY,
         pauseScrollRef,
         windowPositionRef,
-        mainPositionRef,
-        navbarHeight,
-        footerHeight,
-        true
+        mainPositionRef
       );
     };
 
     const keyDown = (e) => {
-      handleKeyDown(
-        e,
-        windowPositionRef,
-        mainPositionRef,
-        navbarHeight,
-        footerHeight,
-        true
-      );
+      handleKeyDown(e, windowPositionRef, mainPositionRef);
     };
     const el = document.getElementById("main-inner");
     el?.addEventListener("wheel", wheel);
@@ -76,10 +56,6 @@ export default function Home() {
 
   return (
     <>
-      {/* <header>
-        {" "}
-        <NavBar elId="main" />
-      </header> */}
       <main id="main" className={`main main-fixed`}>
         <div id="main-inner" className={`main-inner `}>
           {" "}
@@ -89,10 +65,6 @@ export default function Home() {
           <BackgroundFour />
         </div>
       </main>
-      {/* <footer>
-        {" "}
-        <Footer footerId="footer" />
-      </footer> */}
     </>
   );
 }
