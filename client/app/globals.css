@@ -586,6 +586,7 @@ body {
 }
 
 .post-center {
+  width: 100vw;
   padding: 1rem;
   padding-top: 6rem;
 }

@@ -1,6 +1,6 @@
 import { heightFromToPx } from "../../animationFrames/heightAnimations";
 
-const handleMenuClick = (footerHeight, navbarHeight) => {
+const handleMenuClick = (footerHeight, navbarHeight, pathName) => {
   const navbar = document.getElementById("navbar");
   const footer = document.getElementById("footer");
   const sidebar = document.getElementById("sidebar-main");
@@ -18,12 +18,14 @@ const handleMenuClick = (footerHeight, navbarHeight) => {
     navbarHeight.current = 96;
     footerHeight.current = 80;
   } else {
-    setTimeout(() => {
-      navbar.style.background = "none";
-      navbar.style.opacity = 0.9;
-      navbar.style.boxShadow = "0 4px 30px #ced9df60";
-    }, 500);
-    footer.style.background = "none";
+    if (pathName === "/cloud9") {
+      setTimeout(() => {
+        navbar.style.background = "none";
+        navbar.style.boxShadow = "0 4px 30px #ced9df60";
+      }, 500);
+      footer.style.background = "none";
+    }
+
     heightFromToPx("footer", 300, footerHeight.current, 0);
     heightFromToPx("sidebar-main", 300, 800, 0);
     footerHeight.current = 0;

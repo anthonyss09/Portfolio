@@ -46,9 +46,6 @@ export default function CloudLayout({ children }) {
     };
   }, []);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
   return (
     <div>
       <NavBar />

@@ -4,22 +4,23 @@ import { Spiral as Hamburger } from "hamburger-react";
 import SidebarMain from "./SidebarMain";
 import { handleMenuClick } from "../cloud9/cbs/handleMenuClick";
 import { useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function NavBar({ navbarClass }) {
   const footerHeight = useRef(0);
   const navbarHeight = useRef(80);
   const [isOpen, setOpen] = useState(false);
+  const pathName = usePathname();
 
   const handleClick = () => {
     const sidebar = document.getElementById("sidebar-main");
-    const children = document.getElementById("children");
     const sidebarHeight = sidebar.offsetHeight;
-    handleMenuClick(footerHeight, navbarHeight);
+    handleMenuClick(footerHeight, navbarHeight, pathName);
     if (sidebarHeight === 0) {
-      children.style.position = "fixed";
+      document.body.style.overflow = "hidden";
       setOpen(true);
     } else {
-      children.style.position = "relative";
+      document.body.style.overflow = "unset";
       setOpen(false);
     }
   };

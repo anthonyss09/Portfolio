@@ -20,8 +20,18 @@ import feContainer from "/public/assets/images/fe-container-config-1.png";
 import feContainer2 from "/public/assets/images/fe-container-port-1.png";
 import beContainer from "/public/assets/images/add-be-container.png";
 import backPic from "/public/assets/images/dataFlow.jpg";
+import { useEffect } from "react";
 
 export default function postOne() {
+  useEffect(() => {
+    const footer = document.getElementById("footer");
+    const navbar = document.getElementById("navbar");
+    setTimeout(() => {
+      navbar.style.background = "white";
+      footer.style.background = "white";
+      navbar.style.opacity = 0.9;
+    }, 500);
+  }, []);
   return (
     <>
       {" "}
@@ -364,8 +374,11 @@ export default function postOne() {
               alt="back end container"
             />
             <p className="blog-main-p">
-              Now deploy service. You can click the link for our app but it
-              won't work until we configure our YAML file. Let's do that now.
+              Now that the backend service container has been added scroll back
+              up to 'container startup order' and instruct the front end
+              container to be dependant on the backend service. Now the back end
+              service will be started first, so we know we'll be able to reach
+              it when our front end calls. Scroll back down and deploy!
             </p>
           </section>
         </main>
