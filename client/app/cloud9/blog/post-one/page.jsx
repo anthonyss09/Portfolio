@@ -43,12 +43,10 @@ export default function postOne() {
             Deploy dockerized React/Nginx app featuring Redux & RTK with Node.js
             in serverless Google Cloud Run containers.
           </h2>
-          <span className="blog-credits-container">
-            <span className="column">
-              <p className="blog-credits">Anthony Toffetti </p>
-              <p className="date">1/14/2024</p>
-            </span>
-          </span>
+          <div className="post-credits-container">
+            <p className="post-author">Anthony Toffetti </p>
+            <p className="post-date">1/14/2024</p>
+          </div>
           <Image
             src={backPic}
             className="post-pic-header"

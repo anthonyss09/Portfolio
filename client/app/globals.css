@@ -409,6 +409,10 @@ body {
   font-size: 16px;
 }
 
+.link-blog {
+  font-weight: 500;
+}
+
 .link:hover {
   cursor: pointer;
 }
@@ -585,10 +589,27 @@ body {
   transition: 1.2s ease-out all;
 }
 
+.post-author {
+  color: #00000099;
+  font-weight: 500;
+}
+
 .post-center {
   width: 100vw;
   padding: 1rem;
-  padding-top: 6rem;
+  padding-top: 7rem;
+}
+
+.post-credits-container {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.post-date {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #00000070;
+  color: #90a5b0;
 }
 
 .post-main {
@@ -653,6 +674,7 @@ body {
 
 .post-title {
   font-size: 20px;
+  font-size: 18px;
 }
 
 .two-med-clouds-b2 {
