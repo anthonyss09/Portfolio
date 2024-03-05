@@ -48,6 +48,7 @@ body {
 .background-one {
   position: relative;
   padding-top: 6rem;
+  opacity: 0;
 }
 
 .background-two {

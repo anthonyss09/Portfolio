@@ -7,6 +7,7 @@ import React, { useEffect, useRef } from "react";
 import { handleWheel } from "./cbs/handleWheel";
 import { handleKeyDown } from "./cbs/handleKeyDown";
 import { handleTouchEnd } from "./cbs/handleTouchEnd";
+import { fadeInElement } from "../animationFrames/opacityAnimations";
 
 export default function Home() {
   const pauseScrollRef = useRef(false);
@@ -52,6 +53,7 @@ export default function Home() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    fadeInElement("background-1", 1000);
   }, []);
 
   return (
