@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function Footer({ footerClass, footerId }) {
   return (
     <div id={footerId} className={`footer ${footerClass}`}>
-      <Link href="#" className="link">
+      <Link href="/cloud9/contact" className="link">
         <Image src={GmailIcon} alt="gmail icon" />
       </Link>
       <Link href="https://github.com/anthonyss09" className="link">

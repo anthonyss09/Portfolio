@@ -71,7 +71,7 @@ export default function BarkMate() {
           BarkMate.app
         </Link>
         <Link
-          href="https://github.com/anthonyss09/Portfolio.git"
+          href="https://github.com/anthonyss09/BarkMate"
           className="link link-bark-mate-git"
         >
           <Image src={GitHub2} alt="git hub icons" />

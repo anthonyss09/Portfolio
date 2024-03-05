@@ -30,7 +30,7 @@ export default function SidebarMain({ handleLinkClick }) {
           Work
         </Link>
         <Link
-          href="#"
+          href="/cloud9/contact"
           className="link sidebar-main-link"
           onClick={handleLinkClick}
         >

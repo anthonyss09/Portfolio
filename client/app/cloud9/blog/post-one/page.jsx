@@ -22,7 +22,7 @@ import beContainer from "/public/assets/images/add-be-container.png";
 import backPic from "/public/assets/images/dataFlow.jpg";
 import { useEffect } from "react";
 
-export default function postOne() {
+export default function PostOne() {
   useEffect(() => {
     const footer = document.getElementById("footer");
     const navbar = document.getElementById("navbar");
@@ -93,11 +93,12 @@ export default function postOne() {
               Google Cloud Platform offers a serverless deployment service
               called Google Cloud Run. Serverless deployment is becoming
               increasingly popular. Despite what the name indicates Cloud Run &
-              other 'serverless' options do have operating servers, it's just
-              the server management they've removed from a developer's plate. A
-              serverless deployment may also be a desireable option for it's
-              fast auto scaling. Cloud Run services can be configured to scale
-              to 0, so when they are not running, you are not paying.
+              other &apos;serverless&apos; options do have operating servers,
+              it&apos;s just the server management they&apos;ve removed from a
+              developer&apos;s plate. A serverless deployment may also be a
+              desireable option for it&apos;s fast auto scaling. Cloud Run
+              services can be configured to scale to 0, so when they are not
+              running, you are not paying.
             </p>
             <h4>Prerequisites</h4>
             <ul className="blog-list-prerequisites">
@@ -113,7 +114,7 @@ export default function postOne() {
             <h4>Section Overview:</h4>
             <p className="blog-main-p">
               In this section we will quickly go over the steps to build a React
-              app with Redux using create react app. Let's begin.
+              app with Redux using create react app. Let&apos;s begin.
             </p>
             <p className="blog-main-p">
               {" "}
@@ -149,8 +150,8 @@ export default function postOne() {
             <h5 className="path">/client/src/index.js</h5>
             <CodeSnippet language="javascript" code={indexSnippet} />
             <p className="blog-main-p">
-              Add proxy to package.json so any requests that don't match our
-              front end's address with be proxied there.
+              Add proxy to package.json so any requests that don&apos;t match
+              our front end&apos;s address with be proxied there.
             </p>
             <h5 className="path">/client/src/package.json</h5>
             <CodeSnippet
@@ -196,46 +197,47 @@ export default function postOne() {
             <h4>Section Overview:</h4>
             <p className="blog-main-p">
               In this section we build docker images for our application then
-              test them in local docker containers with docker compose. We'll
-              need dockerfiles for both our front and back ends & a
-              docker-compose.YML file to instruct docker compose. Let's start
-              with the dockerfile for our React app.
+              test them in local docker containers with docker compose.
+              We&apos;ll need dockerfiles for both our front and back ends & a
+              docker-compose.YML file to instruct docker compose. Let&apos;s
+              start with the dockerfile for our React app.
             </p>
             <p className="blog-main-p">
               The dockerfile for our React app is also where we build the nginx
-              web server. We'll instruct docker to build our application in
+              web server. We&apos;ll instruct docker to build our application in
               stages. First we instruct docker how to build the React
               application then we add instructions for nginx & copy our first
-              stage into the nginx build. We'll add & copy an nginx
+              stage into the nginx build. We&apos;ll add & copy an nginx
               configuration file as well.
             </p>
             <h5 className="path">/client/dockerfile</h5>
             <CodeSnippet language="dockerfile" code={reactDockerSnippet} />
             <p className="blog-main-p">
               We instructed our front end docker image build to copy the
-              nginx.conf file from /client/nginx/, so let's add it now.
+              nginx.conf file from /client/nginx/, so let&apos;s add it now.
             </p>
             <h5 className="path">/client/nginx/nginx.conf</h5>
             <CodeSnippet language="nginx" code={nginxSnippet} />
             <p className="blog-main-p">
-              Now let's add the dockerfile for our Node server.
+              Now let&apos;s add the dockerfile for our Node server.
             </p>
             <h5 className="path">/server/dockerfile</h5>
             <CodeSnippet language="dockerfile" code={nodeDockerSnippet} />
             <p className="blog-main-p">
-              Now we'll add a bare bones docker-compose.YML file in root where
-              we define front & back end services and tell docker compose which
-              to run first.
+              Now we&apos;ll add a bare bones docker-compose.YML file in root
+              where we define front & back end services and tell docker compose
+              which to run first.
             </p>
             <h5 className="path">/docker-compose.YML</h5>
             <CodeSnippet language="dockerfile" code={composeSnippet} />
             <p className="blog-main-p">
-              Now that we have our dockerfiles in place let's start building the
-              images. Make sure you have docker installed on your machine &
-              continue.
+              Now that we have our dockerfiles in place let&apos;s start
+              building the images. Make sure you have docker installed on your
+              machine & continue.
             </p>
             <p className="blog-main-p">
-              First let's build the front end image with the following commands.
+              First let&apos;s build the front end image with the following
+              commands.
             </p>
             <CodeSnippet code={`cd client \ndocker build -t react-app .`} />
             <p className="blog-main-p">Navigate back to root.</p>
@@ -256,11 +258,11 @@ export default function postOne() {
               In this last section we will deploy our application to Google
               Cloud Platform in Cloud Run containers. Within this section we
               will create a GCP project and push our local docker images to
-              Google's Artifact Registry. We will start a Cloud Run service
+              Google&apos;s Artifact Registry. We will start a Cloud Run service
               container using our front end image from the registry & add a
               sidecar container using our back end image. Lastly we will
-              configure our project's YAML file with instructions on running our
-              container services.
+              configure our project&apos;s YAML file with instructions on
+              running our container services.
             </p>
             <p className="blog-main-p">
               To start you will need to create a free Google Cloud Platform
@@ -310,7 +312,7 @@ export default function postOne() {
             />
             <p className="blog-main-p">
               Before we push our images to GCP we need to create repositories in
-              Google's Artifact Registry for both front and back ends.{" "}
+              Google&apos;s Artifact Registry for both front and back ends.{" "}
             </p>
             <Image
               className="post-pic"
@@ -319,7 +321,7 @@ export default function postOne() {
             />
             <p className="blog-main-p">
               Now that we have our repositories created in the Artifact Registry
-              let's push our local images. The following will describe the
+              let&apos;s push our local images. The following will describe the
               process for pushing local docker files to the registry. Repeat the
               process for both front & back end applications and be sure to push
               them to their respective repository which we created in the last
@@ -373,10 +375,10 @@ export default function postOne() {
             />
             <p className="blog-main-p">
               Now that the backend service container has been added scroll back
-              up to 'container startup order' and instruct the front end
-              container to be dependant on the backend service. Now the back end
-              service will be started first, so we know we'll be able to reach
-              it when our front end calls. Scroll back down and deploy!
+              up to &apos;container startup order&apos; and instruct the front
+              end container to be dependant on the backend service. Now the back
+              end service will be started first, so we know we&apos;ll be able
+              to reach it when our front end calls. Scroll back down and deploy!
             </p>
           </section>
         </main>
