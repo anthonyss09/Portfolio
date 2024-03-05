@@ -21,10 +21,12 @@ const handleMenuClick = (footerHeight, navbarHeight, pathName) => {
     if (pathName === "/cloud9") {
       setTimeout(() => {
         navbar.style.background = "none";
-        navbar.style.boxShadow = "0 4px 30px #ced9df60";
       }, 500);
       footer.style.background = "none";
     }
+    setTimeout(() => {
+      navbar.style.boxShadow = "0 4px 30px #ced9df60";
+    }, 500);
 
     heightFromToPx("footer", 300, footerHeight.current, 0);
     heightFromToPx("sidebar-main", 300, 800, 0);
