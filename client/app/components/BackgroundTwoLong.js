@@ -36,7 +36,7 @@ export default function BackgroundOne() {
 
       <p className="p-b2 p-b2-2">Bridge the gap</p>
       <p className="p-b2 p-b2-3">Between formless & form.</p>
-      <Link href="#" className="link link-projects">
+      <Link href="/cloud9/work" className="link link-projects">
         View Projects
       </Link>
 
