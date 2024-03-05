@@ -1,6 +1,7 @@
 import Link from "next/link";
-import TwoSmallClouds from "../assets/svgs/TwoSmallClouds";
-import CloudSmallTwo from "../assets/svgs/CloudSmallTwo";
+import TwoSmallClouds from "../assets/svgs/twoSmallCloudsR.svg";
+import CloudSmallTwo from "../assets/svgs/cloudSmallTwoR.svg";
+import Image from "next/image";
 
 export default function SidebarMain({ handleLinkClick }) {
   return (
@@ -40,13 +41,9 @@ export default function SidebarMain({ handleLinkClick }) {
         {" "}
         <div className="two-small-clouds-sidebar">
           {" "}
-          <TwoSmallClouds />
+          <Image src={TwoSmallClouds} alt="two small clouds" />
           <div className="cloud-small-two-sidebar">
-            <CloudSmallTwo />
-            {/* <div className="image-blue-sphere-sidebar">
-              {" "}
-              <Image src={blueSphere} height={140} />
-            </div> */}
+            <Image src={CloudSmallTwo} alt="small cloud" />
           </div>
         </div>
       </div>

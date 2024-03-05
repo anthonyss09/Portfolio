@@ -2,9 +2,8 @@ import Image from "next/image";
 import beachBums from "/public/assets/images/beachBums.PNG";
 import bmPicBlue from "/public/assets/images/bmPicBlue.jpeg";
 import bmPicPink from "/public/assets/images/bmPicPink.PNG";
-import bmPicPearl from "/public/assets/images/bmPicPearl.jpeg";
 import Link from "next/link";
-import GitHub2 from "../../../assets/svgs/GitHub2";
+import GitHub2 from "../../../assets/svgs/gitHub2R.svg";
 
 export default function BarkMate() {
   return (
@@ -75,7 +74,7 @@ export default function BarkMate() {
           href="https://github.com/anthonyss09/Portfolio.git"
           className="link link-bark-mate-git"
         >
-          <GitHub2 />
+          <Image src={GitHub2} alt="git hub icons" />
         </Link>
       </section>
     </aside>

@@ -1,6 +1,6 @@
 "use client";
 import { storeSnippet } from "../snippets/blog-one/storeOne";
-import CodeSnippet from "../../../components/CodeSnippet";
+import CodeSnippet from "../components/CodeSnippet";
 import { apiSliceOne } from "../snippets/blog-one/apiSliceOne";
 import { indexSnippet } from "../snippets/blog-one/indexOne";
 import { serverSnippet } from "../snippets/blog-one/serverOne";
@@ -39,7 +39,11 @@ export default function postOne() {
               <p className="date">1/14/2024</p>
             </span>
           </span>
-          <Image src={backPic} className="post-pic-header" />
+          <Image
+            src={backPic}
+            className="post-pic-header"
+            alt="computers and data board"
+          />
         </header>
         <main className="post-main">
           {" "}
@@ -109,6 +113,7 @@ export default function postOne() {
               Execute the following commands.
             </p>
             <CodeSnippet
+              language="javascript"
               code={`mkdir --your-project-name-- \ncd --your-project-name-- \nnpx create-react-app client \ncd client \nnpm install @reduxjs/toolkit react-redux`}
             />
             <p className="blog-main-p">
@@ -260,14 +265,22 @@ export default function postOne() {
             >
               https://console.cloud.google.com/getting-started?pli=1
             </Link>
-            <Image src={gcpAccount} className="post-pic" />
+            <Image
+              src={gcpAccount}
+              className="post-pic"
+              alt="google cloud account"
+            />
             <p className="blog-main-p">
               Once you have access to a GCP account navigate to the console
               dashboard and create a new project. Choose your billing account to
               enable billing. Once we are finished with this section be sure to
               shutdown services & delete project to avoid incurring any charges.
             </p>
-            <Image src={firstProject} className="post-pic" />
+            <Image
+              src={firstProject}
+              className="post-pic"
+              alt="google console"
+            />
             <p className="blog-main-pic">
               Now we will push our local docker images to the Google Cloud
               Registry. To do this you will need to have the gcloud CLI
@@ -282,12 +295,20 @@ export default function postOne() {
                 https://cloud.google.com/sdk/docs/install
               </Link>
             </p>
-            <Image src={CLI} className="post-pic" />
+            <Image
+              src={CLI}
+              className="post-pic"
+              alt="command line interface instructions"
+            />
             <p className="blog-main-p">
               Before we push our images to GCP we need to create repositories in
               Google's Artifact Registry for both front and back ends.{" "}
             </p>
-            <Image className="post-pic" src={artifactRegistry} />
+            <Image
+              className="post-pic"
+              src={artifactRegistry}
+              alt="google artifact registry"
+            />
             <p className="blog-main-p">
               Now that we have our repositories created in the Artifact Registry
               let's push our local images. The following will describe the
@@ -310,22 +331,38 @@ export default function postOne() {
                 https://cloud.google.com/artifact-registry/docs/docker/pushing-and-pulling
               </Link>
             </p>
-            <Image className="post-pic" src={pushImages} />
+            <Image
+              className="post-pic"
+              src={pushImages}
+              alt="push and pull images instructions"
+            />
             <p className="blog-main-p">
               Now we will create & configure our Cloud Run service. Navigate to
               Cloud Run in your console & click create service. Choose the
               container image url from your front end repository, name your
               service, choose a region & set container port to 80.
             </p>
-            <Image src={feContainer} className="post-pic" />
-            <Image src={feContainer2} className="post-pic" />
+            <Image
+              src={feContainer}
+              className="post-pic"
+              alt="front end container"
+            />
+            <Image
+              src={feContainer2}
+              className="post-pic"
+              alt="front end container"
+            />
             <p className="blog-main-p">
               {" "}
               Now scroll down to add container. Choose the image from our back
               end registry as container image url & set a PORT env variable to
               8080.
             </p>
-            <Image src={beContainer} className="post-pic" />
+            <Image
+              src={beContainer}
+              className="post-pic"
+              alt="back end container"
+            />
             <p className="blog-main-p">
               Now deploy service. You can click the link for our app but it
               won't work until we configure our YAML file. Let's do that now.

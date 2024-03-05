@@ -1,15 +1,16 @@
-import LinkdIn from "../assets/svgs/LinkdIn";
-import GmailIcon from "../assets/svgs/GmailIcon";
-import GitHubPages from "../assets/svgs/GitHubPages";
+import Image from "next/image";
+import LinkdIn from "../assets/svgs/linkedInR.svg";
+import GmailIcon from "../assets/svgs/gmailIconR.svg";
+import GitHubPages from "../assets/svgs/gitHubPagesR.svg";
 
 export default function Footer({ footerClass, footerId }) {
   return (
     <div id={footerId} className={`footer ${footerClass}`}>
-      <GmailIcon />
+      <Image src={GmailIcon} alt="gmail icon" />
 
-      <GitHubPages className="to-front" />
+      <Image src={GitHubPages} alt="github icon" />
 
-      <LinkdIn />
+      <Image src={LinkdIn} alt="linked in icon" />
     </div>
   );
 }

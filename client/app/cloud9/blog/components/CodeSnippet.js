@@ -9,7 +9,7 @@ export default function CodeSnippet({ code, language }) {
     Prism.highlightAll();
   }, []);
   return (
-    <div className="code-snippet">
+    <div className="code-snippet ">
       {" "}
       <pre className="code-pre">
         <code className={`language-${language}`}>{code}</code>
