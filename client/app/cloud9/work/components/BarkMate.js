@@ -29,13 +29,13 @@ export default function BarkMate() {
           alt="bark mate preview"
         />
       </section>
-      <section className="work-preview-section work-preview-section-title">
-        <h5 className="work-preview-header">Bark Mate</h5>
-        <p>A social networking platform for dog lovers.</p>
-      </section>
 
-      <section className="work-preview-body">
+      <div className="work-preview-body">
         {" "}
+        <section className="work-preview-section work-preview-section-title">
+          <h5 className="work-preview-header">Bark Mate</h5>
+          <p>A social networking platform for dog lovers.</p>
+        </section>
         <section className="work-preview-section work-preview-section-tools">
           <h5 className="work-preview-header">Tools</h5>
           <ul className="work-preview-tools">
@@ -63,7 +63,7 @@ export default function BarkMate() {
             <li>Serverless deployment</li>
           </ul>
         </section>
-      </section>
+      </div>
 
       <section className="work-preview-section work-preview-section-links">
         {" "}
