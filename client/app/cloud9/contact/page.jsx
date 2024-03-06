@@ -43,7 +43,7 @@ export default function Contact() {
           </label>
           <textarea id="message" className="contact-form-textarea" rows={6} />
         </div>
-        <button className="btn contact-form-btn">Send</button>
+        <button className="btn contact-form-btn">Send It!</button>
       </form>
     </div>
   );

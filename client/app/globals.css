@@ -291,7 +291,8 @@ body {
 }
 
 .contact-form-header {
-  margin: 1rem 0 2rem 0;
+  width: 200px;
+  margin: 2rem 1rem;
   font-weight: 500;
 }
 
@@ -302,7 +303,7 @@ body {
 .contact-form-input {
   border: none;
   border-bottom: 1px solid #1fa8f240;
-  border-bottom: 2px solid #03466a40;
+  border-bottom: 2px solid #03466a10;
   border-radius: 0;
 }
 
@@ -314,7 +315,7 @@ body {
 
 .contact-form-textarea {
   border: 1px solid #1fa8f260;
-  border: 2px solid #03466a40;
+  border: 2px solid #03466a10;
   resize: none;
   border-radius: 1.2rem;
   margin-top: 1rem;
@@ -323,7 +324,7 @@ body {
 
 .contact-main {
   margin-top: 80px;
-  padding: 1rem 2rem;
+  padding: 1rem;
   padding-bottom: 64px;
 }
 
