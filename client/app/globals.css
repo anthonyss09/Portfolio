@@ -35,6 +35,33 @@ body {
   font-family: "M PLUS Rounded 1c", sans-serif;
 }
 
+input {
+  outline: none;
+  font-size: 16px;
+}
+
+textarea {
+  outline: none;
+  font-size: 16px;
+}
+
+.alert-container {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+}
+
+.alert-message {
+  font-weight: 500;
+  /* font-size: 2rem; */
+  color: #03466a;
+  opacity: 0;
+}
+
 .background {
   height: 760px;
   width: 100%;
@@ -108,9 +135,8 @@ body {
   font-size: 16px;
   font-weight: 600;
   color: #29292d;
-  border: 0.5px solid #ced9df80;
-  border: 2px solid #ced9df60;
-  box-shadow: 4px 4px 30px #ced9df60;
+  /* border: 2px solid #ced9df60;
+  box-shadow: 4px 4px 30px #ced9df60; */
   margin-bottom: 1rem;
   padding: 0.6rem 1rem;
   border-radius: 1.2rem;
@@ -139,6 +165,10 @@ body {
 
 .blue-sphere {
   transition: 1s ease-in all;
+}
+
+.btn:hover {
+  cursor: pointer;
 }
 
 .cloud-big-b1-left {
@@ -272,22 +302,24 @@ body {
   overscroll-behavior: auto;
 }
 
-.contact-form {
-}
-
 .contact-form-btn {
-  width: 100%;
+  width: 200px;
   height: 3.2rem;
-  border-radius: 1.2rem;
+  /* margin-left: 1rem; */
+  border-radius: 0.6rem;
   font-size: 1.2rem;
-  letter-spacing: 0.1rem;
   font-weight: 500;
-  color: black;
+  color: white;
   background: none;
   border: none;
   box-shadow: 0 4px 30px #ced9df60;
   background: #ced9df;
   background: #1fa8f2;
+}
+
+.contact-form-btn:hover {
+  transform: scale(1.01);
+  transition: 0.3s ease all;
 }
 
 .contact-form-header {
@@ -326,6 +358,14 @@ body {
   margin-top: 80px;
   padding: 1rem;
   padding-bottom: 64px;
+}
+
+.error-main {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+  font-weight: 500;
 }
 
 .icon-bars {
@@ -491,6 +531,25 @@ body {
   width: 200px;
   margin-left: 4rem;
   margin-bottom: 4rem;
+  font-weight: 500;
+}
+
+.loader-container {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  font-weight: 500;
+}
+
+.loading-main {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
   font-weight: 500;
 }
 
@@ -820,8 +879,8 @@ body {
 .work-header {
   font-weight: 600;
   color: #29292d;
-  border: 2px solid #ced9df60;
-  box-shadow: 4px 4px 30px #ced9df60;
+  /* border: 2px solid #ced9df60;
+  box-shadow: 4px 4px 30px #ced9df60; */
   padding: 0.6rem 1rem;
   border-radius: 1.2rem;
   margin-bottom: 1rem;

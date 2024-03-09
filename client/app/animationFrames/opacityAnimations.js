@@ -49,6 +49,7 @@ const fadeOutElement = (targetId, duration) => {
         animate();
       });
     } else {
+      element.style.opacity = 0;
       return;
     }
   }

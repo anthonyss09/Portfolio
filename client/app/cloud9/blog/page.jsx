@@ -1,5 +1,5 @@
 "use client";
-import PostPreview from "@/app/components/PostPreview";
+import PostPreview from "./components/PostPreview";
 import dataFlow from "/public/assets/images/dataFlow.jpg";
 import cloudNetwork1 from "/public/assets/images/cloudNetwork1.png";
 import Link from "next/link";
