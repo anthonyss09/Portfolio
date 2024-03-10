@@ -324,7 +324,7 @@ textarea {
 
 .contact-form-header {
   width: 200px;
-  margin: 2rem 1rem;
+  margin: 2rem 0;
   font-weight: 500;
 }
 
@@ -762,7 +762,7 @@ textarea {
   padding-right: 1rem;
   padding: 1rem;
   border: 2px solid #ced9df60;
-  box-shadow: 4px 4px 30px #ced9df60;
+  /* box-shadow: 4px 4px 30px #ced9df60; */
 }
 
 .post-preview-date {
@@ -902,7 +902,7 @@ textarea {
 
 .work-preview {
   padding: 1rem 0;
-  box-shadow: 4px 4px 30px #ced9df60;
+  /* box-shadow: 4px 4px 30px #ced9df60; */
   border: 2px solid #ced9df60;
 }
 
