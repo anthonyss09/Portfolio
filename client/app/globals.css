@@ -138,7 +138,7 @@ textarea {
   /* border: 2px solid #ced9df60;
   box-shadow: 4px 4px 30px #ced9df60; */
   margin-bottom: 1rem;
-  padding: 0.6rem 1rem;
+  padding: 0.6rem 2rem;
   border-radius: 1.2rem;
 }
 
@@ -147,7 +147,7 @@ textarea {
   margin-top: 80px;
   display: flex;
   flex-direction: column;
-  padding: 2rem 1rem;
+  padding: 2rem 0;
 }
 
 .blog-section {
@@ -303,10 +303,11 @@ textarea {
 }
 
 .contact-form-btn {
-  width: 200px;
+  width: 180px;
   height: 3.2rem;
   /* margin-left: 1rem; */
   border-radius: 0.6rem;
+  border-radius: 1.2rem;
   font-size: 1.2rem;
   font-weight: 500;
   color: white;
@@ -315,6 +316,7 @@ textarea {
   box-shadow: 0 4px 30px #ced9df60;
   background: #ced9df;
   background: #1fa8f2;
+  background: #041e2d;
 }
 
 .contact-form-btn:hover {
@@ -324,7 +326,8 @@ textarea {
 
 .contact-form-header {
   width: 200px;
-  margin: 2rem 0;
+  margin: 2rem 1rem;
+  margin-top: 1rem;
   font-weight: 500;
 }
 
@@ -759,8 +762,8 @@ textarea {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding-right: 1rem;
   padding: 1rem;
+  margin: 0 1rem;
   border: 2px solid #ced9df60;
   /* box-shadow: 4px 4px 30px #ced9df60; */
 }
@@ -881,7 +884,7 @@ textarea {
   color: #29292d;
   /* border: 2px solid #ced9df60;
   box-shadow: 4px 4px 30px #ced9df60; */
-  padding: 0.6rem 1rem;
+  padding: 0.6rem 2rem;
   border-radius: 1.2rem;
   margin-bottom: 1rem;
 }
@@ -891,7 +894,7 @@ textarea {
   margin-top: 80px;
   display: flex;
   flex-direction: column;
-  padding: 2rem 1rem;
+  padding: 2rem 0;
   padding-bottom: 64px;
   position: relative;
 }
@@ -901,7 +904,9 @@ textarea {
 }
 
 .work-preview {
-  padding: 1rem 0;
+  border-radius: 1.2rem;
+  padding: 0.6rem;
+  margin: 0 1rem;
   /* box-shadow: 4px 4px 30px #ced9df60; */
   border: 2px solid #ced9df60;
 }
