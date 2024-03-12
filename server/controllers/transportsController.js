@@ -49,8 +49,10 @@ const forwardEmail = async (req, res) => {
       from: email,
       to: process.env.EMAIL,
       subject: subject,
-      text: message,
+      text: message + "from: " + email,
     });
+
+    console.log(info);
 
     // console.log("email on the way dear");
     res.status(StatusCodes.OK).json({ message: "Email sent successfully!" });

@@ -167,8 +167,41 @@ textarea {
   transition: 1s ease-in all;
 }
 
+.btn {
+  border: none;
+  background: none;
+  color: black;
+  -webkit-tap-highlight-color: #50bdf810;
+}
+
 .btn:hover {
   cursor: pointer;
+}
+
+.btn-follow {
+  opacity: 0;
+  font-weight: 500;
+  color: #041e2d;
+}
+
+.btn-follow-close {
+  height: 25px;
+  width: 25px;
+  font-weight: 500;
+  align-self: flex-end;
+  border: 1.5px solid black;
+  border-radius: 40px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+}
+
+.btn-follow-submit {
+  height: 40px;
+  box-shadow: 0 4px 30px #ced9df60;
+  background: #ced9df;
+  /* background: #1fa8f2; */
+  border-radius: 0.9rem;
 }
 
 .cloud-big-b1-left {
@@ -303,20 +336,19 @@ textarea {
 }
 
 .contact-form-btn {
-  width: 180px;
-  height: 3.2rem;
-  /* margin-left: 1rem; */
+  width: 140px;
+  height: 40px;
   border-radius: 0.6rem;
-  border-radius: 1.2rem;
-  font-size: 1.2rem;
+  border-radius: 0.9rem;
+  font-size: 1rem;
   font-weight: 500;
-  color: white;
+  /* color: white; */
   background: none;
   border: none;
   box-shadow: 0 4px 30px #ced9df60;
   background: #ced9df;
   background: #1fa8f2;
-  background: #041e2d;
+  /* background: #041e2d; */
 }
 
 .contact-form-btn:hover {
@@ -326,7 +358,7 @@ textarea {
 
 .contact-form-header {
   width: 200px;
-  margin: 2rem 1rem;
+  margin: 2rem 0rem;
   margin-top: 1rem;
   font-weight: 500;
 }
@@ -337,7 +369,6 @@ textarea {
 
 .contact-form-input {
   border: none;
-  border-bottom: 1px solid #1fa8f240;
   border-bottom: 2px solid #03466a10;
   border-radius: 0;
 }
@@ -447,6 +478,53 @@ textarea {
   height: 360px;
   display: grid;
   place-items: center;
+}
+
+.follow-form {
+  width: 85vw;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: white;
+  box-shadow: 0 -4px 30px #ced9df;
+  border: 1px solid #ced9df60;
+  border-radius: 1.2rem;
+  opacity: 0;
+}
+
+.follow-form-container {
+  width: 100vw;
+  height: 100vh;
+  background: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  opacity: 1;
+  z-index: 20;
+}
+
+.follow-form-header {
+  font-weight: 500;
+  color: #041e2d;
+}
+
+.follow-form-input {
+  border: none;
+  border-bottom: 2px solid #03466a10;
+  border-radius: 0;
+  font-size: 16px;
+}
+
+.follow-form-label {
+  font-size: 0.8rem;
+}
+
+.follow-form-row {
+  display: flex;
+  flex-direction: column;
 }
 
 .footer {
@@ -566,6 +644,11 @@ textarea {
   font-weight: 500;
   color: var(--blue-black);
   font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+.logo-follow {
+  display: flex;
+  gap: 0.2rem;
 }
 
 .main {
@@ -697,6 +780,12 @@ textarea {
   left: 0;
   opacity: 0;
   transition: 1.2s ease-out all;
+}
+
+.p-validity {
+  font-size: 0.6rem;
+  color: #00000090;
+  color: rgb(243, 31, 116);
 }
 
 .post-author {

@@ -30,6 +30,7 @@ const fadeInElement = (targetId, duration) => {
         animate();
       });
     } else {
+      element.style.opacity = 1;
       return;
     }
   }
