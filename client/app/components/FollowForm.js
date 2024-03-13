@@ -1,9 +1,12 @@
 import isEmail from "../utils/isEmail";
 import { useState } from "react";
+import { useAddFollowerMutation } from "../../lib/features/api/apiSlice";
 
 export default function FollowForm({ handleToggleFollowForm }) {
   const [email, setEmail] = useState("");
   const [btnDisabled, setBtnDisabled] = useState(true);
+
+  const [addFollower] = useAddFollowerMutation();
 
   const handleChange = (e) => {
     const btn = document.getElementById("btn-follow-submit");
@@ -19,8 +22,15 @@ export default function FollowForm({ handleToggleFollowForm }) {
     }
   };
 
-  const handleClick = () => {
+  const handleClick = async () => {
     console.log("btn clicked");
+
+    try {
+      const response = await addFollower({ user: "i am the user" });
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
   };
   return (
     <div className="follow-form-container">
@@ -48,9 +58,10 @@ export default function FollowForm({ handleToggleFollowForm }) {
           <p className="p-validity">Enter valid email address.</p>
         )}
         <button
+          type="button"
           id="btn-follow-submit"
           className={`btn btn-follow-submit`}
-          disabled
+          disabled={btnDisabled}
           onClick={handleClick}
         >
           Send it!
