@@ -6,7 +6,10 @@ import { handleMenuClick } from "../cloud9/cbs/handleMenuClick";
 import { useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import FollowForm from "../components/FollowForm";
-import { fadeInElement } from "../animationFrames/opacityAnimations";
+import {
+  fadeInElement,
+  fadeOutElement,
+} from "../animationFrames/opacityAnimations";
 
 export default function NavBar({ navbarClass }) {
   const footerHeight = useRef(0);
@@ -21,10 +24,11 @@ export default function NavBar({ navbarClass }) {
     handleMenuClick(footerHeight, navbarHeight, pathName);
     if (sidebarHeight === 0) {
       document.body.style.overflow = "hidden";
-      fadeInElement("btn-follow", 1000);
+      fadeInElement("btn-follow", 300);
       setOpen(true);
     } else {
       document.body.style.overflow = "unset";
+      fadeOutElement("btn-follow", 300);
       setOpen(false);
     }
   };
@@ -45,15 +49,14 @@ export default function NavBar({ navbarClass }) {
         <div className="navbar-row-flex">
           <span className="logo-follow">
             <Logo />
-            {isOpen && (
-              <button
-                id="btn-follow"
-                className="btn btn-follow"
-                onClick={handleToggleFollowForm}
-              >
-                + Follow
-              </button>
-            )}
+
+            <button
+              id="btn-follow"
+              className="btn btn-follow"
+              onClick={handleToggleFollowForm}
+            >
+              + Follow
+            </button>
           </span>
 
           <div className="icon-bars link" onClick={handleClick}>
