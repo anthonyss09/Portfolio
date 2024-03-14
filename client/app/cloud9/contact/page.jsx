@@ -5,8 +5,12 @@ import {
   fadeInElement,
   fadeOutElement,
 } from "../../animationFrames/opacityAnimations";
-import Alert from "../../components/Alert";
 import isEmail from "../../utils/isEmail";
+import { useAppDispatch } from "../../../lib/hooks";
+import {
+  displayAlert,
+  clearAlert,
+} from "../../../lib/features/alerts/alertsSlice";
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -14,8 +18,8 @@ export default function Contact() {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [showAlert, setShowAlert] = useState(false);
-  const [alertMessage, setAlertMessage] = useState("");
+
+  const dispatch = useAppDispatch();
 
   const handleChange = (e) => {
     const { id, value } = e.target;
@@ -40,10 +44,9 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    setShowAlert(true);
     const emailValid = isEmail(email);
     if (!emailValid) {
-      setAlertMessage("Enter a valid email address.");
+      dispatch(displayAlert({ alertMessage: "Enter a valid email address." }));
     } else {
       try {
         const response = await axios.post("/api/transports/forward-email", {
@@ -56,10 +59,10 @@ export default function Contact() {
         setEmail("");
         setSubject("");
         setMessage("");
-        setAlertMessage("Message sent!");
+        dispatch(displayAlert({ alertMessage: "Message sent!" }));
       } catch (error) {
         console.log(error);
-        setAlertMessage("Something went wrong.");
+        dispatch(displayAlert({ alertMessage: "Something went wrong." }));
       }
     }
 
@@ -68,7 +71,7 @@ export default function Contact() {
     setTimeout(() => {
       fadeOutElement("alert-message", 300);
       setTimeout(() => {
-        setShowAlert(false);
+        dispatch(clearAlert());
       }, 500);
     }, 1500);
   };
@@ -84,8 +87,6 @@ export default function Contact() {
   }, []);
   return (
     <div className="contact-main">
-      {showAlert && <Alert alertMessage={alertMessage} />}
-
       {isLoading && (
         <div className="loader-container">
           <p>Sending ...</p>

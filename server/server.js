@@ -4,6 +4,7 @@ import * as dotenv from "dotenv";
 dotenv.config();
 import transportsRoutes from "./routes/transportsRoutes.js";
 import usersRoutes from "./routes/usersRoutes.js";
+import connectDb from "./Db/connect.js";
 
 app.use(express.json());
 app.use("/api/transports", transportsRoutes);
@@ -17,6 +18,7 @@ const port = process.env.PORT;
 
 const start = async () => {
   try {
+    await connectDb(process.env.MONGO_CONNECTION_STRING);
     app.listen(port, () => {
       console.log(`App is listening on port:${port}`);
     });

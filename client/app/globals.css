@@ -53,6 +53,7 @@ textarea {
   left: 0;
   display: grid;
   place-items: center;
+  z-index: 30;
 }
 
 .alert-message {

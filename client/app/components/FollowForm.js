@@ -1,11 +1,21 @@
 import isEmail from "../utils/isEmail";
 import { useState } from "react";
 import { useAddFollowerMutation } from "../../lib/features/api/apiSlice";
+import { useAppDispatch } from "../../lib/hooks";
+import {
+  displayAlert,
+  clearAlert,
+} from "../../lib/features/alerts/alertsSlice";
+import {
+  fadeInElement,
+  fadeOutElement,
+} from "../animationFrames/opacityAnimations";
 
 export default function FollowForm({ handleToggleFollowForm }) {
   const [email, setEmail] = useState("");
   const [btnDisabled, setBtnDisabled] = useState(true);
 
+  const dispatch = useAppDispatch();
   const [addFollower] = useAddFollowerMutation();
 
   const handleChange = (e) => {
@@ -22,19 +32,30 @@ export default function FollowForm({ handleToggleFollowForm }) {
     }
   };
 
-  const handleClick = async () => {
-    console.log("btn clicked");
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
     try {
-      const response = await addFollower({ user: "i am the user" });
-      console.log(response);
+      const response = await addFollower({ email });
+      dispatch(
+        displayAlert({ alertMessage: "All set, we'll send news soon!" })
+      );
+      handleToggleFollowForm();
     } catch (error) {
-      console.log(error);
+      dispatch(displayAlert({ alertMessage: "Something went wrong." }));
+      handleToggleFollowForm();
     }
+    fadeInElement("alert-message", 300);
+    setTimeout(() => {
+      fadeOutElement("alert-message", 300);
+      setTimeout(() => {
+        dispatch(clearAlert());
+      }, 500);
+    }, 1500);
   };
   return (
     <div className="follow-form-container">
-      <form id="follow-form" className="follow-form">
+      <form id="follow-form" className="follow-form" onSubmit={handleSubmit}>
         {" "}
         <button
           className="btn btn-follow-close"
@@ -58,11 +79,10 @@ export default function FollowForm({ handleToggleFollowForm }) {
           <p className="p-validity">Enter valid email address.</p>
         )}
         <button
-          type="button"
+          type="submit"
           id="btn-follow-submit"
           className={`btn btn-follow-submit`}
           disabled={btnDisabled}
-          onClick={handleClick}
         >
           Send it!
         </button>

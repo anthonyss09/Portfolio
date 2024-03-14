@@ -17,8 +17,6 @@ const fadeFromTo = (elId, duration, opacity1, opacity2) => {
 };
 
 const fadeInElement = (targetId, duration) => {
-  console.log(targetId);
-
   requestAnimationFrame(animate);
   const start = document.timeline.currentTime;
 
@@ -39,7 +37,6 @@ const fadeInElement = (targetId, duration) => {
 };
 
 const fadeOutElement = (targetId, duration) => {
-  console.log(targetId);
   requestAnimationFrame(animate);
   const start = document.timeline.currentTime;
 

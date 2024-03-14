@@ -10,6 +10,9 @@ import {
   fadeInElement,
   fadeOutElement,
 } from "../animationFrames/opacityAnimations";
+import Alert from "../components/Alert";
+import { useAppSelector } from "../../lib/hooks";
+import { selectAlertsInfo } from "../../lib/features/alerts/alertsSlice";
 
 export default function NavBar({ navbarClass }) {
   const footerHeight = useRef(0);
@@ -17,6 +20,8 @@ export default function NavBar({ navbarClass }) {
   const [isOpen, setOpen] = useState(false);
   const [followOpen, setFollowOpen] = useState(false);
   const pathName = usePathname();
+
+  const { showAlert, alertMessage } = useAppSelector(selectAlertsInfo);
 
   const handleClick = () => {
     const sidebar = document.getElementById("sidebar-main");
@@ -45,6 +50,7 @@ export default function NavBar({ navbarClass }) {
       {followOpen && (
         <FollowForm handleToggleFollowForm={handleToggleFollowForm} />
       )}
+      {showAlert && <Alert alertMessage={alertMessage} />}
       <nav id="navbar" className={`navbar ${navbarClass}`}>
         <div className="navbar-row-flex">
           <span className="logo-follow">
