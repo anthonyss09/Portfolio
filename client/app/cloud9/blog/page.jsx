@@ -4,6 +4,7 @@ import dataFlow from "/public/assets/images/dataFlow.jpg";
 import cloudNetwork1 from "/public/assets/images/cloudNetwork1.png";
 import Link from "next/link";
 import { useEffect } from "react";
+import sliderDiagram from "/public/assets/images/sliderDiagram.png";
 
 export default function Blog() {
   useEffect(() => {
@@ -20,13 +21,13 @@ export default function Blog() {
       <main id="blog-main" className="blog-main">
         <section className="blog-section-featured blog-section">
           <h4 className="blog-header">Featured Post</h4>{" "}
-          <Link href="/cloud9/blog/post-one" className="link">
+          <Link href="/cloud9/blog/post-two" className="link">
             {" "}
             <PostPreview
-              postHeading="Deploy dockerized React/Nginx app featuring Redux & RTK with Node.js
-            in serverless Google Cloud Run containers."
-              postImage={dataFlow}
-              postDate="02/25/2024"
+              postHeading=" Create a reusable customizable slider component that responds to
+            touch swipes, mouse wheel, and arrow key events in NextJs."
+              postImage={sliderDiagram}
+              postDate="03/14/2024"
             />
           </Link>
         </section>
@@ -34,6 +35,12 @@ export default function Blog() {
         <section className="blog-section-recent blog-section">
           {" "}
           <h4 className="blog-header blog-header-recent">Recent</h4>
+          <PostPreview
+            postHeading="Deploy dockerized React/Nginx app featuring Redux & RTK with Node.js
+            in serverless Google Cloud Run containers."
+            postImage={dataFlow}
+            postDate="02/25/2024"
+          />
           <PostPreview
             postHeading="Check back we'll be adding new posts soon!"
             postImage={cloudNetwork1}

@@ -54,6 +54,8 @@ export default function Home() {
   useEffect(() => {
     window.scrollTo(0, 0);
     fadeInElement("background-1", 1000);
+    const navbar = document.getElementById("navbar");
+    navbar.style.background = "none";
   }, []);
 
   return (

@@ -599,6 +599,11 @@ textarea {
   font-weight: 500;
 }
 
+.link-post {
+  color: #ae6ce5;
+  font-weight: bold;
+}
+
 .link-projects {
   width: 100vw;
   text-align: center;
@@ -682,7 +687,6 @@ textarea {
   display: flex;
   z-index: 12;
   box-shadow: 0 4px 30px #ced9df60;
-  /* box-shadow: 0 4px 30px #6cc7f860; */
   transition: all 0.2s ease-out;
   opacity: 0.9;
 }
@@ -847,6 +851,11 @@ textarea {
   width: 100%;
 }
 
+.post-pic-outlined {
+  border: 2px solid #ae6ce560;
+  box-shadow: 4px 4px 30px #ced9df60;
+}
+
 .post-preview {
   border-radius: 1.2rem;
   display: flex;
@@ -854,6 +863,7 @@ textarea {
   gap: 1rem;
   padding: 1rem;
   margin: 0 1rem;
+  margin-bottom: 1rem;
   border: 2px solid #ced9df60;
   /* box-shadow: 4px 4px 30px #ced9df60; */
 }
