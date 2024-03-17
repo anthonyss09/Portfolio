@@ -58,7 +58,7 @@ export default function NavBar({ navbarClass }) {
 
             <button
               id="btn-follow"
-              className="btn btn-follow"
+              className="btn btn-follow btn-follow-navbar"
               onClick={handleToggleFollowForm}
             >
               + Follow

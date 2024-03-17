@@ -38,5 +38,5 @@
     "opera 51",
     "safari 12"
   ],
-  "proxy": "http://localhost:80"
+  "proxy": "http://localhost:8080"
 }

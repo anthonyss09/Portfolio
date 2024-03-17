@@ -5,6 +5,7 @@ export const apiSlice = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: "/api",
   }),
+  tagTypes: ["Post"],
   endpoints: (builder) => ({
     addFollower: builder.mutation({
       query: (user) => ({

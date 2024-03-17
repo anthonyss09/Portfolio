@@ -12,6 +12,7 @@ import { pageThreeSnippet } from "../snippets/blog-two/pageThreeSnippet";
 import { pageFourSnippet } from "../snippets/blog-two/pageFourSnippet";
 import { pageFiveSnippet } from "../snippets/blog-two/pageFiveSnippet";
 import { useEffect } from "react";
+import PostInteractions from "../components/PostInteractions";
 
 export default function PostTwo() {
   useEffect(() => {
@@ -32,10 +33,13 @@ export default function PostTwo() {
             Create a reusable customizable slider component that responds to
             touch swipes, mouse wheel, and arrow key events in NextJs.
           </h2>
+
           <div className="post-credits-container">
             <p className="post-author">Anthony Toffetti </p>
             <p className="post-date">3/14/2024</p>
+            <PostInteractions postId="65f76041b5e942ae8e532be9" />
           </div>
+
           <Image
             src={sliderDiagram}
             className="post-pic-header post-pic-outlined"
@@ -124,12 +128,14 @@ export default function PostTwo() {
               Now the slide component. For Slide we will pass a slideNumber as a
               prop. This will allow us to dynamically style each slide.
             </p>
+            <h5 className="path">/your-app-name/app/components/Slide.js</h5>
             <CodeSnippet code={slideSnippet} language="javascript" />
             <p className="blog-main-p">
               Now navigate to /app/page.js and if you haven&#39;t done so
               already clean out the contents. Let&#39;s import our Slider and
               Slide and add the following html.
             </p>
+            <h5 className="path">/your-app-name/app/page.js</h5>
             <CodeSnippet language="javascript" code={pageOneSnippet} />
             <p className="blog-main-p">
               Now that our components and html is in place let&#39;s talk a
@@ -153,11 +159,16 @@ export default function PostTwo() {
               slider-inner will be hidden. Some images might make this more
               clear.
             </p>
-            <Image src={sliderDiagram} className="post-pic" />
+            <Image
+              src={sliderDiagram}
+              className="post-pic"
+              alt="slider diagram"
+            />
             <p className="blog-main-p">
               Hopefully you have a good idea of how we will be achieving our
               functionality so copy the following styles into global.css
             </p>
+            <h5 className="path">/your-app-name/app/global.css</h5>
             <CodeSnippet language="css" code={stylesSnippet} />
             <p className="blog-main-p">
               Now let&#39;s move on to the functionality of our page.
@@ -189,6 +200,7 @@ export default function PostTwo() {
               clean up event listeners. We do this in the return statement so
               our listeners are attached for the life cycle of the component.
             </p>
+            <h5 className="path">/your-app-name/app/page.js</h5>
             <CodeSnippet language="javascript" code={pageTwoSnippet} />
             <p className="blog-main-p">
               Now that our listeners are set to be attached let&#39;s fill the
@@ -236,6 +248,7 @@ export default function PostTwo() {
               time-out on this but you can experiment. Now you can see our full
               wheel callback.
             </p>
+            <h5 className="path">/your-app-name/app/page.js</h5>
             <CodeSnippet language="javascript" code={pageThreeSnippet} />
             <p className="blog-main-p">
               Now for the touch swipe event. We&#39;ve attached two event
@@ -249,6 +262,7 @@ export default function PostTwo() {
               Now we can deduce direction of scroll based on deltaY being a
               negative or positive value.
             </p>
+            <h5 className="path">/your-app-name/app/page.js</h5>
             <CodeSnippet language="javascript" code={pageFourSnippet} />
 
             <p className="blog-main-p">
@@ -258,12 +272,17 @@ export default function PostTwo() {
               event, 40 being down arrow key and 38 up arrow key. After adding
               the key down call back our final page.js will look like this.
             </p>
+            <h5 className="path">/your-app-name/app/page.js</h5>
             <CodeSnippet language="javascript" code={pageFiveSnippet} />
 
             <p className="blog-main-p">
               That&#39;s it! We&#39;ve created a simply structured and designed
               slider component that responds to wheel, touch & key events!{" "}
             </p>
+          </section>
+          <section className="blog-footer">
+            {" "}
+            <PostInteractions postId="65f76041b5e942ae8e532be9" />
           </section>
         </main>
       </div>

@@ -35,12 +35,14 @@ export default function Blog() {
         <section className="blog-section-recent blog-section">
           {" "}
           <h4 className="blog-header blog-header-recent">Recent</h4>
-          <PostPreview
-            postHeading="Deploy dockerized React/Nginx app featuring Redux & RTK with Node.js
+          <Link className="link" href="/cloud9/blog/post-one">
+            <PostPreview
+              postHeading="Deploy dockerized React/Nginx app featuring Redux & RTK with Node.js
             in serverless Google Cloud Run containers."
-            postImage={dataFlow}
-            postDate="02/25/2024"
-          />
+              postImage={dataFlow}
+              postDate="02/25/2024"
+            />
+          </Link>
           <PostPreview
             postHeading="Check back we'll be adding new posts soon!"
             postImage={cloudNetwork1}

@@ -21,6 +21,7 @@ import feContainer2 from "/public/assets/images/fe-container-port-1.png";
 import beContainer from "/public/assets/images/add-be-container.png";
 import backPic from "/public/assets/images/dataFlow.jpg";
 import { useEffect } from "react";
+import PostInteractions from "../components/PostInteractions";
 
 export default function PostOne() {
   useEffect(() => {
@@ -46,6 +47,7 @@ export default function PostOne() {
           <div className="post-credits-container">
             <p className="post-author">Anthony Toffetti </p>
             <p className="post-date">1/14/2024</p>
+            <PostInteractions postId="65f75fd4b5e942ae8e532be7" />
           </div>
           <Image
             src={backPic}
@@ -380,6 +382,12 @@ export default function PostOne() {
               end service will be started first, so we know we&apos;ll be able
               to reach it when our front end calls. Scroll back down and deploy!
             </p>
+          </section>
+          <section className="blog-footer">
+            <PostInteractions
+              showComment={true}
+              postId="65f75fd4b5e942ae8e532be7"
+            />
           </section>
         </main>
       </div>

@@ -5,8 +5,10 @@ dotenv.config();
 import transportsRoutes from "./routes/transportsRoutes.js";
 import usersRoutes from "./routes/usersRoutes.js";
 import connectDb from "./Db/connect.js";
+import postsRoutes from "./routes/postsRoutes.js";
 
 app.use(express.json());
+app.use("/api/posts", postsRoutes);
 app.use("/api/transports", transportsRoutes);
 app.use("/api", usersRoutes);
 

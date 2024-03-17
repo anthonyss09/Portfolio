@@ -43,6 +43,7 @@ input {
 textarea {
   outline: none;
   font-size: 16px;
+  resize: none;
 }
 
 .alert-container {
@@ -143,6 +144,20 @@ textarea {
   border-radius: 1.2rem;
 }
 
+.blog-interactions {
+  width: 105px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-left: -0.4rem;
+  margin-top: 0.4rem;
+}
+
+.blog-footer {
+  align-self: center;
+}
+
 .blog-main {
   width: 100vw;
   margin-top: 80px;
@@ -179,8 +194,18 @@ textarea {
   cursor: pointer;
 }
 
+.btn-comment {
+  width: 100px;
+  height: 40px;
+  border-radius: 1.2rem;
+  border: 2px solid #ced9df60;
+  border: 2px solid #6cc7f8;
+  border: 2px solid black;
+  box-shadow: 0 4px 30px #ced9df60;
+  align-self: center;
+}
+
 .btn-follow {
-  opacity: 0;
   font-weight: 500;
   color: #041e2d;
 }
@@ -197,12 +222,19 @@ textarea {
   place-items: center;
 }
 
+.btn-follow-navbar {
+  opacity: 0;
+}
+
 .btn-follow-submit {
   height: 40px;
   box-shadow: 0 4px 30px #ced9df60;
   background: #ced9df;
-  /* background: #1fa8f2; */
   border-radius: 0.9rem;
+}
+
+.btn-like {
+  position: relative;
 }
 
 .cloud-big-b1-left {
@@ -216,8 +248,6 @@ textarea {
   right: -12rem;
   right: -14rem;
   top: 18rem;
-  /* top: 22rem; */
-  /* transform: rotate(90deg); */
 }
 
 .cloud-big-b3 {
@@ -334,6 +364,37 @@ textarea {
 
 .code-pre {
   overscroll-behavior: auto;
+}
+
+.post-comment {
+  width: 100%;
+  border-radius: 1.2rem;
+  border: 2px solid #6cc7f860;
+  box-shadow: 0 4px 30px #ced9df60;
+  padding: 0.6rem 1rem;
+}
+
+.comment-author {
+  align-self: flex-end;
+  margin-right: 2rem;
+  font-size: 0.9rem;
+}
+
+.comment-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.comment-row {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.comment-header {
+  margin-bottom: 1rem;
 }
 
 .contact-form-btn {
@@ -498,7 +559,7 @@ textarea {
   width: 100vw;
   height: 100vh;
   background: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   display: grid;
@@ -565,6 +626,14 @@ textarea {
   bottom: 0;
   background: white;
   opacity: 1;
+}
+
+.like-count {
+  position: absolute;
+  top: -0.7rem;
+  right: -0.4rem;
+  font-weight: 500;
+  color: rgb(21, 7, 97);
 }
 
 .link {
@@ -886,7 +955,7 @@ textarea {
 
 .post-title {
   font-size: 20px;
-  font-size: 18px;
+  /* font-size: 18px; */
 }
 
 .two-med-clouds-b2 {
