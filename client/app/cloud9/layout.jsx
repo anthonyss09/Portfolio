@@ -13,8 +13,13 @@ export default function CloudLayout({ children }) {
   const touchStartYRef = useRef(0);
   const footerHeight = useRef(0);
   const navbarHeight = useRef(80);
+  const dynamicClassName = useRef("");
 
   const pathName = usePathname();
+
+  if (pathName === "/cloud9") {
+    dynamicClassName.current = "background-none";
+  }
 
   useEffect(() => {
     const wheel = (e) => {
@@ -48,9 +53,9 @@ export default function CloudLayout({ children }) {
 
   return (
     <div>
-      <NavBar />
+      <NavBar navbarClass={dynamicClassName.current} />
       <div id="children"> {children}</div>
-      <Footer footerId="footer" />
+      <Footer footerId="footer" footerClass={dynamicClassName.current} />
     </div>
   );
 }

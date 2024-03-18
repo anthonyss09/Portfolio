@@ -7,15 +7,6 @@ import { useEffect } from "react";
 import sliderDiagram from "/public/assets/images/sliderDiagram.png";
 
 export default function Blog() {
-  useEffect(() => {
-    const footer = document.getElementById("footer");
-    const navbar = document.getElementById("navbar");
-    setTimeout(() => {
-      navbar.style.background = "white";
-      footer.style.background = "white";
-      navbar.style.opacity = 0.9;
-    }, 500);
-  }, []);
   return (
     <>
       <main id="blog-main" className="blog-main">

@@ -23,16 +23,14 @@ import backPic from "/public/assets/images/dataFlow.jpg";
 import { useEffect } from "react";
 import PostInteractions from "../components/PostInteractions";
 
+// export const metadata = {
+//   title:
+//     "Cloud 9 by atoffettidev. Deploy dockerized React/Nginx app featuring Redux & RTK with Node.js in serverless Google Cloud Run containers.",
+//   description:
+//     "Deploy dockerized React/Nginx app featuring Redux & RTK with Node.js in serverless Google Cloud Run containers.This post includes concepts from javascript, react, css & html.",
+// };
+
 export default function PostOne() {
-  useEffect(() => {
-    const footer = document.getElementById("footer");
-    const navbar = document.getElementById("navbar");
-    setTimeout(() => {
-      navbar.style.background = "white";
-      footer.style.background = "white";
-      navbar.style.opacity = 0.9;
-    }, 500);
-  }, []);
   return (
     <>
       {" "}

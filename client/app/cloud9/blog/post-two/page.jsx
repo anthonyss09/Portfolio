@@ -14,15 +14,13 @@ import { pageFiveSnippet } from "../snippets/blog-two/pageFiveSnippet";
 import { useEffect } from "react";
 import PostInteractions from "../components/PostInteractions";
 
+// export const metadata = {
+//   title: "Cloud 9 by atoffettidev. Responsive slider nextjs.",
+//   description:
+//     "Create a reusable customizable slider component that responds to touch swipes, mouse wheel, and arrow key events in NextJs. This post includes concepts from javascript, react, css & html.",
+// };
+
 export default function PostTwo() {
-  useEffect(() => {
-    const footer = document.getElementById("footer");
-    const navbar = document.getElementById("navbar");
-    setTimeout(() => {
-      navbar.style.background = "white";
-      navbar.style.opacity = 0.9;
-    }, 500);
-  }, []);
   return (
     <>
       <div className="post-center">

@@ -196,8 +196,14 @@ textarea {
 }
 
 .btn-follow {
+  height: 25px;
+  width: 90px;
   font-weight: 500;
+  font-size: 0.8rem;
   color: #041e2d;
+  border: 1.5px solid rgb(100, 100, 100);
+  box-shadow: 0 4px 30px #ced9df60;
+  border-radius: 1.2rem;
 }
 
 .btn-follow-close {
@@ -215,6 +221,9 @@ textarea {
 .btn-follow-navbar {
   opacity: 0;
   border: none;
+  font-weight: 500;
+  font-size: 0.8rem;
+  color: #041e2d;
 }
 
 .btn-follow-submit {
@@ -739,7 +748,7 @@ textarea {
   height: 80px;
   position: fixed;
   top: 0;
-  background: none;
+  background: white;
   padding: 0 2rem;
   padding-bottom: 0.4rem;
   display: flex;
@@ -1164,6 +1173,9 @@ li {
   border-radius: 1.2rem;
   background: #ced9df30;
   background: #ced9df;
-  /* background: #03466a; */
   margin: 2rem 0;
+}
+
+.background-none {
+  background: none;
 }

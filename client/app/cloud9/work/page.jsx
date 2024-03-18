@@ -4,15 +4,6 @@ import CheckBack from "./components/CheckBack";
 import { useEffect } from "react";
 
 export default function Work() {
-  useEffect(() => {
-    const footer = document.getElementById("footer");
-    const navbar = document.getElementById("navbar");
-    setTimeout(() => {
-      navbar.style.background = "white";
-      footer.style.background = "white";
-      navbar.style.opacity = 0.9;
-    }, 500);
-  }, []);
   return (
     <div className="work-positioner">
       <main id="work-main" className="work-main">
