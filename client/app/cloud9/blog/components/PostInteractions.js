@@ -35,7 +35,7 @@ export default function PostInteractions({ showComment, postId }) {
   };
 
   return (
-    <section className="blog-interactions">
+    <section className="post-interactions-main">
       {followOpen && (
         <FollowForm handleToggleFollowForm={handleToggleFollowForm} />
       )}

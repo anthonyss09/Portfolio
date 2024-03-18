@@ -144,16 +144,6 @@ textarea {
   border-radius: 1.2rem;
 }
 
-.blog-interactions {
-  width: 105px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 0.6rem;
-  margin-left: -0.4rem;
-  margin-top: 0.4rem;
-}
-
 .blog-footer {
   align-self: center;
 }
@@ -224,6 +214,7 @@ textarea {
 
 .btn-follow-navbar {
   opacity: 0;
+  border: none;
 }
 
 .btn-follow-submit {
@@ -404,13 +395,11 @@ textarea {
   border-radius: 0.9rem;
   font-size: 1rem;
   font-weight: 500;
-  /* color: white; */
   background: none;
   border: none;
   box-shadow: 0 4px 30px #ced9df60;
   background: #ced9df;
   background: #1fa8f2;
-  /* background: #041e2d; */
 }
 
 .contact-form-btn:hover {
