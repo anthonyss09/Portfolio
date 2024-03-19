@@ -17,9 +17,19 @@ export default function CloudLayout({ children }) {
 
   const pathName = usePathname();
 
-  if (pathName === "/cloud9") {
-    dynamicClassName.current = "background-none";
-  }
+  useEffect(() => {
+    const navbar = document.getElementById("navbar");
+    const footer = document.getElementById("footer");
+    setTimeout(() => {
+      if (pathName === "/cloud9") {
+        navbar.style.background = "none";
+        footer.style.background = "none";
+      } else {
+        navbar.style.background = "white";
+        footer.style.background = "white";
+      }
+    }, 500);
+  }, [pathName]);
 
   useEffect(() => {
     const wheel = (e) => {

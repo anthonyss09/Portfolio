@@ -11,20 +11,20 @@ import { pageTwoSnippet } from "../snippets/blog-two/pageTwoSnippet";
 import { pageThreeSnippet } from "../snippets/blog-two/pageThreeSnippet";
 import { pageFourSnippet } from "../snippets/blog-two/pageFourSnippet";
 import { pageFiveSnippet } from "../snippets/blog-two/pageFiveSnippet";
-import { useEffect } from "react";
 import PostInteractions from "../components/PostInteractions";
-
-// export const metadata = {
-//   title: "Cloud 9 by atoffettidev. Responsive slider nextjs.",
-//   description:
-//     "Create a reusable customizable slider component that responds to touch swipes, mouse wheel, and arrow key events in NextJs. This post includes concepts from javascript, react, css & html.",
-// };
+import Head from "next/head";
 
 export default function PostTwo() {
   return (
     <>
+      <Head>
+        <title> Responsive slider nextjs. Cloud9 by AToffettiDev</title>
+        <meta
+          name="description"
+          content="Create a reusable customizable slider component that responds to touch swipes, mouse wheel, and arrow key events in NextJs. This post includes concepts from javascript, react, css & html."
+        />
+      </Head>{" "}
       <div className="post-center">
-        {" "}
         <header>
           <h2 className="post-title">
             {" "}

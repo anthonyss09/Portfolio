@@ -1,7 +1,5 @@
-"use client";
 import BarkMate from "./components/BarkMate";
 import CheckBack from "./components/CheckBack";
-import { useEffect } from "react";
 
 export default function Work() {
   return (

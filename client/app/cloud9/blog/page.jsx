@@ -1,9 +1,7 @@
-"use client";
 import PostPreview from "./components/PostPreview";
 import dataFlow from "/public/assets/images/dataFlow.jpg";
 import cloudNetwork1 from "/public/assets/images/cloudNetwork1.png";
 import Link from "next/link";
-import { useEffect } from "react";
 import sliderDiagram from "/public/assets/images/sliderDiagram.png";
 
 export default function Blog() {

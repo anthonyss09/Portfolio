@@ -20,20 +20,23 @@ import feContainer from "/public/assets/images/fe-container-config-1.png";
 import feContainer2 from "/public/assets/images/fe-container-port-1.png";
 import beContainer from "/public/assets/images/add-be-container.png";
 import backPic from "/public/assets/images/dataFlow.jpg";
-import { useEffect } from "react";
 import PostInteractions from "../components/PostInteractions";
-
-// export const metadata = {
-//   title:
-//     "Cloud 9 by atoffettidev. Deploy dockerized React/Nginx app featuring Redux & RTK with Node.js in serverless Google Cloud Run containers.",
-//   description:
-//     "Deploy dockerized React/Nginx app featuring Redux & RTK with Node.js in serverless Google Cloud Run containers.This post includes concepts from javascript, react, css & html.",
-// };
+import Head from "next/head";
 
 export default function PostOne() {
   return (
     <>
-      {" "}
+      <Head>
+        <title>
+          {" "}
+          Deploy dockerized React/Nginx app featuring Redux & RTK with Node.js
+          in serverless Google Cloud Run containers.
+        </title>
+        <meta
+          name="description"
+          content="Deploy dockerized React/Nginx app featuring Redux & RTK with Node.js in serverless Google Cloud Run containers.This post includes concepts from javascript, react, css & html."
+        />
+      </Head>{" "}
       <div className="post-center">
         {" "}
         <header>
