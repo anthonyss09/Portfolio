@@ -65,7 +65,11 @@ export default function NavBar({ navbarClass }) {
             </button>
           </span>
 
-          <div className="icon-bars link" onClick={handleClick}>
+          <div
+            title="hamburger"
+            className="icon-bars link"
+            onClick={handleClick}
+          >
             <Hamburger
               id="hamburger"
               color="#ced9df"

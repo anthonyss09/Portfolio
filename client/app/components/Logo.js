@@ -3,8 +3,11 @@ import Link from "next/link";
 export default function Logo() {
   return (
     <Link href="/" className="logo link">
-      <p className="p-logo">Cloud 9</p>
+      <p role="paragraph" className="p-logo">
+        Cloud 9
+      </p>
       <svg
+        title="cloud-logo"
         width="30"
         height="23"
         viewBox="0 0 30 23"

@@ -41,9 +41,17 @@ export default function SidebarMain({ handleLinkClick }) {
         {" "}
         <div className="two-small-clouds-sidebar">
           {" "}
-          <Image src={TwoSmallClouds} alt="two small clouds" />
+          <Image
+            title="sb-two-small-clouds"
+            src={TwoSmallClouds}
+            alt="two small clouds"
+          />
           <div className="cloud-small-two-sidebar">
-            <Image src={CloudSmallTwo} alt="small cloud" />
+            <Image
+              title="sb-cloud-small-two"
+              src={CloudSmallTwo}
+              alt="small cloud"
+            />
           </div>
         </div>
       </div>
