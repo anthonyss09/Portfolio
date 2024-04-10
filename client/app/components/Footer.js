@@ -7,19 +7,26 @@ import Link from "next/link";
 export default function Footer({ footerClass, footerId }) {
   return (
     <div id={footerId} className={`footer ${footerClass}`}>
-      <Link href="/cloud9/contact" className="link">
-        <Image src={GmailIcon} alt="gmail icon" />
+      <Link role="footer-gmail-link" href="/cloud9/contact" className="link">
+        <Image role="footer-gmail-icon" src={GmailIcon} alt="gmail icon" />
       </Link>
-      <Link href="https://github.com/anthonyss09" className="link">
-        {" "}
-        <Image src={GitHubPages} alt="github icon" />
-      </Link>
+
       <Link
+        role="footer-github-link"
+        href="https://github.com/anthonyss09"
+        className="link"
+      >
+        {" "}
+        <Image role="footer-github-icon" src={GitHubPages} alt="github icon" />
+      </Link>
+
+      <Link
+        role="footer-linkedin-link"
         href="https://www.linkedin.com/in/anthony-toffetti-58345b122/"
         className="link"
       >
         {" "}
-        <Image src={LinkdIn} alt="linked in icon" />
+        <Image role="footer-linkedin-icon" src={LinkdIn} alt="linked in icon" />
       </Link>
     </div>
   );

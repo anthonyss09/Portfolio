@@ -1,8 +1,27 @@
 import "@testing-library/jest-dom";
-import { render, screen } from "@testing-library/react";
+import { screen } from "@testing-library/react";
 import NavBar from "../app/components/NavBar";
-import { Provider } from "react-redux";
-import configureStore from "redux-mock-store";
+import { renderWithProviders } from "../app/utils/test-utils";
+import { http, HttpResponse, delay } from "msw";
+import { setupServer } from "msw/node";
+
+export const handlers = [
+  http.get("/api/", async () => {
+    await delay(150);
+    return HttpResponse.json("some response");
+  }),
+];
+
+const server = setupServer(...handlers);
+
+// Enable API mocking before tests.
+beforeAll(() => server.listen());
+
+// Reset any runtime request handlers we may add during the tests.
+afterEach(() => server.resetHandlers());
+
+// Disable API mocking after the tests are done.
+afterAll(() => server.close());
 
 describe("NavBar", () => {
   const initialState = {
@@ -12,16 +31,9 @@ describe("NavBar", () => {
       alertMessage: "",
     },
   };
-  const mockStore = configureStore();
-  let store;
 
   it("renders follow button", () => {
-    store = mockStore(initialState);
-    render(
-      <Provider store={store}>
-        <NavBar />
-      </Provider>
-    );
+    renderWithProviders(<NavBar />, { preloadedState: initialState });
 
     const elem = screen.getByRole("button", { name: "+ Follow" });
 
@@ -29,18 +41,10 @@ describe("NavBar", () => {
   });
 
   it("renders hamburger icon", () => {
-    store = mockStore(initialState);
-    render(
-      <Provider store={store}>
-        <NavBar />
-      </Provider>
-    );
+    renderWithProviders(<NavBar />, { preloadedState: initialState });
 
     const elem = screen.getByTitle("hamburger");
 
     expect(elem).toBeInTheDocument();
   });
 });
-
-//role button name + follow
-//title hamburger
