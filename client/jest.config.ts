@@ -13,7 +13,7 @@ const config: Config = {
   // Add more setup options before each test is run
   setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
 
-  setupFiles: ["./jest.polyfills.js"],
+  setupFiles: ["./jest.polyfills.js", "./__mocks__/client.js"],
   testEnvironmentOptions: {
     customExportConditions: [""],
   },

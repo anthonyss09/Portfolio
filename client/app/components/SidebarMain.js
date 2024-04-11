@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function SidebarMain({ handleLinkClick }) {
   return (
-    <aside id="sidebar-main" className={`sidebar-main `}>
+    <aside role="sidebar-main" id="sidebar-main" className={`sidebar-main `}>
       <div className="sidebar-main-links">
         <Link
           href="/"

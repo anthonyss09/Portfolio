@@ -1,9 +1,10 @@
 import "@testing-library/jest-dom";
-import { screen } from "@testing-library/react";
+import { screen, fireEvent, render } from "@testing-library/react";
 import NavBar from "../app/components/NavBar";
 import { renderWithProviders } from "../app/utils/test-utils";
 import { http, HttpResponse, delay } from "msw";
 import { setupServer } from "msw/node";
+import Footer from "../app/components/Footer";
 
 export const handlers = [
   http.get("/api/", async () => {
@@ -46,5 +47,14 @@ describe("NavBar", () => {
     const elem = screen.getByTitle("hamburger");
 
     expect(elem).toBeInTheDocument();
+  });
+
+  test("renders sidebar on click ", () => {
+    renderWithProviders(<NavBar />, { preloadedState: initialState });
+    render(<Footer footerId="footer" />);
+
+    const elem = screen.getByRole("sidebar-main");
+
+    fireEvent.click(elem);
   });
 });
