@@ -1,10 +1,10 @@
 const fadeFromTo = (elId, duration, opacity1, opacity2) => {
   requestAnimationFrame(animate);
-  const start = document.timeline.currentTime;
+  const start = Date.now();
   const el = document.getElementById(elId);
 
   function animate() {
-    const now = document.timeline.currentTime;
+    const now = Date.now();
     const delta = (now - start) / duration;
     const opacity = opacity1 + (opacity2 - opacity1) * delta;
     if (delta < 1) {
@@ -18,10 +18,10 @@ const fadeFromTo = (elId, duration, opacity1, opacity2) => {
 
 const fadeInElement = (targetId, duration) => {
   requestAnimationFrame(animate);
-  const start = document.timeline.currentTime;
+  const start = Date.now();
 
   function animate() {
-    const now = document.timeline.currentTime;
+    const now = Date.now();
     const element = document.getElementById(targetId);
     const delta = (now - start) / duration;
     if (delta < 1) {

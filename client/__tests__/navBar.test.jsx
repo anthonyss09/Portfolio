@@ -9,7 +9,7 @@ import Footer from "../app/components/Footer";
 export const handlers = [
   http.get("/api/", async () => {
     await delay(150);
-    return HttpResponse.json("some response");
+    return HttpResponse.json({ message: "some response" });
   }),
 ];
 
@@ -53,7 +53,7 @@ describe("NavBar", () => {
     renderWithProviders(<NavBar />, { preloadedState: initialState });
     render(<Footer footerId="footer" />);
 
-    const elem = screen.getByRole("sidebar-main");
+    const elem = screen.getByTitle("hamburger");
 
     fireEvent.click(elem);
   });

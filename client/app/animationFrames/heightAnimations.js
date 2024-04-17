@@ -21,11 +21,11 @@ const heightFromToPx = (elId, duration, height1, height2) => {
     return;
   }
   requestAnimationFrame(animate);
-  const start = document.timeline.currentTime;
+  const start = Date.now();
   const el = document.getElementById(elId);
 
   function animate() {
-    const now = document.timeline.currentTime;
+    const now = Date.now();
     const delta = (now - start) / duration;
     const height = height1 + (height2 - height1) * delta;
     if (delta < 1) {
