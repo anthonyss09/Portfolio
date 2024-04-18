@@ -54,7 +54,9 @@ describe("NavBar", () => {
     render(<Footer footerId="footer" />);
 
     const elem = screen.getByTitle("hamburger");
+    const sidebar = screen.getByRole("sidebar-main");
 
     fireEvent.click(elem);
+    expect(sidebar).toBeInTheDocument();
   });
 });

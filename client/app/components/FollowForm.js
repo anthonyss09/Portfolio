@@ -69,6 +69,7 @@ export default function FollowForm({ handleToggleFollowForm }) {
             Email
           </label>
           <input
+            role="input-email"
             id="email"
             className="follow-form-input"
             onChange={handleChange}
