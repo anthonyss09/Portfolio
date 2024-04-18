@@ -3,7 +3,6 @@ import Link from "next/link";
 import blueSphere from "/public/assets/images/blueSphere.png";
 import twoSmallCloudsR from "../assets/svgs/twoSmallCloudsR.svg";
 import cloudSmallThreeR from "../assets/svgs/cloudSmallThreeR.svg";
-import twoMedCloudsR from "../assets/svgs/twoMedCloudsR.svg";
 import blocks3dBackR from "../assets/svgs/blocks3dBackR.svg";
 
 export default function BackgroundOne() {
