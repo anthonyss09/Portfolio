@@ -1,0 +1,253 @@
+.gradientBlack {
+  background-color: #2b4162;
+  background-image: linear-gradient(315deg, #2b4162 0%, #12100e 74%);
+  background-attachment: fixed;
+}
+.gradientBlackReverse {
+  background-color: #2b4162;
+  background-image: linear-gradient(315deg, #12100e 0%, #2b4162 74%);
+}
+
+.gradientBlueRrich {
+  background: hsla(217, 100%, 50%, 1);
+
+  background: radial-gradient(
+    circle,
+    hsla(217, 100%, 50%, 1) 35%,
+    hsla(266, 100%, 47%, 1) 100%
+  );
+
+  background: -moz-radial-gradient(
+    circle,
+    hsla(217, 100%, 50%, 1) 35%,
+    hsla(266, 100%, 47%, 1) 100%
+  );
+
+  background: -webkit-radial-gradient(
+    circle,
+    hsla(217, 100%, 50%, 1) 35%,
+    hsla(266, 100%, 47%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0061FF", endColorstr="#6600EE", GradientType=1 );
+}
+
+.gradientBlueBright {
+  background: hsla(178, 81%, 80%, 1);
+
+  background: radial-gradient(
+    circle,
+    hsla(178, 81%, 80%, 1) 0%,
+    hsla(208, 91%, 59%, 1) 70%
+  );
+
+  background: -moz-radial-gradient(
+    circle,
+    hsla(178, 81%, 80%, 1) 0%,
+    hsla(208, 91%, 59%, 1) 70%
+  );
+
+  background: -webkit-radial-gradient(
+    circle,
+    hsla(178, 81%, 80%, 1) 0%,
+    hsla(208, 91%, 59%, 1) 70%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#A1F5F2", endColorstr="#359CF6", GradientType=1 );
+}
+
+.gradientBlueBrights {
+  background: hsla(217, 100%, 50%, 1);
+
+  background: radial-gradient(
+    circle,
+    hsla(217, 100%, 50%, 1) 35%,
+    hsla(186, 100%, 69%, 1) 100%
+  );
+
+  background: -moz-radial-gradient(
+    circle,
+    hsla(217, 100%, 50%, 1) 35%,
+    hsla(186, 100%, 69%, 1) 100%
+  );
+
+  background: -webkit-radial-gradient(
+    circle,
+    hsla(217, 100%, 50%, 1) 35%,
+    hsla(186, 100%, 69%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0061FF", endColorstr="#60EFFF", GradientType=1 );
+}
+
+.gradientBlueBrightSecondary {
+  background: hsla(208, 91%, 59%, 1);
+
+  background: radial-gradient(
+    circle,
+    hsla(208, 91%, 59%, 1) 35%,
+    hsla(189, 100%, 50%, 1) 100%
+  );
+
+  background: -moz-radial-gradient(
+    circle,
+    hsla(208, 91%, 59%, 1) 35%,
+    hsla(189, 100%, 50%, 1) 100%
+  );
+
+  background: -webkit-radial-gradient(
+    circle,
+    hsla(208, 91%, 59%, 1) 35%,
+    hsla(189, 100%, 50%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#359CF6", endColorstr="#00D8FF", GradientType=1 );
+}
+
+.gradientGreenLight {
+  background: hsla(178, 81%, 80%, 1);
+
+  background: radial-gradient(
+    circle,
+    hsla(178, 81%, 80%, 1) 0%,
+    hsla(179, 59%, 45%, 1) 70%
+  );
+
+  background: -moz-radial-gradient(
+    circle,
+    hsla(178, 81%, 80%, 1) 0%,
+    hsla(179, 59%, 45%, 1) 70%
+  );
+
+  background: -webkit-radial-gradient(
+    circle,
+    hsla(178, 81%, 80%, 1) 0%,
+    hsla(179, 59%, 45%, 1) 70%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#A1F5F2", endColorstr="#2FB9B7", GradientType=1 );
+}
+
+.gradientGreenLightEx {
+  background: hsla(179, 59%, 45%, 1);
+
+  background: radial-gradient(
+    circle,
+    hsla(179, 59%, 45%, 1) 0%,
+    hsla(105, 11%, 85%, 1) 100%
+  );
+
+  background: -moz-radial-gradient(
+    circle,
+    hsla(179, 59%, 45%, 1) 0%,
+    hsla(105, 11%, 85%, 1) 100%
+  );
+
+  background: -webkit-radial-gradient(
+    circle,
+    hsla(179, 59%, 45%, 1) 0%,
+    hsla(105, 11%, 85%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#2FB9B7", endColorstr="#D8DED6", GradientType=1 );
+}
+
+.gradientHtml {
+  background: #ee0979; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ff6a00,
+    #ee0979
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ff6a00,
+    #ee0979
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.gradientPurpleLight {
+  background: hsla(0, 0%, 100%, 1);
+
+  background: radial-gradient(
+    circle,
+    hsla(0, 0%, 100%, 1) 0%,
+    hsla(237, 72%, 77%, 1) 50%
+  );
+
+  background: -moz-radial-gradient(
+    circle,
+    hsla(0, 0%, 100%, 1) 0%,
+    hsla(237, 72%, 77%, 1) 50%
+  );
+
+  background: -webkit-radial-gradient(
+    circle,
+    hsla(0, 0%, 100%, 1) 0%,
+    hsla(237, 72%, 77%, 1) 50%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFFFFF", endColorstr="#9CA0EF", GradientType=1 );
+}
+
+.gradientLightPrimary {
+  background: hsla(0, 0%, 100%, 1);
+
+  background: radial-gradient(
+    circle,
+    hsla(0, 0%, 100%, 1) 0%,
+    hsla(245, 65%, 97%, 1) 50%
+  );
+
+  background: -moz-radial-gradient(
+    circle,
+    hsla(0, 0%, 100%, 1) 0%,
+    hsla(245, 65%, 97%, 1) 50%
+  );
+
+  background: -webkit-radial-gradient(
+    circle,
+    hsla(0, 0%, 100%, 1) 0%,
+    hsla(245, 65%, 97%, 1) 50%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFFFFF", endColorstr="#F2F1FC", GradientType=1 );
+}
+
+.gradientLightPrimarys {
+  background: hsla(0, 0%, 100%, 1);
+
+  background: radial-gradient(
+    circle,
+    hsla(0, 0%, 100%, 1) 35%,
+    hsla(236, 100%, 97%, 1) 100%
+  );
+
+  background: -moz-radial-gradient(
+    circle,
+    hsla(0, 0%, 100%, 1) 35%,
+    hsla(236, 100%, 97%, 1) 100%
+  );
+
+  background: -webkit-radial-gradient(
+    circle,
+    hsla(0, 0%, 100%, 1) 35%,
+    hsla(236, 100%, 97%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFFFFF", endColorstr="#EFF0FF", GradientType=1 );
+}
+
+.gradientSelenium {
+  background: #3c3b3f; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #605c3c,
+    #3c3b3f
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #605c3c,
+    #3c3b3f
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}

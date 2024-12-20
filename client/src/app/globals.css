@@ -3,15 +3,17 @@
 @tailwind utilities;
 
 :root {
-  --primary-light: 242 241 252;
+  --blue-light: 196 227 254;
   --blue-med: 53 156 246;
   --blue-vibe: 0 216 255;
+  --green-light: 47 185 183;
+  --primary-light: 242 241 252;
+  --purple-light: 212 214 245;
+  --purple-med: 179 175 251;
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #2b4162;
-  background: linear-gradient(315deg, #2b4162 0%, #12100e 74%);
   overflow-x: hidden;
 }
 
@@ -19,6 +21,20 @@ body {
   font-family: var(--font-inter);
   box-sizing: border-box;
   transition: 0.3s ease-in-out all;
+}
+
+.background-wrap {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-color: #2b4162;
+  background: linear-gradient(315deg, #2b4162 0%, #12100e 74%);
 }
 
 @keyframes fadeInDown {
@@ -43,8 +59,19 @@ body {
   }
 }
 
-.fadeInDown-animation {
-  animation: 1.5s fadeInDown;
+.fadeInDown-animation-first {
+  animation: fadeInDown 1.5s 0s;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.fadeInDown-animation-second {
+  animation: fadeInDown 1.5s 1s;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.fadeInDown-animation-third {
+  animation: fadeInDown 2s 2.5s;
+  -webkit-animation-fill-mode: forwards;
 }
 
 .fadeInLeft-animation {
@@ -62,6 +89,7 @@ body {
   background-color: rgba(17, 25, 40, 0.22);
   border-radius: 12px;
   /* border: 1px solid rgba(255, 255, 255, 0.125); */
+  /* border: 2px solid black; */
 }
 
 .glass-light {
@@ -70,135 +98,6 @@ body {
   background-color: rgba(189, 202, 229, 0.22);
   border-radius: 12px;
   /* border: 1px solid rgba(255, 255, 255, 0.125); */
-}
-
-.gradient-black {
-  background-color: #2b4162;
-  background-image: linear-gradient(315deg, #2b4162 0%, #12100e 74%);
-}
-
-.gradient-blue-rich {
-  background: hsla(217, 100%, 50%, 1);
-
-  background: radial-gradient(
-    circle,
-    hsla(217, 100%, 50%, 1) 35%,
-    hsla(266, 100%, 47%, 1) 100%
-  );
-
-  background: -moz-radial-gradient(
-    circle,
-    hsla(217, 100%, 50%, 1) 35%,
-    hsla(266, 100%, 47%, 1) 100%
-  );
-
-  background: -webkit-radial-gradient(
-    circle,
-    hsla(217, 100%, 50%, 1) 35%,
-    hsla(266, 100%, 47%, 1) 100%
-  );
-
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0061FF", endColorstr="#6600EE", GradientType=1 );
-}
-
-.gradient-bright-blue {
-  background: hsla(217, 100%, 50%, 1);
-
-  background: radial-gradient(
-    circle,
-    hsla(217, 100%, 50%, 1) 35%,
-    hsla(186, 100%, 69%, 1) 100%
-  );
-
-  background: -moz-radial-gradient(
-    circle,
-    hsla(217, 100%, 50%, 1) 35%,
-    hsla(186, 100%, 69%, 1) 100%
-  );
-
-  background: -webkit-radial-gradient(
-    circle,
-    hsla(217, 100%, 50%, 1) 35%,
-    hsla(186, 100%, 69%, 1) 100%
-  );
-
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0061FF", endColorstr="#60EFFF", GradientType=1 );
-}
-
-.gradient-bright-blue-2 {
-  background: hsla(208, 91%, 59%, 1);
-
-  background: radial-gradient(
-    circle,
-    hsla(208, 91%, 59%, 1) 35%,
-    hsla(189, 100%, 50%, 1) 100%
-  );
-
-  background: -moz-radial-gradient(
-    circle,
-    hsla(208, 91%, 59%, 1) 35%,
-    hsla(189, 100%, 50%, 1) 100%
-  );
-
-  background: -webkit-radial-gradient(
-    circle,
-    hsla(208, 91%, 59%, 1) 35%,
-    hsla(189, 100%, 50%, 1) 100%
-  );
-
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#359CF6", endColorstr="#00D8FF", GradientType=1 );
-}
-
-.gradient-html {
-  background: #ee0979; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #ff6a00,
-    #ee0979
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #ff6a00,
-    #ee0979
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-.gradient-light-primary {
-  background: hsla(0, 0%, 100%, 1);
-
-  background: radial-gradient(
-    circle,
-    hsla(0, 0%, 100%, 1) 35%,
-    hsla(236, 100%, 97%, 1) 100%
-  );
-
-  background: -moz-radial-gradient(
-    circle,
-    hsla(0, 0%, 100%, 1) 35%,
-    hsla(236, 100%, 97%, 1) 100%
-  );
-
-  background: -webkit-radial-gradient(
-    circle,
-    hsla(0, 0%, 100%, 1) 35%,
-    hsla(236, 100%, 97%, 1) 100%
-  );
-
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFFFFF", endColorstr="#EFF0FF", GradientType=1 );
-}
-
-.gradient-selenium {
-  background: #3c3b3f; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #605c3c,
-    #3c3b3f
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #605c3c,
-    #3c3b3f
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -218,5 +117,66 @@ body {
   }
   100% {
     transform: translateY(-100%);
-  } /* Adjust as needed */
+  }
+}
+
+@keyframes shadowDance {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.5);
+  }
+}
+
+@keyframes bounce {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, 25px, 0);
+  }
+}
+
+.ball-1 {
+  animation: bounce 0.75s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
+  animation-iteration-count: infinite;
+}
+
+.ball-shadow-1 {
+  animation: shadowDance 0.75s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
+  animation-iteration-count: infinite;
+}
+
+.ball-shadow-2 {
+  animation: shadowDance 0.75s 2.25s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
+  animation-iteration-count: infinite;
+}
+
+.ball-shadow-3 {
+  animation: shadowDance 0.75s 1s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
+  animation-iteration-count: infinite;
+}
+
+.ball-2 {
+  animation: bounce 0.75s 2.25s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
+  animation-iteration-count: infinite;
+}
+
+.ball-3 {
+  animation: bounce 0.75s 1s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
+  animation-iteration-count: infinite;
 }
