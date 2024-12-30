@@ -4,7 +4,7 @@ export default function ExcerptTwo() {
   return (
     <div
       id="excerpt-two"
-      className={`w-[330px] mx-auto font-light text-3xl text-blueMed text-center duration-0`}
+      className={`w-[336px] mx-auto font-light text-3xl text-blueMed text-center duration-0`}
     >
       <p className={`w-0 overflow-hidden ${animations.typedOutOne}`}>
         I write <span className={`text-white `}>clean,</span>
@@ -20,9 +20,14 @@ export default function ExcerptTwo() {
         for the internet.
       </p>
       <button
-        className={`w-0 overflow-hidden text-black text-lg ${animations.typedOutFive}`}
+        className={`py-2 px-4 rounded-2xl shadow-[0_25px_40px_0px_rgba(0,0,0,.05)]`}
       >
-        Send me mail.{" "}
+        <p
+          className={`w-0 overflow-hidden text-black text-lg font-normal ${animations.typedOutFive} `}
+        >
+          {" "}
+          Send me mail.{" "}
+        </p>
       </button>
     </div>
   );

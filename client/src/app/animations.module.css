@@ -71,6 +71,15 @@
   }
 }
 
+@keyframes typingButton {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
 @keyframes scroll {
   0% {
     transform: translateY(0);
@@ -186,7 +195,7 @@
   -webkit-animation-fill-mode: forwards;
 }
 .typedOutFive {
-  animation: typing 2s 6.5s;
+  animation: typingButton 2s 6.5s;
   white-space: nowrap;
   -webkit-animation-fill-mode: forwards;
 }
