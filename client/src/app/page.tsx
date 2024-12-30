@@ -7,7 +7,7 @@ import gradients from "./gradients.module.css";
 
 export default function Home() {
   const scrollYRef = useRef(0);
-  function handleScroll(e: Event) {
+  function handleScroll() {
     const backgroundRed = document.getElementById("background-red");
     const backgroundTwo = document.getElementById("background-two");
     const excerptTwo = document.getElementById("excerpt-two");

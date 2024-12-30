@@ -1,11 +1,8 @@
 "use client";
-import { useEffect, useRef } from "react";
-import NavItems from "./NavItems";
+import { useEffect } from "react";
 import Image from "next/image";
 
 export default function Navbar() {
-  const elementRef = useRef(null);
-
   function handleScroll() {
     const overflowContainer = document.getElementById("overflow-container");
 

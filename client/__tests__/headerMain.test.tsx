@@ -6,7 +6,7 @@ test("Navbar", () => {
   render(<HeaderMain />);
   const p1 = screen.getByText("Hi.");
   const anthony = screen.getByText("Anthony Toffetti");
-  const lastP = screen.getByText("web developer.");
+  const lastP = screen.getByText("web developer");
 
   expect(p1).toBeDefined();
   expect(anthony).toBeDefined();

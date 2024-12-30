@@ -1,5 +1,4 @@
 import animations from "../animations.module.css";
-import Image from "next/image";
 
 export default function ExcerptTwo() {
   return (
