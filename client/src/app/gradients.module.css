@@ -1,38 +1,69 @@
-.gradientBlack {
+.black {
   background-color: #2b4162;
-  background-image: linear-gradient(315deg, #2b4162 0%, #12100e 74%);
+  /* background-image: linear-gradient(315deg, #2b4162 0%, #12100e 74%); */
+  background: linear-gradient(315deg, #2b4162 0%, #12100e 18%);
   background-attachment: fixed;
 }
-.gradientBlackReverse {
+.blackReverse {
   background-color: #2b4162;
   background-image: linear-gradient(315deg, #12100e 0%, #2b4162 74%);
 }
 
-.gradientBlueRrich {
-  background: hsla(217, 100%, 50%, 1);
+.blueLight {
+  background: hsla(0, 0%, 100%, 1);
 
   background: radial-gradient(
     circle,
-    hsla(217, 100%, 50%, 1) 35%,
-    hsla(266, 100%, 47%, 1) 100%
+    hsla(0, 0%, 100%, 1) 65%,
+    hsla(210, 100%, 98%, 1) 89%,
+    hsla(208, 97%, 88%, 1) 100%
   );
 
   background: -moz-radial-gradient(
     circle,
-    hsla(217, 100%, 50%, 1) 35%,
-    hsla(266, 100%, 47%, 1) 100%
+    hsla(0, 0%, 100%, 1) 65%,
+    hsla(210, 100%, 98%, 1) 89%,
+    hsla(208, 97%, 88%, 1) 100%
   );
 
   background: -webkit-radial-gradient(
     circle,
-    hsla(217, 100%, 50%, 1) 35%,
-    hsla(266, 100%, 47%, 1) 100%
+    hsla(0, 0%, 100%, 1) 65%,
+    hsla(210, 100%, 98%, 1) 89%,
+    hsla(208, 97%, 88%, 1) 100%
   );
 
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0061FF", endColorstr="#6600EE", GradientType=1 );
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFFFFF", endColorstr="#F5FAFF", GradientType=1 );
 }
 
-.gradientBlueBright {
+/* .blueLight {
+  background: hsla(0, 0%, 100%, 1);
+
+  background: radial-gradient(
+    circle,
+    hsla(0, 0%, 100%, 1) 68%,
+    hsla(208, 56%, 89%, 1) 94%,
+    hsla(208, 94%, 69%, 1) 100%
+  );
+
+  background: -moz-radial-gradient(
+    circle,
+    hsla(0, 0%, 100%, 1) 68%,
+    hsla(208, 56%, 89%, 1) 94%,
+    hsla(208, 94%, 69%, 1) 100%
+  );
+
+  background: -webkit-radial-gradient(
+    circle,
+    hsla(0, 0%, 100%, 1) 68%,
+    hsla(208, 56%, 89%, 1) 94%,
+    hsla(208, 94%, 69%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFFFFF", endColorstr="#D5E5F3", GradientType=1 );
+} */
+
+.blueBright {
   background: hsla(178, 81%, 80%, 1);
 
   background: radial-gradient(
@@ -56,7 +87,7 @@
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#A1F5F2", endColorstr="#359CF6", GradientType=1 );
 }
 
-.gradientBlueBrights {
+.blueBrights {
   background: hsla(217, 100%, 50%, 1);
 
   background: radial-gradient(
@@ -80,7 +111,7 @@
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0061FF", endColorstr="#60EFFF", GradientType=1 );
 }
 
-.gradientBlueBrightSecondary {
+.blueBrightSecondary {
   background: hsla(208, 91%, 59%, 1);
 
   background: radial-gradient(
@@ -104,7 +135,45 @@
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#359CF6", endColorstr="#00D8FF", GradientType=1 );
 }
 
-.gradientGreenLight {
+.blueRich {
+  background: hsla(217, 100%, 50%, 1);
+
+  background: radial-gradient(
+    circle,
+    hsla(217, 100%, 50%, 1) 35%,
+    hsla(266, 100%, 47%, 1) 100%
+  );
+
+  background: -moz-radial-gradient(
+    circle,
+    hsla(217, 100%, 50%, 1) 35%,
+    hsla(266, 100%, 47%, 1) 100%
+  );
+
+  background: -webkit-radial-gradient(
+    circle,
+    hsla(217, 100%, 50%, 1) 35%,
+    hsla(266, 100%, 47%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0061FF", endColorstr="#6600EE", GradientType=1 );
+}
+
+.deepSea {
+  background: #005c97; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #363795,
+    #005c97
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #363795,
+    #005c97
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.greenLight {
   background: hsla(178, 81%, 80%, 1);
 
   background: radial-gradient(
@@ -128,7 +197,7 @@
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#A1F5F2", endColorstr="#2FB9B7", GradientType=1 );
 }
 
-.gradientGreenLightEx {
+.greenLightEx {
   background: hsla(179, 59%, 45%, 1);
 
   background: radial-gradient(
@@ -152,7 +221,7 @@
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#2FB9B7", endColorstr="#D8DED6", GradientType=1 );
 }
 
-.gradientHtml {
+.html {
   background: #ee0979; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
@@ -166,31 +235,7 @@
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.gradientPurpleLight {
-  background: hsla(0, 0%, 100%, 1);
-
-  background: radial-gradient(
-    circle,
-    hsla(0, 0%, 100%, 1) 0%,
-    hsla(237, 72%, 77%, 1) 50%
-  );
-
-  background: -moz-radial-gradient(
-    circle,
-    hsla(0, 0%, 100%, 1) 0%,
-    hsla(237, 72%, 77%, 1) 50%
-  );
-
-  background: -webkit-radial-gradient(
-    circle,
-    hsla(0, 0%, 100%, 1) 0%,
-    hsla(237, 72%, 77%, 1) 50%
-  );
-
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFFFFF", endColorstr="#9CA0EF", GradientType=1 );
-}
-
-.gradientLightPrimary {
+.lightPrimary {
   background: hsla(0, 0%, 100%, 1);
 
   background: radial-gradient(
@@ -214,7 +259,7 @@
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFFFFF", endColorstr="#F2F1FC", GradientType=1 );
 }
 
-.gradientLightPrimarys {
+.lightPrimarys {
   background: hsla(0, 0%, 100%, 1);
 
   background: radial-gradient(
@@ -238,7 +283,31 @@
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFFFFF", endColorstr="#EFF0FF", GradientType=1 );
 }
 
-.gradientSelenium {
+.purpleLight {
+  background: hsla(0, 0%, 100%, 1);
+
+  background: radial-gradient(
+    circle,
+    hsla(0, 0%, 100%, 1) 0%,
+    hsla(237, 72%, 77%, 1) 50%
+  );
+
+  background: -moz-radial-gradient(
+    circle,
+    hsla(0, 0%, 100%, 1) 0%,
+    hsla(237, 72%, 77%, 1) 50%
+  );
+
+  background: -webkit-radial-gradient(
+    circle,
+    hsla(0, 0%, 100%, 1) 0%,
+    hsla(237, 72%, 77%, 1) 50%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFFFFF", endColorstr="#9CA0EF", GradientType=1 );
+}
+
+.selenium {
   background: #3c3b3f; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
@@ -250,4 +319,48 @@
     #605c3c,
     #3c3b3f
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.test {
+  background: #f85032; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #e73827,
+    #f85032
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #e73827,
+    #f85032
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* .gradientRedMin {
+  background: #f00000;
+  background: -webkit-linear-gradient(to right, #dc281e, #f00000);
+  background: linear-gradient(to right, #dc281e, #f00000);
+} */
+
+.redMin {
+  background: hsla(3, 76%, 49%, 1);
+
+  background: radial-gradient(
+    circle,
+    hsla(3, 76%, 49%, 1) 35%,
+    hsla(3, 96%, 28%, 1) 100%
+  );
+
+  background: -moz-radial-gradient(
+    circle,
+    hsla(3, 76%, 49%, 1) 35%,
+    hsla(3, 96%, 28%, 1) 100%
+  );
+
+  background: -webkit-radial-gradient(
+    circle,
+    hsla(3, 76%, 49%, 1) 35%,
+    hsla(3, 96%, 28%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#DC281E", endColorstr="#8C0903", GradientType=1 );
 }

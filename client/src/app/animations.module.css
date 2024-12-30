@@ -1,0 +1,192 @@
+@keyframes bounce {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, 25px, 0);
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInSectionUp {
+  0% {
+    transform: translateY(0%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-600px);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutSectionUp {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-600px);
+    opacity: 0;
+  }
+}
+@keyframes fadeInSectionDown {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(600px);
+    opacity: 1;
+  }
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 300px;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes shadowDance {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.5);
+  }
+}
+
+.ballOne {
+  animation: bounce 0.75s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
+  animation-iteration-count: infinite;
+}
+
+.ballShadow1 {
+  animation: shadowDance 0.75s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
+  animation-iteration-count: infinite;
+}
+
+.ballShadow2 {
+  animation: shadowDance 0.75s 2.25s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
+  animation-iteration-count: infinite;
+}
+
+.ballShadow3 {
+  animation: shadowDance 0.75s 1s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
+  animation-iteration-count: infinite;
+}
+
+.ballTwo {
+  animation: bounce 0.75s 2.25s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
+  animation-iteration-count: infinite;
+}
+
+.ballThree {
+  animation: bounce 0.75s 1s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
+  animation-iteration-count: infinite;
+}
+
+.fadeInDownFirst {
+  animation: fadeInDown 1.5s 0s;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.fadeInDownSecond {
+  animation: fadeInDown 1.5s 1s;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.fadeInDownThird {
+  animation: fadeInDown 2s 2.5s;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.fadeInLeft {
+  animation: 1.5s fadeInLeft;
+}
+
+.fadeInSectionDown {
+  animation: fadeInSectionDown 1.5s 0s;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.fadeInSectionUp {
+  animation: fadeInSectionUp 1.5s 0s;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.fadeOutSectionUp {
+  animation: fadeOutSectionUp 1.5s 0s;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.typedOutOne {
+  animation: typing 2s 4s;
+  white-space: nowrap;
+  -webkit-animation-fill-mode: forwards;
+}
+.typedOutTwo {
+  animation: typing 2s 4.5s;
+  white-space: nowrap;
+  -webkit-animation-fill-mode: forwards;
+}
+.typedOutThree {
+  animation: typing 2s 4.5s;
+  white-space: nowrap;
+  -webkit-animation-fill-mode: forwards;
+}
+.typedOutFour {
+  animation: typing 2s 5s;
+  white-space: nowrap;
+  -webkit-animation-fill-mode: forwards;
+}
+.typedOutFive {
+  animation: typing 2s 6.5s;
+  white-space: nowrap;
+  -webkit-animation-fill-mode: forwards;
+}

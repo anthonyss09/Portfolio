@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef } from "react";
 import NavItems from "./NavItems";
+import Image from "next/image";
 
 export default function Navbar() {
   const elementRef = useRef(null);
@@ -30,8 +31,15 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="w-full h-16 z-20 fixed top-8 left-0 flex justify-center">
-      <div className="h-12 w-[160px] z-50 backdrop-blur-sm opacity-70 fixed left-1/2 translate-x-[-280px] rounded-[200px]"></div>
+    <nav className="w-full h-16 z-20 fixed top-8 left-0 flex justify-center items-center">
+      <Image
+        src="/assets/svgs/boxMenu.svg"
+        height={36}
+        width={36}
+        alt="menu"
+        className="absolute top-4 left-8 z-[100]"
+      />
+      {/* <div className="h-12 w-[160px] z-50 backdrop-blur-sm opacity-70 fixed left-1/2 translate-x-[-280px] rounded-[200px]"></div>
       <div className="h-12 w-[160px] z-50 backdrop-blur-sm opacity-70 fixed right-1/2 translate-x-[280px] rounded-[200px]"></div>
       <div
         id="overflow-container"
@@ -40,7 +48,7 @@ export default function Navbar() {
         {" "}
         <div
           id="view-box"
-          className="w-[240px] h-16 glass fixed top-8 left-1/2 translate-x-[-50%] z-20 "
+          className="w-[240px] h-16 glas fixed top-8 left-1/2 translate-x-[-50%] z-20"
         >
           {" "}
         </div>
@@ -50,7 +58,7 @@ export default function Navbar() {
           <NavItems />
           <NavItems />
         </div>
-      </div>
+      </div> */}
     </nav>
   );
 }
