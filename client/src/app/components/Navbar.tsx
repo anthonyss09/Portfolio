@@ -29,12 +29,12 @@ export default function Navbar() {
 
   return (
     <nav className="w-full h-16 z-20 fixed top-8 left-0 flex justify-center items-center">
-      <div className="h-12 w-12 glass absolute top-0 left-4 flex items-center justify-center">
+      <div className="h-[44px] w-[44px] glass absolute top-0 left-4 flex items-center justify-center">
         {" "}
         <Image
           src="/assets/svgs/boxMenu.svg"
-          height={36}
-          width={36}
+          height={32}
+          width={32}
           alt="menu"
           className=""
         />
