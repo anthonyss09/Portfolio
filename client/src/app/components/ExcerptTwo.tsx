@@ -4,7 +4,7 @@ export default function ExcerptTwo() {
   return (
     <div
       id="excerpt-two"
-      className={`w-[300px] mx-auto font-light text-3xl text-blueMed text-center duration-0`}
+      className={`w-[330px] mx-auto font-light text-3xl text-blueMed text-center duration-0`}
     >
       <p className={`w-0 overflow-hidden ${animations.typedOutOne}`}>
         I write <span className={`text-white `}>clean,</span>
@@ -13,7 +13,7 @@ export default function ExcerptTwo() {
         developer friendly
       </p>
       <p className={`w-0 overflow-hidden ${animations.typedOutThree}`}>
-        code <span className="text-white">optimized</span>
+        code <span className="text-white">tested & optimized</span>
       </p>
 
       <p className={`w-0 mb-4 overflow-hidden ${animations.typedOutFour}`}>

@@ -3,7 +3,6 @@ import Navbar from "./components/Navbar";
 import HeaderMain from "./components/HeaderMain";
 import { useEffect, useRef } from "react";
 import gradients from "./gradients.module.css";
-// import handleScroll from "./utils/handlers/handleScroll";
 
 export default function Home() {
   const scrollYRef = useRef(0);
@@ -12,13 +11,16 @@ export default function Home() {
     const backgroundTwo = document.getElementById("background-two");
     const excerptTwo = document.getElementById("excerpt-two");
 
-    if (window.scrollY >= 1) {
+    if (scrollYRef.current === 0 && window.scrollY >= 1) {
       if (backgroundRed && backgroundTwo && excerptTwo) {
         backgroundRed.style.transform = "translateY(0)";
         excerptTwo.style.color = "rgb(196,227,254)";
-        // excerptTwo.style.fontWeight = "400";
       }
-    } else if (scrollYRef.current > 200 && window.scrollY <= 200) {
+    } else if (window.scrollY === 0) {
+      if (backgroundRed && backgroundTwo && excerptTwo) {
+        backgroundRed.style.transform = "translateY(-400px)";
+        excerptTwo.style.color = "rgb(53,156,246)";
+      }
     }
     scrollYRef.current = window.scrollY;
   }
