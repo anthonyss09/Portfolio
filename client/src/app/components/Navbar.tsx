@@ -29,13 +29,17 @@ export default function Navbar() {
 
   return (
     <nav className="w-full h-16 z-20 fixed top-8 left-0 flex justify-center items-center">
-      <Image
-        src="/assets/svgs/boxMenu.svg"
-        height={36}
-        width={36}
-        alt="menu"
-        className="absolute top-4 left-8 z-[100]"
-      />
+      <div className="h-12 w-12 glass absolute top-0 left-4 flex items-center justify-center">
+        {" "}
+        <Image
+          src="/assets/svgs/boxMenu.svg"
+          height={36}
+          width={36}
+          alt="menu"
+          className=""
+        />
+      </div>
+
       {/* <div className="h-12 w-[160px] z-50 backdrop-blur-sm opacity-70 fixed left-1/2 translate-x-[-280px] rounded-[200px]"></div>
       <div className="h-12 w-[160px] z-50 backdrop-blur-sm opacity-70 fixed right-1/2 translate-x-[280px] rounded-[200px]"></div>
       <div
