@@ -2,7 +2,6 @@
 import Navbar from "./components/Navbar";
 import HeaderMain from "./components/HeaderMain";
 import { useEffect, useRef } from "react";
-import gradients from "./gradients.module.css";
 import FooterLinks from "./components/FooterLinks";
 
 export default function Home() {
@@ -39,12 +38,13 @@ export default function Home() {
     <div id="page" className="h-[2000px] w-full overflow-hidden">
       <div
         id="background-red"
-        className={`h-[800px] translate-y-[-416px] w-full fixed z-[-1] top-0 left-0 border-b-[2px] border-blueLight duration-500 ${gradients.redMin}`}
+        className={`h-[800px] translate-y-[-416px] w-full fixed z-[-1] top-0 left-0 border-b-[2px] border-blueLight duration-500 back-red-peaks`}
       ></div>
       <div
         id="background-two"
-        className={`h-[394px] w-full fixed z-[-2] top-[384px] left-0 ${gradients.blueLight}`}
+        className={`h-[280px] w-full fixed z-[-2] top-[384px] left-0 `}
       ></div>
+
       <Navbar />
 
       <HeaderMain />

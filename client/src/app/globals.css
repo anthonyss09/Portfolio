@@ -23,6 +23,12 @@ body {
   transition: 0.3s ease-in-out all;
 }
 
+.back-red-peaks {
+  background-image: url("../../public/assets/images/redPeaks.png");
+  background-position: center;
+  background-size: cover;
+}
+
 .free-center {
   left: 50%;
   transform: translateX(-50%);

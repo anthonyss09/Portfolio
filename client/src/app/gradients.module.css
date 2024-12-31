@@ -36,7 +36,7 @@
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFFFFF", endColorstr="#F5FAFF", GradientType=1 );
 }
 
-/* .blueLight {
+.blueLight {
   background: hsla(0, 0%, 100%, 1);
 
   background: radial-gradient(
@@ -61,7 +61,7 @@
   );
 
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFFFFF", endColorstr="#D5E5F3", GradientType=1 );
-} */
+}
 
 .blueBright {
   background: hsla(178, 81%, 80%, 1);
@@ -281,6 +281,30 @@
   );
 
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFFFFF", endColorstr="#EFF0FF", GradientType=1 );
+}
+
+.pink {
+  background: hsla(336, 100%, 50%, 1);
+
+  background: radial-gradient(
+    circle,
+    hsla(336, 100%, 50%, 1) 48%,
+    hsla(336, 82%, 29%, 1) 100%
+  );
+
+  background: -moz-radial-gradient(
+    circle,
+    hsla(336, 100%, 50%, 1) 48%,
+    hsla(336, 82%, 29%, 1) 100%
+  );
+
+  background: -webkit-radial-gradient(
+    circle,
+    hsla(336, 100%, 50%, 1) 48%,
+    hsla(336, 82%, 29%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FF0066", endColorstr="#870D3E", GradientType=1 );
 }
 
 .purpleLight {
