@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import HeaderMain from "./components/HeaderMain";
 import { useEffect, useRef } from "react";
 import FooterLinks from "./components/FooterLinks";
+import gradients from "./gradients.module.css";
 
 export default function Home() {
   const scrollYRef = useRef(0);
@@ -42,7 +43,7 @@ export default function Home() {
       ></div>
       <div
         id="background-two"
-        className={`h-[280px] w-full fixed z-[-2] top-[384px] left-0 `}
+        className={`h-[420px] w-full fixed z-[-2] top-[384px] left-0 ${gradients.white}`}
       ></div>
 
       <Navbar />

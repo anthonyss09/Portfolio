@@ -388,3 +388,33 @@
 
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#DC281E", endColorstr="#8C0903", GradientType=1 );
 }
+
+.white {
+  background: hsla(215, 35%, 78%, 1);
+
+  background: linear-gradient(
+    135deg,
+    hsla(215, 35%, 78%, 1) 0%,
+    hsla(0, 0%, 100%, 1) 13%,
+    hsla(0, 0%, 100%, 1) 87%,
+    hsla(215, 35%, 78%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    135deg,
+    hsla(215, 35%, 78%, 1) 0%,
+    hsla(0, 0%, 100%, 1) 13%,
+    hsla(0, 0%, 100%, 1) 87%,
+    hsla(215, 35%, 78%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    135deg,
+    hsla(215, 35%, 78%, 1) 0%,
+    hsla(0, 0%, 100%, 1) 13%,
+    hsla(0, 0%, 100%, 1) 87%,
+    hsla(215, 35%, 78%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#B3C3DA", endColorstr="#FFFFFF", GradientType=1 );
+}

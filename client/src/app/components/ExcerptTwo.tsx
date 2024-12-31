@@ -20,7 +20,7 @@ export default function ExcerptTwo() {
         for the internet.
       </p>
       <button
-        className={`py-2 px-4 rounded-2xl shadow-[0_25px_40px_0px_rgba(0,0,0,.05)]`}
+        className={`py-2 px-4 rounded-2xl shadow-[0_25px_40px_0px_rgba(0,0,0,.0)]`}
       >
         <p
           className={`w-0 overflow-hidden text-black text-lg font-normal ${animations.typedOutFive} `}

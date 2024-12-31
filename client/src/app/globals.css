@@ -29,6 +29,12 @@ body {
   background-size: cover;
 }
 
+.back-white-peaks {
+  background-image: url("../../public/assets/images/greyPeaks.png");
+  background-position: center;
+  background-size: cover;
+}
+
 .free-center {
   left: 50%;
   transform: translateX(-50%);
