@@ -9,6 +9,7 @@ export default {
   theme: {
     extend: {
       colors: {
+        red: "rgb(var(--red))",
         primaryLight: "rgb(var(--primary-light))",
         blueLight: "rgb(var(--blue-light))",
         blueMed: "rgb(var(--blue-med))",
@@ -19,6 +20,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+    },
+    screens: {
+      xs: "460px",
     },
   },
   plugins: [],

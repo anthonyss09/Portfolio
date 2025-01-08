@@ -30,48 +30,7 @@
   }
 }
 
-@keyframes fadeInSectionUp {
-  0% {
-    transform: translateY(0%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(-600px);
-    opacity: 1;
-  }
-}
-
-@keyframes fadeOutSectionUp {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-600px);
-    opacity: 0;
-  }
-}
-@keyframes fadeInSectionDown {
-  0% {
-    transform: translateY(0);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(600px);
-    opacity: 1;
-  }
-}
-
 @keyframes typing {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 336px;
-  }
-}
-
-@keyframes typingButton {
   0% {
     width: 0;
   }
@@ -80,12 +39,12 @@
   }
 }
 
-@keyframes scroll {
+@keyframes typingButton {
   0% {
-    transform: translateY(0);
+    width: 0;
   }
   100% {
-    transform: translateY(-100%);
+    width: 256px;
   }
 }
 
@@ -155,47 +114,20 @@
   -webkit-animation-fill-mode: forwards;
 }
 
-.fadeInLeft {
-  animation: 1.5s fadeInLeft;
-}
-
-.fadeInSectionDown {
-  animation: fadeInSectionDown 1.5s 0s;
-  -webkit-animation-fill-mode: forwards;
-}
-
-.fadeInSectionUp {
-  animation: fadeInSectionUp 1.5s 0s;
-  -webkit-animation-fill-mode: forwards;
-}
-
-.fadeOutSectionUp {
-  animation: fadeOutSectionUp 1.5s 0s;
-  -webkit-animation-fill-mode: forwards;
-}
-
 .typedOutOne {
   animation: typing 2s 4s;
   white-space: nowrap;
   -webkit-animation-fill-mode: forwards;
 }
+
 .typedOutTwo {
-  animation: typing 2s 4.5s;
-  white-space: nowrap;
-  -webkit-animation-fill-mode: forwards;
-}
-.typedOutThree {
-  animation: typing 2s 4.5s;
-  white-space: nowrap;
-  -webkit-animation-fill-mode: forwards;
-}
-.typedOutFour {
   animation: typing 2s 5s;
   white-space: nowrap;
   -webkit-animation-fill-mode: forwards;
 }
-.typedOutFive {
-  animation: typingButton 2s 6.5s;
+
+.typedOutButton {
+  animation: typingButton 2s 5.5s;
   white-space: nowrap;
   -webkit-animation-fill-mode: forwards;
 }

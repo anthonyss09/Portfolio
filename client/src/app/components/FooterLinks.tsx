@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function FooterLinks() {
   return (
-    <footer className="free-center bg-[#ffffff] px-6 pt-2  flex justify-center items-center fixed bottom-0 gap-4 shadow-[1px_-2px_20px_2px_rgba(0,0,0,.08)] rounded-tl-xl rounded-tr-xl">
+    <footer className="free-center bg-[#ffffff] px-6 pt-2  flex justify-center items-center fixed bottom-2 gap-4 shadow-[1px_-2px_20px_2px_rgba(0,0,0,.08)] rounded-tl-xl rounded-tr-xl rounded-xl shadow-xl border-[1px]">
       <Link href="https://github.com/anthonyss09">
         {" "}
         <Image

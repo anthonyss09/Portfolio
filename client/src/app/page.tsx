@@ -3,25 +3,19 @@ import Navbar from "./components/Navbar";
 import HeaderMain from "./components/HeaderMain";
 import { useEffect, useRef } from "react";
 import FooterLinks from "./components/FooterLinks";
-import gradients from "./gradients.module.css";
 
 export default function Home() {
   const scrollYRef = useRef(0);
   function handleScroll() {
     const backgroundRed = document.getElementById("background-red");
-    const backgroundTwo = document.getElementById("background-two");
-    const excerptTwo = document.getElementById("excerpt-two");
+    const backgroundThree = document.getElementById("background-three");
 
-    if (scrollYRef.current === 0 && window.scrollY >= 1) {
-      if (backgroundRed && backgroundTwo && excerptTwo) {
-        backgroundRed.style.transform = "translateY(0)";
-        excerptTwo.style.color = "rgb(196,227,254)";
-      }
-    } else if (window.scrollY === 0) {
-      if (backgroundRed && backgroundTwo && excerptTwo) {
-        backgroundRed.style.transform = "translateY(-416px)";
-        excerptTwo.style.color = "rgb(53,156,246)";
-      }
+    if (window.scrollY >= 400 && backgroundRed && backgroundThree) {
+      backgroundRed.style.transform = "translateY(-100%)";
+      backgroundThree.style.transform = "translateY(-100%)";
+    } else if (window.scrollY <= 400 && backgroundThree && backgroundRed) {
+      backgroundThree.style.transform = "translateY(0)";
+      backgroundRed.style.transform = "translateY(0)";
     }
     scrollYRef.current = window.scrollY;
   }
@@ -39,18 +33,15 @@ export default function Home() {
     <div id="page" className="h-[2000px] w-full overflow-hidden">
       <div
         id="background-red"
-        className={`h-[800px] translate-y-[-416px] w-full fixed z-[-1] top-0 left-0 border-b-[2px] border-blueLight duration-500 back-red-peaks`}
+        className={`h-[800px] w-full fixed z-[-1] top-0 left-0 border-b-[0px] border-[#90AFC9] duration-500 back-red-peaks overflow-hidden`}
       ></div>
       <div
-        id="background-two"
-        className={`h-[420px] w-full fixed z-[-2] top-[384px] left-0 ${gradients.white}`}
+        id="background-three"
+        className={`h-[800px] w-full fixed  top-[800px] left-0 bg-black duration-500`}
       ></div>
-
       <Navbar />
-
       <HeaderMain />
-
-      <main className={``}></main>
+      <main></main>
       <FooterLinks />
     </div>
   );

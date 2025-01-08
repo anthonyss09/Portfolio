@@ -10,6 +10,7 @@
   --primary-light: 242 241 252;
   --purple-light: 212 214 245;
   --purple-med: 179 175 251;
+  --red: 255 0 0;
 }
 
 body {
@@ -25,6 +26,12 @@ body {
 
 .back-red-peaks {
   background-image: url("../../public/assets/images/redPeaks.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.back-red-gradient {
+  background-image: url("../../public/assets/images/redGradient.png");
   background-position: center;
   background-size: cover;
 }
