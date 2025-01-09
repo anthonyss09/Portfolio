@@ -1,14 +1,23 @@
 "use client";
 import animations from "../animations.module.css";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 export default function ExcerptTwo() {
+  const scrollYRef = useRef(0);
+
   function handleScroll() {
     const excerptTwo = document.getElementById("excerpt-two");
 
-    if (window.scrollY >= 1 && excerptTwo) {
-    } else if (window.scrollY === 0 && excerptTwo) {
+    if (window.scrollY >= 200 && excerptTwo) {
+      excerptTwo.classList.add(`${animations.fadeOut}`);
+    } else if (
+      scrollYRef.current >= 200 &&
+      window.scrollY < 200 &&
+      excerptTwo
+    ) {
+      excerptTwo.classList.remove(`${animations.fadeOut}`);
     }
+    scrollYRef.current = window.scrollY;
   }
 
   useEffect(() => {

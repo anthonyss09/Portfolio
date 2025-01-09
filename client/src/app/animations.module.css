@@ -8,9 +8,38 @@
   }
 }
 
+@keyframes enlargeTranslate {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: scale(5) translateY(-300%);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes fadeInDown {
   0% {
     transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDownHalf {
+  0% {
+    transform: translateY(-50%);
     opacity: 0;
   }
   100% {
@@ -27,6 +56,15 @@
   100% {
     transform: translateX(0%);
     opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
@@ -99,35 +137,45 @@
   animation-iteration-count: infinite;
 }
 
-.fadeInDownFirst {
-  animation: fadeInDown 1.5s 0s;
+.fadeInEOButton {
+  animation: fadeIn 1.5s 7s;
   -webkit-animation-fill-mode: forwards;
 }
 
-.fadeInDownSecond {
-  animation: fadeInDown 1.5s 1s;
+.fadeInEOFirst {
+  animation: fadeInDownHalf 1.5s 0s;
   -webkit-animation-fill-mode: forwards;
 }
 
-.fadeInDownThird {
-  animation: fadeInDown 2s 2.5s;
+.fadeInEOSecond {
+  animation: fadeInDownHalf 1.5s 1s;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.fadeInEOThird {
+  animation: fadeInDownHalf 2s 2.5s;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.fadeOut {
+  animation: fadeOut 1s 0s;
   -webkit-animation-fill-mode: forwards;
 }
 
 .typedOutOne {
-  animation: typing 2s 4s;
+  animation: typing 2s 4.5s;
   white-space: nowrap;
   -webkit-animation-fill-mode: forwards;
 }
 
 .typedOutTwo {
-  animation: typing 2s 5s;
+  animation: typing 2s 5.5s;
   white-space: nowrap;
   -webkit-animation-fill-mode: forwards;
 }
 
 .typedOutButton {
-  animation: typingButton 2s 5.5s;
+  animation: typingButton 1.5s 6.5s;
   white-space: nowrap;
   -webkit-animation-fill-mode: forwards;
 }
