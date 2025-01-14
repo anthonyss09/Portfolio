@@ -14,7 +14,10 @@ export default function ExcerptOne() {
       window.scrollY < 100 &&
       excerptOne
     ) {
-      excerptOne.classList.remove(`${animations.fadeOut}`);
+      setTimeout(() => {
+        excerptOne.classList.remove(`${animations.fadeOut}`);
+        excerptOne.classList.add(`${animations.fadeIn}`);
+      }, 500);
     }
     scrollYRef.current = window.scrollY;
   }

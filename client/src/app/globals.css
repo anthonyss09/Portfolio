@@ -37,13 +37,13 @@ body {
 }
 
 .back-white-peaks {
-  background-image: url("../../public/assets/images/greyPeaks.png");
+  background-image: url("../../public/assets/images/yellowGradient.png");
   background-position: center;
   background-size: cover;
 }
 
 .free-center {
-  left: 50%;
+  left: 50vw;
   transform: translateX(-50%);
 }
 

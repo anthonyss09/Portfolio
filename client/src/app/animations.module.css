@@ -59,6 +59,17 @@
   }
 }
 
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-100%);
+  }
+}
+
 @keyframes fadeOut {
   0% {
     opacity: 1;
@@ -137,6 +148,11 @@
   animation-iteration-count: infinite;
 }
 
+.fadeIn {
+  animation: fadeIn 1.5s 0s;
+  -webkit-animation-fill-mode: forwards;
+}
+
 .fadeInEOButton {
   animation: fadeIn 1.5s 7s;
   -webkit-animation-fill-mode: forwards;
@@ -154,6 +170,11 @@
 
 .fadeInEOThird {
   animation: fadeInDownHalf 2s 2.5s;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.fadeInUp {
+  animation: fadeInUp 1.5s 0s;
   -webkit-animation-fill-mode: forwards;
 }
 

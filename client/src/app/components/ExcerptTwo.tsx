@@ -15,7 +15,10 @@ export default function ExcerptTwo() {
       window.scrollY < 200 &&
       excerptTwo
     ) {
-      excerptTwo.classList.remove(`${animations.fadeOut}`);
+      setTimeout(() => {
+        excerptTwo.classList.remove(`${animations.fadeOut}`);
+        excerptTwo.classList.add(`${animations.fadeIn}`);
+      }, 500);
     }
     scrollYRef.current = window.scrollY;
   }

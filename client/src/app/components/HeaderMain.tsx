@@ -17,7 +17,10 @@ export default function HeaderMain() {
       window.scrollY < 300 &&
       buttonHeader
     ) {
-      buttonHeader.classList.remove(`${animations.fadeOut}`);
+      setTimeout(() => {
+        buttonHeader.classList.remove(`${animations.fadeOut}`);
+        buttonHeader.classList.add(`${animations.fadeIn}`);
+      }, 500);
     }
     scrollYRef.current = window.scrollY;
   }
@@ -37,7 +40,7 @@ export default function HeaderMain() {
     >
       <div
         id="profile-image-main"
-        className="h-[80px] w-[80px] mb-8 border-[6px] border-blueMed rounded-[100px] shadow-med ml-2 fixed z-10"
+        className="h-[80px] w-[80px] mb-8 border-[6px] border-blueLight rounded-[100px] shadow-med ml-2 fixed z-10"
       >
         {" "}
         <Image
@@ -53,7 +56,7 @@ export default function HeaderMain() {
       <div id="button-wrapper-header">
         {" "}
         <button
-          className={`h-[40px] w-0 overflow-hidden font-normal text-base mt-16 ml-4 tracking-wide flex justify-around items-center text-blueLight bg-black/10 shadow-2xl rounded-xl ${animations.typedOutButton}`}
+          className={`h-[40px] w-0 overflow-hidden font-medium text-base mt-16 ml-4 tracking-wide flex justify-around items-center text-[#393C7C] bg-blueLight shadow-2xl rounded-xl ${animations.typedOutButton}`}
         >
           <p id="p-button" className={`opacity-0 ${animations.fadeInEOButton}`}>
             {" "}
